@@ -194,8 +194,6 @@ To reproduce the pipeline from raw public data:
 
 ---
 
-## 11. Academic Context & Authors
+## 11. Academic Context
 
 - **Course:** INSE 6311 — Sustainable Infrastructure Planning and Management Systems
-- **Institution:** Gina Cody School of Engineering and Computer Science, Concordia University, Montréal, Canada
-- **Authors:** INSE 6311 Research Team
