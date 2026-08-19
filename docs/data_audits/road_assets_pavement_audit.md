@@ -14,10 +14,10 @@
 ### A. Source and Destination Paths
 
 *   **Source Archive Path**: `<DOWNLOADS_DIR>\voi_chaussee_s_c22_geojson (1).zip`
-*   **Destination Archive Path**: `D:\Montreal_Road_Risk\data\raw\montreal\road_assets\voi_chaussee_s_c22_geojson.zip`
+*   **Destination Archive Path**: `<PROJECT_ROOT>\data\raw\montreal\road_assets\voi_chaussee_s_c22_geojson.zip`
     *   *Filename Normalization Note*: The destination file copy name is normalized by removing the browser-generated `" (1)"` suffix. The original file remains unchanged in the downloads folder.
 *   **Source Reference CSV Path**: `<DOWNLOADS_DIR>\voi_liste_valeurs_csv.csv`
-*   **Destination Reference CSV Path**: `D:\Montreal_Road_Risk\data\raw\montreal\road_assets\voi_liste_valeurs_csv.csv`
+*   **Destination Reference CSV Path**: `<PROJECT_ROOT>\data\raw\montreal\road_assets\voi_liste_valeurs_csv.csv`
 
 ### B. File Hashes and Sizes
 

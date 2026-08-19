@@ -10,7 +10,7 @@ This report summarizes the execution, validation, and final outputs of Phase 3A:
 - **Target Working CRS**: `EPSG:32188` (NAD83 / MTM zone 8)
 - **Preflight/Postflight Immutability Check**: Passed (0 files modified under `data/raw/`)
 - **Serialization Roundtrip Verification**: Passed (all GeoParquet/Parquet files verified by load-back check)
-- **Pipeline QA Run Manifest**: Generated at [preprocessing_manifest.json](file:///D:/Montreal_Road_Risk/data/interim/phase_3a/manifests/preprocessing_manifest.json)
+- **Pipeline QA Run Manifest**: Generated at [preprocessing_manifest.json](<PROJECT_ROOT>/data/interim/phase_3a/manifests/preprocessing_manifest.json)
 - **Validation Suite**: 102/102 tests passed successfully
 
 ---

@@ -19,7 +19,7 @@ This document presents the content audit and quality checks performed on the Mon
 *   **Source File Selected**: `<DOWNLOADS_DIR>\limites-administratives-agglomeration-nad83 (1).geojson`
 *   **Source Size**: `1,470,723` bytes
 *   **Source SHA-256**: `7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192`
-*   **Destination Path**: `D:\Montreal_Road_Risk\data\raw\montreal\borough_boundaries\limites-administratives-agglomeration-nad83.geojson`
+*   **Destination Path**: `<PROJECT_ROOT>\data\raw\montreal\borough_boundaries\limites-administratives-agglomeration-nad83.geojson`
 *   **Destination Size**: `1,470,723` bytes
 *   **Destination SHA-256**: `7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192`
 *   **Source/Destination Integrity**: **PASS** (Both files are binary-identical).
