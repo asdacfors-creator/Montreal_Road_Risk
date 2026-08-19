@@ -102,7 +102,7 @@ To prevent temporal data leakage and respect realistic operational deployment co
 ├── manifests/               # Cryptographic SHA-256 artifact manifest & data lineage register
 ├── models/                  # Serialized XGBoost model, preprocessor, and evaluation JSONs
 ├── pages/                   # Streamlit multi-page dashboard modules (Overview, Map, Details, etc.)
-├── scripts/                 # 36 reproducible pipeline, modeling, calibration, and audit scripts
+├── scripts/                 # Reproducible pipeline, modeling, calibration, audit, and verification scripts
 ├── src/
 │   └── montreal_road_risk/  # Core Python package (36 modules across 9 subpackages)
 ├── tests/                   # 34 pytest automated test suites
