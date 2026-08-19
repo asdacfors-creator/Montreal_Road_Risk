@@ -7,6 +7,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 ## 1. Required Datasets Evaluation
 
 ### 1. Montréal Géobase
+
 *   **Acquisition Status**: Complete.
 *   **Integrity Status**: Passed. Size: `43,145,805` bytes, SHA-256: `fbb1a46f4fd64ae156a778a3bfe3ef176583967607de33762d26b07f53572c25`.
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/geobase_audit.md`).
@@ -19,6 +20,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 *   **Phase 3 Readiness**: **Ready**.
 
 ### 2. Mechanized Pothole Repairs (2016–2025)
+
 *   **Acquisition Status**: Complete (10 of 10 annual resource files).
 *   **Integrity Status**: Passed (verified via `verify_manual_downloads.py`).
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/pothole_repairs_2021_2025_gpkg_cross_year_audit.md` and annual audits).
@@ -32,6 +34,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 *   **Phase 3 Readiness**: **Ready**.
 
 ### 3. Road-Assets Pavement
+
 *   **Acquisition Status**: Complete (GeoJSON ZIP + Attribute values CSV).
 *   **Integrity Status**: Passed. GeoJSON ZIP size: `36,622,399` bytes, CSV size: `6,829` bytes.
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/road_assets_pavement_audit.md`).
@@ -45,6 +48,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 *   **Phase 3 Readiness**: **Ready**.
 
 ### 4. Pavement-Condition Campaigns (2010–2024)
+
 *   **Acquisition Status**: Complete (6 campaign resources: 2010, 2015, 2018, 2020, 2022, 2024).
 *   **Integrity Status**: Passed.
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/pavement_condition_cross_year_audit.md`).
@@ -58,6 +62,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 *   **Phase 3 Readiness**: **Ready**.
 
 ### 5. Administrative Boundaries
+
 *   **Acquisition Status**: Complete.
 *   **Integrity Status**: Passed. Size: `1,470,723` bytes, SHA-256: `7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192`.
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/borough_boundaries_audit.md`).
@@ -71,6 +76,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 *   **Phase 3 Readiness**: **Ready**.
 
 ### 6. ECCC Daily Weather
+
 *   **Acquisition Status**: Complete (1 station inventory + 34 annual station files).
 *   **Integrity Status**: Passed.
 *   **Audit Decision**: **PASS WITH LIMITATIONS** (see `docs/data_audits/eccc_weather_audit.md`).
@@ -86,11 +92,13 @@ This document presents the final validation and gate check for closing Phase 2 (
 ---
 
 ## 2. Deferred Datasets
+
 *   **Traffic Counts**: Deferred to subsequent phases. It is optional and does not block the classification MVP model.
 
 ---
 
 ## 3. Preprocessing, Joining, and Modeling Checks
+
 *   **No Preprocessing Done**: Confirmed. All raw files remain in native formats and paths. No files reprojected, simplified, or edited.
 *   **No Finalized Spatial Join**: Confirmed. No joined files exist.
 *   **No Labels or Features Constructed**: Confirmed. Target construction is locked.
@@ -99,6 +107,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 ---
 
 ## 4. Phase 2 Verification and Close Check
+
 *   [x] All required raw sources are present in `data/raw/`.
 *   [x] All required sources have passed integrity and hash verification.
 *   [x] Content audit reports are published for all 6 required datasets.
@@ -111,6 +120,7 @@ This document presents the final validation and gate check for closing Phase 2 (
 ---
 
 ## 5. Gate Decision
+
 *   **Decision**: **CLOSE PHASE 2 / AUTHORIZE PHASE 3**
 *   **Next Action**: Phase 3 GIS, Spatial and Temporal Preprocessing.
 *   **Phase 3 Authorization Status**: **AUTHORIZED BUT NOT STARTED**.

@@ -1,6 +1,7 @@
 # Pavement Condition Campaign Audit: 2020
 
 ## 1. Official Identity & Metadata
+
 - **Campaign Label**: 2020 Campaign
 - **Network Scope**: Réseau artériel (RAAV)
 - **Source URL**: [https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/ab4b1114-4caa-47f0-9314-6e19de9df527/download/auscultation-chaussees-2020-arteriel.json](https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/ab4b1114-4caa-47f0-9314-6e19de9df527/download/auscultation-chaussees-2020-arteriel.json)
@@ -12,18 +13,21 @@
 - **Encoding**: Windows-1252 / CP1252
 
 ## 2. Row and Field Counts
+
 - **Physical Row / Feature Count**: 13876
 - **Total Data Record Count**: 13876
 - **Header Columns**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 - **Normalized In-Memory Headers**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 
 ## 3. Survey Dates & Observed Temporal Coverage
+
 - **Min DateReleve**: `2020-09-16`
 - **Max DateReleve**: `2020-12-01`
 - **Year Distribution**:
   - `2020`: 13876 records
 
 ## 4. Identifier Uniqueness
+
 - **ID Column**: `ID_TRC`
 - **Unique ID_TRC Count**: 13777
 - **Duplicate ID_TRC Excess**: 99
@@ -32,6 +36,7 @@
   - **Largest Duplicate Group Size**: 3
 
 ## 5. PCI (Pavement Condition Index) Results
+
 - **Parsed Successfully**: 13876
 - **Missing / Null Count**: 0
 - **PCI range**: `1.0` to `100.0`
@@ -52,6 +57,7 @@
   - `Très mauvais`: 1580 rows
 
 ## 6. IRI (International Roughness Index) Results
+
 - **Parsed Successfully**: 12550
 - **Missing / Null Count**: 0
 - **Sentinel Candidates (IRI = 0 with State = "-")**: 1326
@@ -75,12 +81,14 @@
   - `-`: 1326 rows
 
 ## 7. Consistency Checks
+
 - **PCI index exists but state label missing**: 0
 - **PCI state exists but index missing**: 0
 - **IRI index exists but state label missing**: 1326
 - **IRI state exists but index missing**: 0
 
 ## 8. Geometry and Spatial Attributes
+
 - **Format Geometry**: LineString
 - **CRS declaration**: `urn:ogc:def:crs:OGC:1.3:CRS84`
 - **Geometry Type Distribution**: `{'LineString': 13876}`
@@ -92,11 +100,13 @@
 - **Bounding Box Bounds**: `[-73.93696408990775, 45.41525343636446, -73.47912177774066, 45.70375341771243]`
 
 ## 9. Current Géobase ID Feasibility Check
+
 - **Matched current Géobase IDs**: 13567 / 13777 (98.48%)
 - **Unmatched campaign IDs**: 210
 - **Feasibility Wording**: "Most historical condition identifiers still appear in the current Géobase snapshot, but unmatched identifiers remain and may reflect segment renumbering, reconstruction, geometry changes or coverage differences."
 
 ## 10. Schema Definitions (Attributes table)
+
 | Field | Types | Null Count | Null % | Blank Count |
 | --- | --- | --- | --- | --- |
 | ID_TRC | int | 0 | 0.00% | 0 |
@@ -112,6 +122,7 @@
 | Etat_IRI | str | 0 | 0.00% | 0 |
 
 ## 11. Scientific Limitations & Audit Decisions
+
 - **Scientific Warnings**:
   1. Historical ID_TRC drift relative to the current Géobase.
   2. IRI missingness or sentinel values (e.g. 1326 zeroes in 2020) require a downstream strategy.

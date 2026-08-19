@@ -1,6 +1,7 @@
 # Cross-Year Data Audit Report — 2021–2025 GeoPackage Pothole Repairs
 
 ## 1. Audit Scope and Objectives
+
 This report provides a comparative cross-year audit of the five annual mechanized pothole-repair datasets stored as OGC GeoPackages (2021–2025). The goal is to identify structural, naming, and coordinate reference system changes that could impact down-stream modeling and target construction.
 
 ---
@@ -20,12 +21,15 @@ This report provides a comparative cross-year audit of the five annual mechanize
 ## 3. Key Transitions, Naming, and Format Shifts
 
 ### A. CSV-to-GPKG Transition
+
 The transition from historical CSV files (2016–2020) to OGC GeoPackage binary files (2021–2025) introduces major changes in file formatting, structural constraints, and coordinate representation. The CSV-to-GPKG transition must be handled by separate ingestion pipelines.
 
 ### B. Appareil-to-Véhicule Column Header Transition
+
 In the CSV datasets (2016–2020), the device category was tracked under the column header `Appareil`. In the GeoPackages (2021–2025), the column name is transitioned to `Véhicule`. Preprocessing must map these fields to a unified variable.
 
 ### C. Date-Format Differences
+
 The representation of timestamps varies between resources:
 *   CSV files use `%Y-%m-%d` and `%H:%M:%S` text fields.
 *   `2021`, `2022`, `2024`, and `2025` GPKG files use a `T` separator with 3 fractional digits (e.g., `2021-01-25T07:35:20.063`).
@@ -33,11 +37,13 @@ The representation of timestamps varies between resources:
 Dynamic timestamp parsing is required.
 
 ### D. Vehicle-ID Naming Differences
+
 *   **2021 GPKG**: Vehicle IDs use a hyphenated convention (`NP-` followed by digits, e.g., `NP-117`).
 *   **2022–2025 GPKGs**: Vehicle IDs drop the hyphen (`NP` followed by digits, e.g., `NP117`).
 *   **Alphanumeric Codes**: Alphanumeric codes (e.g., `CT` and `RM` prefixes) occur in 2022, 2023, and 2024 datasets, whereas 2025 contains strictly `NP`-prefixed devices.
 
 ### E. Coordinate Reference System (CRS) Differences
+
 *   **2021 GPKG**: Geometry is stored as longitude/latitude in a custom WGS 84 SRS record (custom `srs_id 100000`, organization `NONE`, and not described as formally declared `EPSG:4326`).
 *   **2022–2025 GPKGs**: Declared `EPSG:2950` (NAD83 (CSRS) / MTM zone 8) is explicitly declared by the source layers.
 *   *Note*: Phase 3 spatial transformation/reprojection has not occurred in Phase 2.
@@ -45,6 +51,7 @@ Dynamic timestamp parsing is required.
 ---
 
 ## 4. Layer-Naming and Temporal Year Mismatches
+
 1.  **2023 Internal-Layer Naming Mismatch**:
     *   The file `remplissage_niddepoule_2023.gpkg` contains a single layer internally named `remplissage_niddepoule_2024`. The layer is not renamed in Phase 2.
 2.  **Out-of-Year Records**:
@@ -54,6 +61,7 @@ Dynamic timestamp parsing is required.
 ---
 
 ## 5. Duplicate Pattern Differences
+
 *   **2021**: No exact duplicates.
 *   **2022**: High exact duplicate rate (`2,041` groups, `4,082` rows).
 *   **2023–2025**: Lower, but persistent exact duplicates.
@@ -62,6 +70,7 @@ Dynamic timestamp parsing is required.
 ---
 
 ## 6. Critical Scientific Warnings on Temporal Coverage
+
 > [!WARNING]
 > **No annual GeoPackage file contains complete calendar-year coverage.**
 > 
@@ -76,10 +85,12 @@ Dynamic timestamp parsing is required.
 ---
 
 ## 7. Modeling Splits and Preprocessing Status
+
 *   **Exact Modeling Split Undecided**: No chronological train/validation/test dates may be hardcoded yet, and the modeling splits remain undecided.
 *   **Phase 3 Preprocessing**: Reprojection and spatial joins have not occurred.
 
 ---
 
 ## 8. Audit Verdict
+
 **ALL FIVE GEOPACKAGES PASS PHYSICAL AND STRUCTURAL AUDITS WITH LIMITATIONS — Databases are uncorrupted, but spatial harmonization (geographic to MTM projection), vehicle ID string formatting, layer-year mismatches, and severe temporal coverage gaps must be handled during Phase 3. Phase 3 transformation/reprojection has not occurred.**

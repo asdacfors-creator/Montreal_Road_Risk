@@ -7,17 +7,20 @@ This report summarizes the results and quality audits for the entirety of **Phas
 ## 1. Summary of Phase Results
 
 ### Phase 3A: CRS Selection and Canonical Loading
+
 - **Working CRS**: Established and approved **`EPSG:32188`** (NAD83 / MTM zone 8) as the standard working projected coordinate reference system. All raw spatial datasets were converted to this CRS.
 - **Canonical loaders**: Built reusable, memory-efficient loaders with strict schema validations.
 - **Interim datasets**: Generated initial GeoParquet/Parquet spatial layers representing the audited raw source files.
 
 ### Phase 3B: Validated Spatial Linkage
+
 - **Pothole-to-Segment Linkage**: Calculated nearest-distance distributions across sensitivity bands (10m, 15m, 20m, 30m, 50m).
 - **Road Asset Crosswalk**: Evaluated segment-asset overlap at multiple levels (0.0, 0.10, 0.25, 0.50). A minimum overlap fraction of **0.10** was recommended.
 - **Administrative Boundaries**: Assigned all road segments to the full Ville de Montréal Agglomeration boundaries (covering 34 features: 19 Arrondissements and 15 Villes liées). All 34 administrative polygons are correctly represented with at least one segment.
 - **Outlier Segment**: Found exactly 1 unmatched segment (ID `210080`), which lies entirely outside municipal boundaries (matching our audited coordinate outlier).
 
 ### Phase 3C: Temporal Normalization and Availability
+
 - **Timezone Assumption**: Localized naive timestamps to `America/Toronto` with DST safeguards (tracking `ambiguous_dst` and `nonexistent_dst` statuses). Potholes: $1,027,267$ successfully localized, $0$ parse failures/missing timestamps.
 - **Source Year Status**: Corrected year mismatch logic. Found exactly $5$ genuine out-of-year records (1 in the 2023 file, 4 in the 2024 file). Unparseable dates ($0$ records) are classified separately as `unknown_parse_failure` and are not treated as mismatches.
 - **Pavement Campaign Availability**: Enforced strict availability rules based on the exact survey date (`survey_date`), prohibiting backward filling.

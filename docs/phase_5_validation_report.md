@@ -64,11 +64,13 @@ unknown and will be measured in Phase 6 under separate supervisor authorization.
 ## 5. Selected Model — Full Details
 
 ### Identity
+
 - **Name:** `XGB_fulldata_3406793_ne500_md4_lr0.1_90d`
 - **Status:** Full-training Phase 5 validation candidate
 - **Artifact:** `models/phase_5/full_training_external_memory_candidate/`
 
 ### Hyperparameters
+
 | Parameter | Value |
 |-----------|-------|
 | objective | binary:logistic |
@@ -83,6 +85,7 @@ unknown and will be measured in Phase 6 under separate supervisor authorization.
 | nthread | 1 |
 
 ### Training
+
 | Item | Value |
 |------|-------|
 | Training rows | 3,406,793 |
@@ -96,6 +99,7 @@ unknown and will be measured in Phase 6 under separate supervisor authorization.
 | best_score (val-aucpr) | **0.806205** |
 
 ### Memory
+
 | Item | Value |
 |------|-------|
 | Peak process RSS | **2.16 GB** |
@@ -105,6 +109,7 @@ unknown and will be measured in Phase 6 under separate supervisor authorization.
 | Cache (D drive) | 1,485 MB peak, 0 MB after training |
 
 ### Validation Metrics
+
 | Metric | Value |
 |--------|-------|
 | **Average Precision (AP)** | **0.806207** |
@@ -118,6 +123,7 @@ unknown and will be measured in Phase 6 under separate supervisor authorization.
 | Lift @ top 20% | 5.000× |
 
 ### Artifact Fingerprints
+
 | File | SHA-256 |
 |------|---------|
 | preprocessor.joblib | `6bfe7209f95b86e962e50249ea2492bc7630f9a37d1700f350e4d748a64492ff` |

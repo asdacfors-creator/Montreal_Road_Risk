@@ -1,6 +1,7 @@
 # Pavement Condition Campaign Audit: 2010
 
 ## 1. Official Identity & Metadata
+
 - **Campaign Label**: 2010 Campaign
 - **Network Scope**: Réseau routier complet (local et artériel)
 - **Source URL**: [https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/d714c4b1-fe1a-4f9e-aa76-3fe45076c830/download/auscultation-chaussees-2010.csv](https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/d714c4b1-fe1a-4f9e-aa76-3fe45076c830/download/auscultation-chaussees-2010.csv)
@@ -12,12 +13,14 @@
 - **Encoding**: UTF-8
 
 ## 2. Row and Field Counts
+
 - **Physical Row / Feature Count**: 29272
 - **Total Data Record Count**: 29271
 - **Header Columns**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice PCI', 'Etat PCI', 'Indice IRI', 'Etat IRI']`
 - **Normalized In-Memory Headers**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 
 ## 3. Survey Dates & Observed Temporal Coverage
+
 - **Min DateReleve**: `2009-09-15`
 - **Max DateReleve**: `2011-07-26`
 - **Year Distribution**:
@@ -29,11 +32,13 @@
 > The resource is labelled as the 2010 campaign, but its actual DateReleve coverage spans 2009–2011.
 
 ## 4. Identifier Uniqueness
+
 - **ID Column**: `ID_TRC`
 - **Unique ID_TRC Count**: 29271
 - **Duplicate ID_TRC Excess**: 0
 
 ## 5. PCI (Pavement Condition Index) Results
+
 - **Parsed Successfully**: 29271
 - **Missing / Null Count**: 0
 - **PCI range**: `1.0` to `100.0`
@@ -54,6 +59,7 @@
   - `Très mauvais`: 3533 rows
 
 ## 6. IRI (International Roughness Index) Results
+
 - **Parsed Successfully**: 29271
 - **Missing / Null Count**: 0
 - **Sentinel Candidates (IRI = 0 with State = "-")**: 0
@@ -79,22 +85,26 @@
   - `Très mauvais`: 5277 rows
 
 ## 7. Consistency Checks
+
 - **PCI index exists but state label missing**: 0
 - **PCI state exists but index missing**: 0
 - **IRI index exists but state label missing**: 0
 - **IRI state exists but index missing**: 0
 
 ## 8. Geometry and Spatial Attributes
+
 - **Format Geometry**: None
 - **CRS declaration**: `No source geometry is included in this selected campaign resource.`
 - **Geometry Details**: No source geometry is included in this selected campaign resource.
 
 ## 9. Current Géobase ID Feasibility Check
+
 - **Matched current Géobase IDs**: 28009 / 29271 (95.69%)
 - **Unmatched campaign IDs**: 1262
 - **Feasibility Wording**: "Most historical condition identifiers still appear in the current Géobase snapshot, but unmatched identifiers remain and may reflect segment renumbering, reconstruction, geometry changes or coverage differences."
 
 ## 10. Schema Definitions (Attributes table)
+
 | Field | Types | Null Count | Null % | Blank Count |
 | --- | --- | --- | --- | --- |
 | ID_TRC | int | 0 | 0.00% | 0 |
@@ -110,6 +120,7 @@
 | Etat_IRI | str | 0 | 0.00% | 0 |
 
 ## 11. Scientific Limitations & Audit Decisions
+
 - **Scientific Warnings**:
   1. Historical ID_TRC drift relative to the current Géobase.
   2. IRI missingness or sentinel values (e.g. 1326 zeroes in 2020) require a downstream strategy.

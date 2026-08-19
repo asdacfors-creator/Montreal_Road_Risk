@@ -44,6 +44,7 @@ Gate A does **not** authorize:
 | B2 authorized | ❌ NO (correct) |
 
 **Test seal:**
+
 - `data/processed/phase_5/test.parquet`
 - SHA-256: `ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c`
 - Schema fingerprint: `f385c705cbe5183760a70da1efdc813f5c74b0629a0a87ea73e522ba36274a2e`
@@ -120,24 +121,29 @@ All 55 Phase 6 tests pass. No test reads sealed targets.
 ## Metric Specification (D6.1–D6.9 Frozen)
 
 ### D6.2 — Calibration Method
+
 Fixed Platt/sigmoid only. No Platt-vs-isotonic comparison.  
 Fit data: Gate B1 targets only (2024-01-31 → 2024-03-31).
 
 ### D6.1 — Average Precision Definition
+
 `sklearn.metrics.average_precision_score` — weighted mean of precision at successive recall thresholds. **NOT** trapezoidal PR-AUC.
 
 ### Calibration Slope/Intercept
 Logistic regression on logit-transformed probabilities:  
 `logit(P(Y=1)) = intercept + slope × logit(p_clipped)`  
+
 Ideal: intercept = 0, slope = 1.  
 **NOT** `scipy.stats.linregress`.
 
 ### ECE
+
 Ten frozen equal-width bins [0.0, 0.1, …, 1.0].  
 Empty bins: weight = 0, contribute zero to ECE.  
 Empty bins shown as NaN in reliability table.
 
 ### Top-K Row Count
+
 `ceil(N × K / 100)` — not floor.  
 Tie-break: descending score → `canonical_segment_id` (asc) → `as_of_date` (asc) → `segment_month_id` (asc).
 
@@ -180,10 +186,12 @@ Results written to `models/phase_6/shuffled_label_control_results.json`.
 ## Gate Sequence (Immutable)
 
 ```
+
 Gate A  → Engineering + negative controls   [AUTHORIZED — this gate]
 Gate B1 → Calibration access only           [REQUIRES SEPARATE AUTHORIZATION]
   └── Embargo anchors: A non-analytic target-column integrity comparison occurred during remediation. Target values were not printed, summarized, scored, passed to a model or used for any modeling decision.
 Gate B2 → Final test evaluation (once)      [REQUIRES DIFFERENT AUTHORIZATION]
+
 ```
 
 ---

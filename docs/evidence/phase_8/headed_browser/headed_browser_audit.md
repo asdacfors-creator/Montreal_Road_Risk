@@ -8,6 +8,7 @@
 **Health Result:** HTTP 200 OK  
 
 ## Page Acceptance Results
+
 - **Executive Overview:** PASS (527,813 test rows, 47,983 segments, 11 anchors, AP=0.505693, ROC-AUC=0.920953, Brier=0.039827, Gate B2 deviation notice, non-causal disclaimer verified)
 - **Interactive Risk Map:** PASS (2025-05-31 default anchor, 4,799 HIGH+MEDIUM default candidates, all sidebar filters operational, popup HTML escaping verified, over-5000 warning banner verified)
 - **Segment Details:** PASS (Searched HIGH Top-5%, MEDIUM 5-10%, Outside Top-10%, Nonexistent ID, and Blank query. Frozen Phase 7 scope message verified for outside-Top-10%)
@@ -15,28 +16,33 @@
 - **Model Interpretation:** PASS (Top-20 global importance table, SHAP beeswarm plot, seed stability audit, 5 dependence plots cycled cleanly, subgroup interpretation, causality disclaimer)
 
 ## Map Controls & Interactions
+
 - **Controls tested:** Anchor month, Borough selection, Road class, Priority bands (HIGH, MEDIUM, WATCH, OTHER), Top-K policy (5%, 10%, 20%), Risk percentile slider, Condition survey missingness, Prior repair history, Segment ID search box.
 - **Map interactions:** Pan/drag, zoom in/out, road segment click, popup render, popup close.
 - **Over-5000 state:** Warning banner displayed cleanly instructing user to narrow filters.
 
 ## CSV Download Result
+
 - **Filename:** `montreal_road_risk_candidates.csv`
 - **Exported Rows:** `4,799` (100% agreement with default map selection)
 - **Forbidden Target / Outcome Columns:** `0`
 - **Formula Injection Protection:** Sanitized `=`, `+`, `-`, `@` with `'` prefix.
 
 ## Viewport Responsive Audits
+
 - Desktop (`1440x1000`): PASS
 - Laptop (`1366x768`): PASS
 - Tablet (`1024x768`): PASS
 - Mobile (`390x844`): PASS
 
 ## Console & Network Integrity
+
 - Console Errors: `0`
 - Console Warnings: `0`
 - Network Failures: `0`
 
 ## Evidence Files & Screenshots (19 captured)
+
 Manifest SHA-256: `67ae1148e0269f8611c635c886ef67cac2eecbf0e73aa9e0c18c43456444b4d1`
 
 - `01_overview_visible.png` (SHA-256: `1c7aebe65dfa9b06...`)

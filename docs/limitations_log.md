@@ -70,6 +70,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
 ## Detailed Limitation Registry
 
 ### L2.1: 2019 Mechanized-Repair Exact-Duplicate Anomaly
+
 * **Status**: Open
 * **Evidence**:
   * 31,858 exact-duplicate groups
@@ -85,6 +86,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Compare duplicate mechanisms across years, define duplicate policy, sensitivity analysis.
 
 ### L2.2: 2020 Mechanized-Repair Incomplete Temporal Coverage
+
 * **Status**: Open
 * **Evidence**:
   * Records span only from `2020-01-14` to `2020-03-20` (81,354 rows).
@@ -97,6 +99,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Document temporal alignment rules; exclude unobserved periods in 2020 from modeling.
 
 ### L2.3: Cross-Year CRS and Schema Transition in 2021–2025 GPKGs
+
 * **Status**: Open
 * **Evidence**:
   * CSV to GPKG transition.
@@ -112,6 +115,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Reproject 2021 layer to MTM Zone 8 (EPSG:2950) in Phase 3. Normalize vehicle ID strings (drop hyphens).
 
 ### L2.4: Annual Temporal Campaign Gaps in 2021–2025 GPKGs
+
 * **Status**: Open
 * **Evidence**:
   * 2021 ends in March (2021-03-17).
@@ -128,6 +132,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Align target construction and temporal aggregations strictly with observed campaigns.
 
 ### L2.5: Layer-Year and Record-Year Anomalies in GPKGs
+
 * **Status**: Open
 * **Evidence**:
   * 2023 file internally names its layer as `remplissage_niddepoule_2024`.
@@ -142,6 +147,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Ensure downstream ingestion code uses layer discovery rather than hardcoded string matching.
 
 ### L2.6: 2021 Spatial-Envelope Exceptions
+
 * **Status**: Open
 * **Evidence**:
   * Five 2021 repair points fall outside the axis-aligned bounding envelope of the current Géobase road-network snapshot: one point is east of the envelope and four points are south of it. This observation does not prove that the points fall outside Montréal or outside any borough. Administrative-boundary validity remains unassessed until an authoritative boundary layer is acquired and a polygon containment test is performed during the authorized GIS-processing phase.
@@ -154,6 +160,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Defer spatial investigation of these points to Phase 3.
 
 ### L2.7: Chronological Split Remains Unapproved
+
 * **Status**: Open
 * **Evidence**:
   * 2016 is partial (ends in December).
@@ -170,6 +177,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Evaluate other datasets' temporal bounds in Phase 2 before proposing split dates.
 
 ### L2.8: Road-Assets Construction-Date Precision Uncertainty
+
 * **Status**: Open
 * **Evidence**:
   * 88.57% of construction dates in the road-assets GeoJSON are flagged as highly imprecise (+/- 100 years max: 20,880 rows) or unknown (Inconnu: 35,830 rows).
@@ -181,6 +189,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Group segments into broad construction-era categorical bins (e.g. Pre-1950, 1950-1980, Post-1980) rather than exact year differences in Phase 5.
 
 ### L2.9: Road-Assets High Resurfacing-Date Missingness
+
 * **Status**: Open
 * **Evidence**:
   * 86.74% (55,535 features out of 64,025) have null values in `DATERESURFACAGE`.
@@ -192,6 +201,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Implement a binary flag indicating whether resurfacing history is available for the segment. Defer any interpolation or imputation to Phase 5.
 
 ### L2.10: Unverified Road-Assets-to-Géobase Relationship
+
 * **Status**: Open
 * **Evidence**:
   * The road-assets features are identified by `ID_VOI_CHAUSSEE_AGR` while Géobase segments use `ID_TRC`. No common attribute joins are documented.
@@ -203,6 +213,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Implement buffer-based spatial intersection overlays in Phase 3 to map road-asset polygons to nearest Géobase line segments.
 
 ### L2.11: No Explicit CRS Member in Road-Assets GeoJSON
+
 * **Status**: Open
 * **Evidence**:
   * The raw GeoJSON archive member contains no top-level `crs` dictionary.
@@ -214,6 +225,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Read as geographic coordinates (WGS 84) and explicitly reproject to MTM Zone 8 (EPSG:2950) in Phase 3.
 
 ### L2.12: Road-Assets Date-Logic Anomalies
+
 * **Status**: Open
 * **Evidence**:
   * 133 features have a resurfacing date that precedes their registered construction date (e.g. construction year recorded after resurfacing year).
@@ -225,6 +237,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Flag anomalous records during panel feature construction; either ignore the resurfacing date or set to null when computing intervals.
 
 ### L2.13: Reference-Field Alias Between MATERIAUCHAUSSEE_REF and MATERIAU_REF
+
 * **Status**: Open
 * **Evidence**:
   * The GeoJSON uses the attribute name `MATERIAUCHAUSSEE_REF` whereas the reference value CSV domain uses `MATERIAU_REF`.
@@ -236,6 +249,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Implement mapping alias translations in ingestion scripts.
 
 ### L2.14: Potential Stale or Uneven Territorial Road-Asset Updates
+
 * **Status**: Open
 * **Evidence**:
   * Road asset updates and reporting are administered by individual local boroughs, which may lead to varying update schedules or stale entries.
@@ -247,6 +261,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Add categorical borough (`PROPRIETAIRE_REF`) and road class features to model partitions to help control for reporting biases.
 
 ### L2.15: 2010-Labelled Campaign Spans 2009–2011
+
 * **Status**: Open
 * **Evidence**:
   * The dataset is labeled as 2010, but actual survey timestamps span `2009-09-15` through `2011-07-26`.
@@ -258,6 +273,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Align surveys based on their exact `DateReleve` field, not the aggregate campaign label.
 
 ### L2.16: Campaigns Have Different Network Scopes
+
 * **Status**: Open
 * **Evidence**:
   * 2010 and 2015 cover the complete network, while 2018, 2020, and 2024 cover the arterial network only, and 2022 covers the local network only.
@@ -269,6 +285,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Group segments by functional class and restrict comparison within the same hierarchy (local vs. arterial).
 
 ### L2.17: Surveys are Irregular and Not Annual
+
 * **Status**: Open
 * **Evidence**:
   * Inconsistent campaign intervals (2010, 2015, 2018, 2020, 2022, 2024).
@@ -280,6 +297,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Compute and include survey age/staleness as a feature.
 
 ### L2.18: Cross-Resource Format and Encoding Differences
+
 * **Status**: Open
 * **Evidence**:
   * CSV formats (UTF-8, no BOM) for 2010, 2015, 2018. GeoJSON (CP1252) for 2020. GeoPackages (binary SQLite) for 2022, 2024.
@@ -291,6 +309,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Maintain separate custom reader interfaces for each campaign type.
 
 ### L2.19: CRS Differences Across Spatial Resources
+
 * **Status**: Open
 * **Evidence**:
   * 2020 uses WGS 84 (CRS84). 2022 uses WGS 84 (EPSG:4326). 2024 uses Projected MTM 8 (EPSG:32188).
@@ -302,6 +321,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Explicitly reproject all spatial files to a single working CRS (e.g. MTM 8) in Phase 3.
 
 ### L2.20: Historical ID_TRC Values Do Not Match Current Géobase
+
 * **Status**: Open
 * **Evidence**:
   * Unmatched IDs range from 66 (2022 local) to 1,461 (2015 complete). Match rate varies from 94.49% to 99.58%.
@@ -313,6 +333,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Defer resolution to Phase 3. Create an unmatched ID indicator feature in Phase 5.
 
 ### L2.21: 2020 Contains 99 Exact Duplicate Excess Records
+
 * **Status**: Open
 * **Evidence**:
   * 99 exact feature duplicates and duplicate ID_TRCs in the 2020 GeoJSON resource.
@@ -324,6 +345,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Assess join outcomes and establish a deduplication logic in Phase 3.
 
 ### L2.22: 2020 Contains 1,326 IRI Sentinel Candidates
+
 * **Status**: Open
 * **Evidence**:
   * 1,326 features in 2020 have `Indice_IRI = 0` and `Etat_IRI = "-"`.
@@ -335,6 +357,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Model sentinels as missing values in Phase 5; do not convert to zero.
 
 ### L2.23: IRI Missingness Varies by Campaign
+
 * **Status**: Open
 * **Evidence**:
   * 0.00% missing in 2010/2015, 0.11% in 2018, 9.24% in 2022, and 4.59% in 2024.
@@ -346,6 +369,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Design a robust missingness indicator and imputation scheme in Phase 5.
 
 ### L2.24: Very High IRI Observations Require Robustness Assessment
+
 * **Status**: Open
 * **Evidence**:
   * IRI of 72.7 observed in 2010.
@@ -357,6 +381,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Assess clipping or robust scaling methods in Phase 5.
 
 ### L2.25: Future-Survey Leakage Risk
+
 * **Status**: Closed
 * **Evidence**:
   * Physical pavement survey scores backfilled into historical segments.
@@ -368,6 +393,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * closed in Phase 3C.
 
 ### L2.26: Local and Arterial Campaigns Must Not Be Treated as Citywide Snapshots
+
 * **Status**: Open
 * **Evidence**:
   * 2022 local covers only the local network; 2024 arterial covers only the arterial network. They share only 28 segment IDs.
@@ -379,6 +405,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Use separate network indicator flags and distinct campaign alignments.
 
 ### L2.27: Current Administrative Boundary Snapshot vs Historical Observations
+
 * **Status**: Open
 * **Evidence**:
   * Boundaries GeoJSON last updated on 2023-11-29.
@@ -391,6 +418,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Treat as stationary partition unless historical boundary versions are acquired in subsequent phases.
 
 ### L2.28: Distinction Between Montréal Boroughs and Related Municipalities
+
 * **Status**: Open
 * **Evidence**:
   * 15 features in the dataset are classified as related municipalities (TYPE = "Ville liée"), and 19 features are boroughs (TYPE = "Arrondissement").
@@ -402,6 +430,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Exclude related municipalities from borough-level aggregation or handle them separately under a unified agglomeration-level partition.
 
 ### L2.29: Boundary-Crossing Road Segment Assignments
+
 * **Status**: Closed
 * **Evidence**:
   * 1,205 Géobase road features intersect more than one administrative polygon in memory.
@@ -413,6 +442,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Closed in Phase 3B.
 
 ### L2.30: Unvalidated Alternative Coordinate Transformations
+
 * **Status**: Open
 * **Evidence**:
   * Ville de Montréal recommends working in the native NAD83 / MTM Zone 8 reference system.
@@ -425,6 +455,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Use the native reference system coordinates or perform validated coordinate transformations within our GIS pipelines.
 
 ### L2.31: Approved Project-Wide Coordinate Reference System (CRS) Undecided
+
 * **Status**: Open
 * **Evidence**:
   * Datasets use varying systems (EPSG:4326, custom 100000, EPSG:2950, and EPSG:32188).
@@ -436,6 +467,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Select and approve a single working projected CRS (candidate: EPSG:2950 or EPSG:32188) in Phase 3.
 
 ### L2.32: Point-Station Observations Used as Montréal-Wide Exposure Proxies
+
 * **Status**: Open
 * **Evidence**:
   * Temperature and precipitation features are constructed using only two specific station points (McTavish and Montréal-Trudeau) for the entire island.
@@ -447,6 +479,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Standardize using primary McTavish data and evaluate spatial interpolation sensitivity in Phase 3.
 
 ### L2.33: Microclimate Spatial Variations Across the Island
+
 * **Status**: Open
 * **Evidence**:
   * Mean temperature difference between McTavish (urban/central) and Montréal-Trudeau (airport/suburban) is 0.426°C.
@@ -458,6 +491,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Test distance-weighted spatial interpolation (IDW) against single-station assignment in Phase 3.
 
 ### L2.34: McTavish Missing Precipitation Periods
+
 * **Status**: Open
 * **Evidence**:
   * McTavish has 375 missing Total Precip records (6.0396% missingness rate).
@@ -469,6 +503,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Define a temporal fallback policy in Phase 3 to impute McTavish missing precipitation using Trudeau observations.
 
 ### L2.35: Montréal-Trudeau Historical Temperature Gaps
+
 * **Status**: Open
 * **Evidence**:
   * Montréal-Trudeau has 776 missing mean temperature records (12.498% missingness rate).
@@ -480,6 +515,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Only use Trudeau to fill McTavish missing days where Trudeau itself is non-missing.
 
 ### L2.36: Rainfall and Snowfall Components Unavailable
+
 * **Status**: Open
 * **Evidence**:
   * McTavish Total Rain and Total Snow are 100% missing. Montréal–Trudeau Total Snow is 100% missing, while Total Rain has only 23 populated observations and 6,186 missing observations (99.63% missing).
@@ -491,6 +527,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * McTavish Total Rain and Total Snow are 100% missing. Montréal–Trudeau Total Snow is 100% missing, while Total Rain has only 23 populated observations and 6,186 missing observations (99.63% missing). Therefore, the separate Total Rain and Total Snow fields are not suitable as consistent cross-year features. Total Precip is the usable precipitation measurement, subject to its documented missingness.
 
 ### L2.37: Snow-on-Ground Incompleteness
+
 * **Status**: Open
 * **Evidence**:
   * Snow on Ground has over 70% missingness at both stations.
@@ -502,6 +539,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Evaluate whether to discard the snow-on-ground feature or apply a seasonal imputation policy in Phase 3.
 
 ### L2.38: ECCC Retrospective Revisions
+
 * **Status**: Open
 * **Evidence**:
   * ECCC retrospectively adjusts daily climate logs on the portal when historical quality controls are run.
@@ -513,6 +551,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Treat the current data manifest as the immutable baseline.
 
 ### L2.39: Station-ID Mutability
+
 * **Status**: Open
 * **Evidence**:
   * Station IDs are internal ECCC indicators and can change over time.
@@ -524,6 +563,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Always resolve station queries using Climate IDs in Phase 3.
 
 ### L2.40: Freeze-Thaw Definition Not Yet Finalized
+
 * **Status**: Open
 * **Evidence**:
   * Three different candidate freeze-thaw counts were evaluated in the audit (Def 1, Def 2, Def 3).
@@ -535,6 +575,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Evaluate the predictive sensitivity of all three candidate definitions during Phase 5 feature selection.
 
 ### L2.41: Weather Features Must Obey Observation Cutoffs
+
 * **Status**: Closed
 * **Evidence**:
   * Segment-month paneled features require strict causal alignment.
@@ -546,6 +587,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Closed in Phase 3C.
 
 ### L2.42: Imprecise Construction and Resurfacing Dates for Road Assets
+
 * **Status**: Closed
 * **Evidence**:
   * Over 88% of construction dates represent year-only, approximate, or unknown values (with exactly 40 precise construction dates and 7,132 precise resurfacing dates).
@@ -557,6 +599,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
   * Closed in Phase 3C.
 
 ### L2.43: America/Toronto Timezone Context Assumption
+
 * **Status**: Closed
 * **Evidence**:
   * Source timestamps lack explicit timezone offsets.
@@ -572,6 +615,7 @@ This log documents the fundamental limitations, data biases, and modeling assump
 ## Phase Gate
 
 To transition to Phase 6, the limitations log must be approved.
+
 * [x] Limitations table populated.
 * [x] Consequence and mitigations defined.
 * [x] Temporal pre-processing limitations recorded and closed.
@@ -600,5 +644,3 @@ To transition to Phase 6, the limitations log must be approved.
 | **L6.1** | B1 calibration partition spans winter/spring months only (2024-01-31 to 2024-03-31) | Approved Gate B1 split manifest | Probability predictions may exhibit seasonal calibration bias if summer/fall repair/weather patterns vary. | Document seasonality limitations; maintain rank-based Top-K operational thresholds. | docs/phase_6_gate_b1_report.md | Approved |
 | **L6.2** | Platt scaling directly on raw probabilities degraded Brier score (+0.001773), Log Loss (+0.010889), and ECE (+0.010217) | Clean Rerun Calibration Diagnostics | Apparent probability calibration errors are slightly worse than raw predictions. | Document degradation honestly; recommend raw probabilities as primary, Platt as sensitivity. | docs/phase_6_gate_b1_report.md | Approved |
 | **L6.3** | Gate B1 procedural breach: contaminated feature inputs used in initial run, and target_repair_180d decoded across full test set | Verified in Gate B1 Source-Path Audit | 180-day final-test seal is procedurally compromised. | Quarantined contaminated B1 artifacts; ran clean Gate B1 rerun using remediated features/targets with strict column projection; locked B2. | docs/phase_6_gate_b1_protocol_deviation.md | Approved |
-
-

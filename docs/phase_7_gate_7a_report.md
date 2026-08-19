@@ -54,7 +54,6 @@ The operational output of Phase 7 identifies **"risk-priority candidates"** base
 | `19` | `freeze_thaw_strict_sum_180d` | `0.063941` | `1` | Standard feature |
 | `20` | `min_temp_min_180d` | `0.061186` | `1` | Standard feature |
 
-
 ---
 
 ## 4. Feature Importance Stability Analysis
@@ -75,6 +74,7 @@ Global feature importance rank stability was evaluated across 3 deterministic st
 
 1. **`prior_repair_months_12m`:**
    Evaluated as the primary remediated feature. The upper-bound historical repair date filtering bug identified in Phase 5 has been fully corrected.
+
 2. **`segment_length_m`:**
    Identified as a structural segment proxy. Highly correlated with road network geometry and category; its SHAP attribution reflects physical exposure and length-dependent opportunity.
 

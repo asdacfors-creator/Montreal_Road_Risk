@@ -72,6 +72,7 @@ Every coverage interval is documented by source file, not by parsed calendar yea
 | 2025 | reparation-nids-de-poule-2025.gpkg | 2025-01-01 | 2025-12-31 | verified_observed | 1 | Annual resource (still updating at acquisition) |
 
 **Key provenance rules:**
+
 - Out-of-year events are preserved in the repair ledger but do **not** extend source-file coverage to another year.
 - 2022-12-20 event → 2023 source file → does not extend 2022 coverage.
 - November 2023 events → 2024 source file → does not extend 2023 coverage.

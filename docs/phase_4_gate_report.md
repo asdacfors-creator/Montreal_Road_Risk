@@ -7,6 +7,7 @@ This report summarizes the results, methodology, and quality gate audits for **P
 ## 1. Summary of Phase Results
 
 ### Panel and Outcome Targets
+
 - **Cartesian Product**: Built the segment-by-month panel spanning 47,983 segments and 102 monthly anchors (December 31, 2016 through May 31, 2025), producing exactly **4,894,266** panel rows.
 - **Primary 90-Day Target**: Constructs target label representing if a segment has at least one mechanized repair event in the official Montreal resources during the future 90 days.
 - **180-Day Sensitivity Target**: Evaluates future repair likelihood over a wider 180-day window.
@@ -14,6 +15,7 @@ This report summarizes the results, methodology, and quality gate audits for **P
 - **Duplicate Collapsing**: Groups same-day, same-vehicle, same-location repair events. Collapses **1,020,457** accepted events into **965,274** unique collapsed events.
 
 ### Feature Engineering
+
 - **Historical Repairs**: Computes rolling active days, raw counts, collapsed counts (over 30d, 90d, 180d, 365d), and active repair months in the past 12 months.
 - **Canonical Weather**: Computes rolling temperature (mean, min, max), precipitation, and freeze-thaw counts (strict, min <= 0, max >= 0) with fallback indicators.
 - **Pavement Conditions**: Joins latest pavement surveys dynamically using `survey_date <= as_of_date`. Resolves same-day duplicates using median.

@@ -1,11 +1,13 @@
 # Data Audit Report — 2020 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2020 annual portion of the Montreal mechanized pothole repairs dataset. No other years (2016–2019 or 2021–2025) are covered by this audit.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule_2020.csv`
 *   **Size**: `5104739` bytes
 *   **SHA-256 Checksum**: `8417021f629007af4d873e1d5faca5924a6d297c35dfc63adf3abe9698ef1703`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2020 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **Encoding**: UTF-8
 *   **Delimiter**: `,` (Comma)
 *   **Line-Ending Style**: CRLF (Windows)
@@ -27,12 +30,14 @@ This audit is strictly limited to the 2020 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format Result
+
 *   **2020 Time Format**: `%H:%M:%S` (24-hour time format)
 *   *Audit Note: 100% of the rows (81,354) are formatted as `%H:%M:%S`.*
 
 ---
 
 ## 5. Temporal Coverage and Incomplete Year Limitation
+
 *   **DateJour Parser Format**: `%Y-%m-%d`
 *   **DateHeure Parser Format**: `%H:%M:%S`
 *   **Invalid Dates (`DateJour`)**: `0`
@@ -45,6 +50,7 @@ This audit is strictly limited to the 2020 annual portion of the Montreal mechan
 *   **Timezone**: Not declared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2020-01`: `22443`
 *   `2020-02`: `18808`
 *   `2020-03`: `40103`
@@ -55,6 +61,7 @@ This audit is strictly limited to the 2020 annual portion of the Montreal mechan
 ---
 
 ## 6. Device Distribution
+
 `Appareil` is treated as a non-empty categorical string representing the device/equipment performing the repair. It must not be converted to a numeric measurement, and its lower frequencies must be treated descriptively rather than as invalidity.
 *   **Unique Devices**: `14`
 *   **Missingness & Validity**:

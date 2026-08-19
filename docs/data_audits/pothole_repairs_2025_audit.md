@@ -1,11 +1,13 @@
 # Data Audit Report — 2025 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2025 annual portion of the Montreal mechanized pothole repairs dataset. No other years are covered.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule_2025.gpkg`
 *   **Size**: `9117696` bytes
 *   **SHA-256 Checksum**: `c64b6dec96dd44bee9ba5a1d4280ba77f733a75e48c4d7ce1f6fbd18148f4320`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2025 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **SQLite/GPKG Integrity Check**: `ok`
 *   **Application ID**: `0x47504b47`
 *   **User Version**: `10200`
@@ -32,6 +35,7 @@ This audit is strictly limited to the 2025 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format and Temporal Results
+
 *   **Date declared type**: DATETIME
 *   **Date format**: T separator with 3 fractional digits (e.g. `2025-01-18T21:29:15.063`)
 *   **Date Range**: `2025-01-18 21:29:15.063000` to `2025-05-20 15:45:54.063000`
@@ -40,6 +44,7 @@ This audit is strictly limited to the 2025 annual portion of the Montreal mechan
 *   **Timezone**: Undeclared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2025-01`: `13942`
 *   `2025-02`: `1560`
 *   `2025-03`: `29973`
@@ -52,6 +57,7 @@ This audit is strictly limited to the 2025 annual portion of the Montreal mechan
 ---
 
 ## 5. Device/Vehicle Distribution
+
 `Véhicule` is treated as a non-empty categorical string.
 *   **Unique Vehicles**: `13`
 *   **Vehicle Identifier Patterns**:

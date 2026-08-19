@@ -54,13 +54,16 @@ A segment-month record `segment_id_YYYY-MM` is eligible for inclusion in the mod
 ## Boundary and Exclusion Rules
 
 ### 90-Day Boundary Rules
+
 * **Start of Window**: $t + 1\text{ second}$ (exclusive of $t$ to prevent leakage from interventions that occurred on the day of feature extraction).
 * **End of Window**: $t + 90\text{ days}$ (inclusive).
 
 ### 180-Day Sensitivity
+
 * Evaluated strictly as a sensitivity analysis. The target window is defined as $(t, t + 180\text{ days}]$.
 
 ### Right-Edge Exclusion
+
 * If the maximum date in the dataset is $T_{\max}$, then any observation month starting at $t$ where $t + 90\text{ days} > T_{\max}$ must be excluded from training, as the 90-day future window cannot be fully observed.
 
 ---
@@ -97,6 +100,7 @@ Assume $T_{\max} =$ **2025-12-31** and we are evaluating the target for the mont
 ## Phase Gate
 
 To transition to Phase 1, target definitions must be frozen.
+
 * [ ] Formal target wording approved.
 * [ ] Eligibility and boundary rules defined.
 * [ ] No implementation started.

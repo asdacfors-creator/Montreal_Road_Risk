@@ -5,6 +5,7 @@ This document presents the content audit and quality checks performed on the Env
 ---
 
 ## 1. Dataset Identity and Metadata
+
 *   **Dataset ID**: `eccc_daily_weather`
 *   **Official Landing Page**: [climate.weather.gc.ca Search Portal](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html)
 *   **Station Inventory URL**: [Station Inventory EN.csv](https://collaboration.cmc.ec.gc.ca/cmc/climate/Get_More_Data_Plus_de_donnees/Station%20Inventory%20EN.csv)
@@ -16,6 +17,7 @@ This document presents the content audit and quality checks performed on the Env
 ## 2. File Verification & Paths
 
 ### Station Inventory File
+
 *   **Local Relative Path**: `data/raw/eccc_weather/station_inventory/Station Inventory EN.csv`
 *   **Modified Date Line**: `Modified Date: 2026-07-08 23:30 UTC`
 *   **Disclaimer (Inventory)**: `"Station Inventory Disclaimer: Please note that this inventory list is a snapshot of stations on our website as of the modified date, and may be subject to change without notice."`
@@ -24,6 +26,7 @@ This document presents the content audit and quality checks performed on the Env
 *   **SHA-256**: `33fcee2d966edf47fdaf5164fe91772f1987e4e7b4a19eede7ffdfcf898ea632`
 
 ### Annual Daily CSV Files
+
 *   **File Count**: `34` annual files (17 McTavish + 17 Montréal-Trudeau)
 *   **Expected Directory (McTavish)**: `data/raw/eccc_weather/mctavish/`
 *   **Expected Directory (Trudeau)**: `data/raw/eccc_weather/montreal_trudeau/`
@@ -33,9 +36,11 @@ This document presents the content audit and quality checks performed on the Env
 ---
 
 ## 3. Raw CSV Structure and Encoding
+
 *   **Encoding**: UTF-8 with BOM (`\ufeff`)
 *   **Total Headers count**: `31` columns
 *   **Header Keys**:
+
     `["Longitude (x)", "Latitude (y)", "Station Name", "Climate ID", "Date/Time", "Year", "Month", "Day", "Data Quality", "Max Temp (°C)", "Max Temp Flag", "Min Temp (°C)", "Min Temp Flag", "Mean Temp (°C)", "Mean Temp Flag", "Heat Deg Days (°C)", "Heat Deg Days Flag", "Cool Deg Days (°C)", "Cool Deg Days Flag", "Total Rain (mm)", "Total Rain Flag", "Total Snow (cm)", "Total Snow Flag", "Total Precip (mm)", "Total Precip Flag", "Snow on Grnd (cm)", "Snow on Grnd Flag", "Dir of Max Gust (10s deg)", "Dir of Max Gust Flag", "Spd of Max Gust (km/h)", "Spd of Max Gust Flag"]`
 
 ---

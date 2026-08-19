@@ -88,6 +88,7 @@ Recorded road-repair interventions represent municipal administrative decisions 
 ## Phase Gate
 
 To transition to Phase 1, this document must be approved by the supervisor.
+
 * [ ] Traceability of proposal and course guide requirements verified.
 * [ ] No implementation started.
 * [ ] Relative links verified.

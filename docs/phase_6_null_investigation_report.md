@@ -60,6 +60,7 @@ status. The correction commit will not amend commit 9942670.
 ### 2.4 Row-Ordering Proof
 
 Train parquet is read in deterministic order (first 3 IDs: `1010001_2016-12`, `1010004_2016-12`,
+
 `1010005_2016-12`; last 3: `4019255_2022-10`, `4019257_2022-10`, `4019258_2022-10`).  
 Feature rows are loaded in this exact order. **Only the label array is permuted.** The
 feature-to-label alignment is: `feature[i]` is paired with `y_shuffled[i] = y_orig[perm[i]]`.  

@@ -1,6 +1,7 @@
 # Pavement Condition Campaign Audit: 2024
 
 ## 1. Official Identity & Metadata
+
 - **Campaign Label**: 2024 Campaign
 - **Network Scope**: Réseau artériel (RAAV)
 - **Source URL**: [https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/97489483-85f9-49cc-be33-829559439ab2/download/auscultation-chaussee-2024.gpkg](https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/97489483-85f9-49cc-be33-829559439ab2/download/auscultation-chaussee-2024.gpkg)
@@ -12,23 +13,27 @@
 - **Encoding**: Binary (SQLite)
 
 ## 2. Row and Field Counts
+
 - **Physical Row / Feature Count**: 17176
 - **Total Data Record Count**: 17176
 - **Header Columns**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 - **Normalized In-Memory Headers**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 
 ## 3. Survey Dates & Observed Temporal Coverage
+
 - **Min DateReleve**: `2024-06-04`
 - **Max DateReleve**: `2024-10-23`
 - **Year Distribution**:
   - `2024`: 17176 records
 
 ## 4. Identifier Uniqueness
+
 - **ID Column**: `ID_TRC`
 - **Unique ID_TRC Count**: 17176
 - **Duplicate ID_TRC Excess**: 0
 
 ## 5. PCI (Pavement Condition Index) Results
+
 - **Parsed Successfully**: 17176
 - **Missing / Null Count**: 0
 - **PCI range**: `2.0` to `100.0`
@@ -49,6 +54,7 @@
   - `Bon`: 3897 rows
 
 ## 6. IRI (International Roughness Index) Results
+
 - **Parsed Successfully**: 16388
 - **Missing / Null Count**: 788
 - **Sentinel Candidates (IRI = 0 with State = "-")**: 0
@@ -71,12 +77,14 @@
   - `Excellent`: 345 rows
 
 ## 7. Consistency Checks
+
 - **PCI index exists but state label missing**: 0
 - **PCI state exists but index missing**: 0
 - **IRI index exists but state label missing**: 0
 - **IRI state exists but index missing**: 0
 
 ## 8. Geometry and Spatial Attributes
+
 - **Format Geometry**: LineString
 - **CRS declaration**: `EPSG:32188 (NAD83 / MTM zone 8)`
 - **Geometry Type Distribution**: `{'LineString': 17176}`
@@ -89,11 +97,13 @@
 - **RTree Row Count**: 17176
 
 ## 9. Current Géobase ID Feasibility Check
+
 - **Matched current Géobase IDs**: 16999 / 17176 (98.97%)
 - **Unmatched campaign IDs**: 177
 - **Feasibility Wording**: "Most historical condition identifiers still appear in the current Géobase snapshot, but unmatched identifiers remain and may reflect segment renumbering, reconstruction, geometry changes or coverage differences."
 
 ## 10. Schema Definitions (Attributes table)
+
 | Field | Types | Null Count | Null % | Blank Count |
 | --- | --- | --- | --- | --- |
 | ID_TRC | int | 0 | 0.00% | 0 |
@@ -109,6 +119,7 @@
 | Etat_IRI | str | 788 | 4.59% | 0 |
 
 ## 11. Scientific Limitations & Audit Decisions
+
 - **Scientific Warnings**:
   1. Historical ID_TRC drift relative to the current Géobase.
   2. IRI missingness or sentinel values (e.g. 1326 zeroes in 2020) require a downstream strategy.

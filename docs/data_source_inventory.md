@@ -45,16 +45,19 @@ This inventory documents the verified metadata, landing pages, geometries, licen
 ## Source-by-Source Details
 
 ### 1. Mechanized Pothole Repairs
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Check if the schema contains a column representing `segment_id` (e.g., `ID_TRONCON`). If missing, spatial snapping must be implemented.
 * **Limitations and Warnings**: Represents only mechanized repairs. Manual interventions are excluded.
 
 ### 2. Géobase Road Network
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Verify the schema of `ID_TRONCON` to ensure it can serve as the unique spatial key `segment_id`.
 * **Limitations and Warnings**: Topology changes (street modifications) occur monthly, which may cause matching drift with older historical repair data.
 
 ### 3. Asset & Resurfacing
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Completed. Verified unique identifier `ID_VOI_CHAUSSEE_AGR` (64,025 unique values).
 * **Limitations and Warnings**:
@@ -64,6 +67,7 @@ This inventory documents the verified metadata, landing pages, geometries, licen
   4. No direct identifier relationship to Géobase exists; spatial joining is required.
 
 ### 4. Pavement Condition (PCI/IRI)
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Completed. Verified six historical campaigns (2010, 2015, 2018, 2020, 2022, 2024).
 * **Limitations and Warnings**:
@@ -73,11 +77,13 @@ This inventory documents the verified metadata, landing pages, geometries, licen
   4. 2020 contains 99 duplicate feature records and 1,326 IRI missing-data sentinel values (`0` with state `-`).
 
 ### 5. Traffic Counts
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Inspect coordinate mapping of sensors and check distance to nearest road segments.
 * **Limitations and Warnings**: High spatial sparsity. Most local streets have no sensors, requiring functional class proxies.
 
 ### 6. Borough Boundaries
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Completed. Verified GeoJSON (34 features) in NAD83 / MTM zone 8 (EPSG:32188).
 * **Limitations and Warnings**:
@@ -87,6 +93,7 @@ This inventory documents the verified metadata, landing pages, geometries, licen
   4. Temporal mismatch: This is a static 2023 snapshot applied to historical observations going back to 2016.
 
 ### 7. ECCC Weather Data
+
 * **Inclusion/Exclusion**: Included.
 * **Phase 2 Verification Required**: Completed. Retrieved and audited continuous daily logs (2009-2025) for McTavish (Station 10761) and Trudeau (Station 30165).
 * **Limitations and Warnings**:
@@ -100,11 +107,13 @@ This inventory documents the verified metadata, landing pages, geometries, licen
 ## Inclusion and Rejection Criteria
 
 ### Inclusion Criteria
+
 * Datasets must be published by official municipal or federal agencies.
 * Spatial layers must cover the territory of the Agglomération de Montréal.
 * Date fields must cover the historical modeling period.
 
 ### Rejection Criteria
+
 * Discard datasets with no documented metadata or licensing information.
 * Reject records with invalid or missing coordinates that cannot be resolved textually.
 * Reject datasets with restrictive commercial licenses.
@@ -121,6 +130,7 @@ This inventory documents the verified metadata, landing pages, geometries, licen
 ## Phase Gate
 
 To transition to Phase 1, the data inventory must be finalized.
+
 * [ ] Landing pages and licenses verified.
 * [ ] No data downloaded.
 * [ ] Verification requirements for Phase 2 defined.

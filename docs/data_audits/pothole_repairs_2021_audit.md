@@ -1,11 +1,13 @@
 # Data Audit Report — 2021 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2021 annual portion of the Montreal mechanized pothole repairs dataset. No other years are covered.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule_2021.gpkg`
 *   **Size**: `6266880` bytes
 *   **SHA-256 Checksum**: `a7c7b0a44db5ef84fd885d35730a94d0292815da8c036cb479c6dc793d2dd245`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2021 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **SQLite/GPKG Integrity Check**: `ok`
 *   **Application ID**: `0x47504b47`
 *   **User Version**: `10200`
@@ -32,6 +35,7 @@ This audit is strictly limited to the 2021 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format and Temporal Results
+
 *   **Date declared type**: DATETIME
 *   **Date format**: T separator with 3 fractional digits (e.g. `2021-01-25T07:35:20.063`)
 *   **Date Range**: `2021-01-25 07:35:20.063` to `2021-03-17 09:32:25.127`
@@ -40,6 +44,7 @@ This audit is strictly limited to the 2021 annual portion of the Montreal mechan
 *   **Timezone**: Undeclared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2021-01`: `8655`
 *   `2021-02`: `10060`
 *   `2021-03`: `31605`
@@ -50,6 +55,7 @@ This audit is strictly limited to the 2021 annual portion of the Montreal mechan
 ---
 
 ## 5. Device/Vehicle Distribution
+
 `Véhicule` is treated as a non-empty categorical string.
 *   **Unique Vehicles**: `14` (All 50320 rows use NP-hyphen-number identifiers).
 *   **NP-hyphen-number Count**: `50320`

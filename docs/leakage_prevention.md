@@ -93,6 +93,7 @@ Later feature engineering may require the construction of the following features
 ---
 
 ## Weather Leakage Controls
+
 * **Temporal Cutoff constraint**: Weather observations used for a segment-month feature must be available on or before that observation cutoff.
 * **Target Window Isolation**: No weather occurring inside the future 90-day or 180-day target window may leak into the predictor features for a given segment-month observation.
 * **Allowed Aggregation Windows**: Candidate aggregation windows (previous 30 days, previous 90 days, previous 365 days, and winter-season-to-date) are allowed as predictors, provided they only use historical daily records.
@@ -100,6 +101,7 @@ Later feature engineering may require the construction of the following features
 ---
 
 ## Limitations and Pending Verification
+
 * Final temporal split dates are pending real-data inspection in Phase 3.
 * Missingness and imputation requirements for pothole repairs, road assets, pavement condition, and weather have been fully audited in Phase 2.
 
@@ -108,6 +110,7 @@ Later feature engineering may require the construction of the following features
 ## Phase Gate
 
 To transition to Phase 1, leakage controls must be approved.
+
 * [ ] Leakage pathways mapped.
 * [ ] Pipeline controls and assertions defined.
 * [ ] No implementation started.

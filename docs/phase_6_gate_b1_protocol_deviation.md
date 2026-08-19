@@ -26,10 +26,12 @@ During Phase 6 Gate A, model and data remediation occurred, creating new, correc
 * Remediated panel directory: `data/processed/phase_4_remediated_01`
 
 However, the path constants at the top of `scratch/run_gate_b1.py` were not updated to point to these new, remediated directories. Instead, they retained the original Phase 5 paths:
+
 ```python
 SEALED_PATH = Path("data/processed/phase_5/test.parquet")
 PANEL_DIR = Path("data/processed/phase_4")
 ```
+
 This error caused the script to load contaminated features and targets, and inadvertently decode the un-remediated `target_repair_180d` column present in `data/processed/phase_5/test.parquet`.
 
 ---
@@ -62,6 +64,7 @@ The invalid B1 artifacts have been moved to `models/phase_6/quarantine/gate_b1_c
 During the initial clean rerun (commit f67860d), three remediated Phase 4 partitions (`panel_year=2024/panel_month=01`, `02`, `03`) were accidentally written back in place with `target_repair_90d` added.
 
 **Remediation & Restoration:**
+
 * The mutated partitions were fully restored and rebuilt as target-free feature panels.
 * All 102 remediated Phase 4 partitions were verified: matching count = 102, changed count = 0, missing count = 0.
 * Target labels were extracted strictly from the legacy Phase 4 directory into a separate, isolated, target-only artifact: `data/processed/phase_6/gate_b1_authorized_targets_90d.parquet`.

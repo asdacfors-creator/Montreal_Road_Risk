@@ -1,6 +1,7 @@
 # Data Audit Report — Road Assets Pavement (Chaussée Agrégée)
 
 ## 1. Dataset Identity and Official Resource Names
+
 *   **Official Dataset Name**: `Chaussée agrégée et intersection — Base de données des actifs de voirie`
 *   **Official Resources**:
     *   `Voirie - C22 - actif Chaussée agrégée - format GeoJSON` (Primary road-assets polygon archive)
@@ -11,6 +12,7 @@
 ## 2. File Verification and Normalization
 
 ### A. Source and Destination Paths
+
 *   **Source Archive Path**: `<DOWNLOADS_DIR>\voi_chaussee_s_c22_geojson (1).zip`
 *   **Destination Archive Path**: `D:\Montreal_Road_Risk\data\raw\montreal\road_assets\voi_chaussee_s_c22_geojson.zip`
     *   *Filename Normalization Note*: The destination file copy name is normalized by removing the browser-generated `" (1)"` suffix. The original file remains unchanged in the downloads folder.
@@ -33,6 +35,7 @@
 ## 3. ZIP Archive and GeoJSON Structural Integrity
 
 ### A. ZIP Archive Details
+
 *   **Genuine ZIP**: `True`
 *   **Integrity Test**: `ok` (CRC verification passed)
 *   **Member Count**: `1`
@@ -41,6 +44,7 @@
 *   **Member SHA-256 Checksum**: `9b6e19c47e85e8337a4ded215ddab8a322c63d9f57cd86ccc55d32037651c35d`
 
 ### B. GeoJSON Structure
+
 *   **JSON Parse Result**: `Parse Successful`
 *   **Top-level Object Type**: `FeatureCollection`
 *   **Dataset Name**: `VOI_CHAUSSEE_S_C22`
@@ -53,6 +57,7 @@
 ---
 
 ## 4. Geometry Quality Audit
+
 *   **Geometry-type distribution**: `{"Polygon": 64025}`
 *   **Null geometries**: `0`
 *   **Empty geometries**: `0`
@@ -66,6 +71,7 @@
 ---
 
 ## 5. Identifier Quality
+
 *   **Attribute Key**: `ID_VOI_CHAUSSEE_AGR`
 *   **Non-null values**: `64025`
 *   **Unique values**: `64025`
@@ -97,12 +103,14 @@
 ## 7. Date Integrity and Logic Audits
 
 ### A. DATECONSTRUCTION
+
 *   **Parseable**: `64025`
 *   **Missing**: `0`
 *   **Earliest**: `1865-12-30`
 *   **Latest**: `2026-01-14`
 
 ### B. DATECONSTRUCTIONPREC_REF Precision Distribution
+
 A populated date field does not imply precise knowledge of the construction date. Over 88% of construction dates are flagged as highly imprecise or unknown:
 
 | Precision Category | Row Count | Percentage |
@@ -118,6 +126,7 @@ A populated date field does not imply precise knowledge of the construction date
 | **`DATE construction +/- 10 ans`** | 14 | 0.02% |
 
 ### C. DATERESURFACAGE
+
 *   **Non-missing**: `8490`
 *   **Missing**: `55535`
 *   **Missing percentage**: `86.74%`
@@ -126,9 +135,11 @@ A populated date field does not imply precise knowledge of the construction date
 *   *Warning*: This high missingness rate is scientifically critical. Missing resurfacing dates must not be filled with construction dates or arbitrary defaults.
 
 ### D. DATE_VERSION
+
 *   **Unique value**: `2026-07-04` (representing the snapshot dataset extraction version).
 
 ### E. Date Logic Anomalies
+
 *   **Invalid date strings**: `0`
 *   **Future construction relative to DATE_VERSION**: `0`
 *   **Future resurfacing relative to DATE_VERSION**: `0`
@@ -141,6 +152,7 @@ A populated date field does not imply precise knowledge of the construction date
 ## 8. Attribute-Value Reference CSV Audit
 
 ### A. CSV Integrity
+
 *   **Encoding**: `UTF-8 with BOM`
 *   **Delimiter**: `,` (Comma)
 *   **Header**: `['ATTRIBUT', 'REFERENCE']`
@@ -150,6 +162,7 @@ A populated date field does not imply precise knowledge of the construction date
 *   **Attributes Represented**: `16` distinct dictionary categories
 
 ### B. Reference Domain Mapping Coverage
+
 The GeoJSON Uses `MATERIAUCHAUSSEE_REF` which maps to the CSV domain key `MATERIAU_REF` (alias mapping). The mapping checks reveal:
 *   **100% Coverage**: Every observed code in the GeoJSON `*_REF` fields is successfully mapped to its corresponding domain key in the CSV (unmapped observed values count is `0` across all fields).
 *   **Documented but Unused Values**:
@@ -183,10 +196,12 @@ The GeoJSON Uses `MATERIAUCHAUSSEE_REF` which maps to the CSV domain key `MATERI
 ---
 
 ## 10. Audit Decision
+
 **PASS WITH LIMITATIONS — The dataset is structurally valid and clean, but contains severe temporal limitations (86.74% missing resurfacing dates, 88.57% unknown/imprecise construction dates, and 133 date-logic anomalies). Geometries are unprojected and lacks direct ID join with Géobase, which must be resolved spatially in Phase 3.**
 
 ---
 
 ## 11. Raw-File Integrity and Phase 3 Lock Confirmation
+
 *   **Raw-File Integrity**: Confirmed. Raw destination files remain completely unmodified.
 *   **Phase 3 Lock**: Confirmed. Phase 3 remains locked.

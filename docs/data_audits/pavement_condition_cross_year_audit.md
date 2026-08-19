@@ -1,6 +1,7 @@
 # Pavement Condition Campaigns Cross-Year Audit Report
 
 ## 1. Format and Encoding Differences Across Campaigns
+
 | Campaign | Format | Encoding | File Size (bytes) | SHA-256 Hash |
 | --- | --- | --- | --- | --- |
 | 2010 | CSV | UTF-8 (No BOM) | 3614958 | `5ee6becde9cb4d2b75246b19458968a6da29c7266f32360b1f097e732ed89a74` |
@@ -13,6 +14,7 @@
 - **Encoding Risk**: Reading the 2020 GeoJSON file as UTF-8 directly will cause decoding errors on French characters. It must be processed with CP1252.
 
 ## 2. Header and Schema Differences
+
 CSV files (2010, 2015, 2018) contain space-based names, whereas GeoJSON/GPKG resources use underscores:
 - `Indice PCI` / `Indice_PCI`
 - `Etat PCI` / `Etat_PCI`
@@ -21,6 +23,7 @@ CSV files (2010, 2015, 2018) contain space-based names, whereas GeoJSON/GPKG res
 - *In-memory Normalization*: The auditor normalizes spaces to underscores to allow uniform access.
 
 ## 3. CRS and Bounding Box Differences
+
 - **2010, 2015, 2018**: No source geometry is included.
 - **2020 GeoJSON**: `urn:ogc:def:crs:OGC:1.3:CRS84` (WGS 84), Bounds: `[-73.93696408990775, 45.41525343636446, -73.47912177774066, 45.70375341771243]`
 - **2022 local GPKG**: `EPSG:4326` (WGS 84), Bounds: `[-73.9431719500133, 45.415263012224855, -73.47977608330396, 45.70109617196858]`
@@ -28,6 +31,7 @@ CSV files (2010, 2015, 2018) contain space-based names, whereas GeoJSON/GPKG res
 - **CRS Warning**: No working CRS is approved for the project yet. These coordinate differences must be resolved during Phase 3 reprocessing.
 
 ## 4. Network-Scope and Survey Timing Analysis
+
 The campaigns do not represent annual full-network surveys:
 - **2010 campaign**: complete network, actual survey spans 2009–2011.
 - **2015 campaign**: complete network.
@@ -37,12 +41,14 @@ The campaigns do not represent annual full-network surveys:
 - **2024 campaign**: arterial network only.
 
 ### ID Overlaps
+
 - 2022 local vs 2024 arterial: only 28 shared IDs.
 - 2018 arterial vs 2022 local: only 60 shared IDs.
 - 2020 arterial vs 2022 local: 0 shared IDs.
 These low overlaps reflect distinct network scopes. Do not treat 2022 and 2024 as consecutive citywide snapshots. Local and arterial networks follow different measurement schedules.
 
 ## 5. Current Géobase ID Match Coverage
+
 | Campaign | Total IDs | Matched in Géobase | Match Rate | Unmatched Count |
 | --- | --- | --- | --- | --- |
 | 2010 | 29271 | 28009 | 95.69% | 1262 |
@@ -55,15 +61,18 @@ These low overlaps reflect distinct network scopes. Do not treat 2022 and 2024 a
 *Interpretation*: Most historical condition identifiers still appear in the current Géobase snapshot, but unmatched identifiers remain and may reflect segment renumbering, reconstruction, geometry changes or coverage differences. Do not assume 100% identifier joining is possible.
 
 ## 6. Duplicates, Sentinels, and Missing Values
+
 - **2020 Duplicates**: 99 exact feature duplicates and 99 duplicate ID_TRC values.
 - **2020 Sentinels**: 1,326 records exhibit `Indice_IRI = 0` and `Etat_IRI = "-"`. This is a missing-data sentinel pattern and must not be treated as genuine zero roughness.
 - **IRI Missingness**: Spans from 0.00% (2010, 2015) to 9.24% (2022) and 4.59% (2024).
 
 ## 7. Temporal Leakage Prevention
+
 > [!IMPORTANT]
 > **Temporal Leakage Rule**: For any future road-segment-month observation, pavement-condition values may only come from a survey whose DateReleve is on or before the observation cutoff date. A future survey must never be backfilled into earlier observations. The 2022 local campaign and 2024 arterial campaign cover different network scopes and must not be treated as citywide consecutive snapshots.
 
 ## 8. Supported and Unsupported Uses
+
 - **Supported Uses**:
   - Segment-level condition feature construction using historical prior surveys.
   - Identification of network-scope constraints (local vs. arterial splits).
@@ -73,6 +82,7 @@ These low overlaps reflect distinct network scopes. Do not treat 2022 and 2024 a
   - Naive direct joins without accounting for ID drift and unmatched segment rates (~1-5%).
 
 ## 9. Phase 3-Deferred Decisions
+
 - Imputation or representation strategy for the 1,326 CP1252 GeoJSON IRI sentinels.
 - Imputation of missing IRI in 2022 and 2024.
 - Spatial reprojection and working project CRS selection.

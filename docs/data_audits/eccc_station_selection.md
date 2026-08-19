@@ -7,6 +7,7 @@ This document details the selection and role assignment of historical daily weat
 ## 1. Selected Stations and Metadata
 
 ### Primary Station: MCTAVISH
+
 *   **Station ID**: `10761`
 *   **Climate ID**: `7024745`
 *   **WMO ID**: `71612`
@@ -17,6 +18,7 @@ This document details the selection and role assignment of historical daily weat
 *   **Selected Period**: 2009–2025 inclusive.
 
 ### Secondary Station: MONTREAL/PIERRE ELLIOTT TRUDEAU INTL
+
 *   **Station ID**: `30165`
 *   **Climate ID**: `702S006`
 *   **WMO ID**: `71183`

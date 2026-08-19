@@ -1,11 +1,13 @@
 # Data Audit Report — 2024 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2024 annual portion of the Montreal mechanized pothole repairs dataset. No other years are covered.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule_2024.gpkg`
 *   **Size**: `6369280` bytes
 *   **SHA-256 Checksum**: `7e3ea9b16999fea7286501e5f1490ef84c89655bd6c3d812b38473e5232ccf34`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2024 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **SQLite/GPKG Integrity Check**: `ok`
 *   **Application ID**: `0x47504b47`
 *   **User Version**: `10200`
@@ -32,6 +35,7 @@ This audit is strictly limited to the 2024 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format and Temporal Results
+
 *   **Date declared type**: DATETIME
 *   **Date format**: T separator with 3 fractional digits (e.g. `2024-01-18T21:29:15.063`)
 *   **Date Range**: `2023-04-11 09:04:57.063000` to `2024-05-30 23:56:08.063000`
@@ -40,6 +44,7 @@ This audit is strictly limited to the 2024 annual portion of the Montreal mechan
 *   **Timezone**: Undeclared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2023-04`: `1` (Temporal out-of-year record from `2023-04-11 09:04:57.063`)
 *   `2023-11`: `3` (Temporal out-of-year records from November 2023)
 *   `2024-01`: `15783`
@@ -53,6 +58,7 @@ This audit is strictly limited to the 2024 annual portion of the Montreal mechan
 ---
 
 ## 5. Device/Vehicle Distribution
+
 `Véhicule` is treated as a non-empty categorical string.
 *   **Unique Vehicles**: `15`
 *   **Vehicle Identifier Patterns**:

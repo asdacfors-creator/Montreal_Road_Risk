@@ -7,11 +7,14 @@ This document defines the temporal standards, parsing heuristics, timezone conte
 ## 1. Timezone and Localization Policy
 
 ### Explicit Timezone Assumption
+
 Source timestamps (such as those in raw pothole repairs CSV/GPKG files) lack explicit timezone metadata (UTC offsets or timezone strings). 
+
 - **Timezone Assumption**: All timestamps are assumed to represent local time in Montreal, Quebec, Canada, and are explicitly localized to the **`America/Toronto`** timezone.
 - **Naiveness Preservation**: The original naive date and time string fields are preserved unmodified in all intermediate and output Parquet files.
 
 ### Daylight-Saving Time (DST) Safety
+
 To prevent coordinate shifts or duplicate observations due to spring-forward and fall-back transitions, the pipeline classifies localization status for every record into one of five categories:
 1. **`successfully_localized`**: Naive time mapped to a unique local timezone offset.
 2. **`ambiguous_dst`**: Fall-back transition hour (e.g. 01:00 to 02:00 in November) where a local time occurs twice.
@@ -29,6 +32,7 @@ To prevent coordinate shifts or duplicate observations due to spring-forward and
 Pavement quality inspections (reporting Pavement Condition Index (PCI) and International Roughness Index (IRI)) represent irregular campaigns conducted in 2010, 2015, 2018, 2020, 2022, and 2024.
 
 ### Information Leakage Controls
+
 To guarantee that model training remains mathematically sound and free from future data leakage:
 - **Availability cut-off**: An auscultation observation becomes available for panel merging **no earlier than its actual survey date** (`survey_date` / `DateReleve`).
 - **Prohibition of Backward Filling**: A future survey campaign (e.g. 2024 condition inspections) must never be back-propagated or used to represent road state in earlier observation months (e.g. 2023).
@@ -44,6 +48,7 @@ Daily weather observations are compiled from 2009-01-01 through 2025-12-31 (6,20
 - **Secondary Station**: Montréal-Trudeau (Climate ID `702S006`)
 
 ### Variable-Specific Fallback Allowlist
+
 To prevent geographic dilution of sensitive precipitation types, same-calendar-day fallback from McTavish to Trudeau is permitted **only** for:
 - `Mean Temp (°C)`
 - `Min Temp (°C)`
@@ -56,12 +61,14 @@ For each of these allowed variables, daily records contain explicit fallback fla
 - `{var}_source_station_used` (`"MCTAVISH"` or `"MONTREAL_TRUDEAU"`)
 
 ### Excluded Variables (No Fallback or Combining)
+
 The following variables are highly sensitive to local micro-climates and are excluded from fallback:
 - **`Total Rain (mm)`**: Spatially variable, insufficient completeness to justify interpolation.
 - **`Total Snow (cm)`**: Spatially variable, insufficient completeness.
 - **`Snow on Grnd (cm)`**: Highly sensitive to local heat-island and terrain factors; must remain strictly station-specific.
 
 ### Observed-Zero Preservation
+
 An observed numeric zero (0.0) is a valid, meaningful weather observation (e.g., no snow on ground, or 0.0°C temperature) and is **never** interpreted as missing or null.
 
 ---
@@ -71,6 +78,7 @@ An observed numeric zero (0.0) is a valid, meaningful weather observation (e.g.,
 Road asset construction and resurfacing dates are highly imprecise. Over 88% of construction dates represent year-only, approximate, or unknown values.
 
 ### A. Non-Exact observed construction dates
+
 - **Proxy Lower Bounds**: January 1st is utilized strictly as a computational year start (`construction_year_start` / `resurfacing_year_start`) or computational lower bound (`construction_date_lower_bound` / `resurfacing_date_lower_bound`). Downstream modeling components must not treat this proxy as an exact day.
 - **Precision Tracking**: Every asset is explicitly flagged with its temporal precision status (`construction_date_precision`, `resurfacing_date_precision`):
   - `precise`: Fully parseable exact date.
@@ -83,6 +91,6 @@ Road asset construction and resurfacing dates are highly imprecise. Over 88% of 
   - `construction_date_unknown` / `resurfacing_date_unknown` is `1` for any unknown or missing date.
 
 ### B. Resurfacing-Before-Construction Anomaly Check
+
 - The pipeline checks and flags records where the resurfacing lower bound date is strictly less than the construction lower bound date.
 - These records are flagged with `resurfacing_before_construction_candidate_flag = 1` and preserved unmodified for downstream sensitivity analysis.
-

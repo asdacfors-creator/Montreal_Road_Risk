@@ -76,6 +76,7 @@ This log records the core architectural decisions, working hypotheses, and pendi
 ## Phase Gate
 
 To transition to Phase 6, the decision log must be reviewed and approved.
+
 * [x] Decision types separated.
 * [x] All pending Phase 5 decisions resolved.
 * [x] Phase 5 primary 90-day candidate selected (full-data XGBoost).

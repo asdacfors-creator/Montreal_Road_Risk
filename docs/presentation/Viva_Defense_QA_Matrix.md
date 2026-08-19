@@ -15,6 +15,7 @@
 ## Q1: How did you mathematically prevent data leakage across the 11 test anchor months?
 
 ### Professor's Intent
+
 Testing understanding of temporal validation discipline, chronological boundary enforcement, and information leakage prevention.
 
 ### Model Answer
@@ -41,6 +42,7 @@ The embargo zone ensures that no validation-period information bleeds into the t
 ## Q2: Why did raw XGBoost probabilities outperform Platt scaling on Brier score and log loss?
 
 ### Professor's Intent
+
 Testing understanding of calibration theory, proper scoring rules, and the Platt scaling trade-off.
 
 ### Model Answer
@@ -61,6 +63,7 @@ In our case, the XGBoost raw probabilities are already **reasonably well-calibra
 ## Q3: Why do SHAP attributions express statistical association and not physical causality?
 
 ### Professor's Intent
+
 Testing ethical and epistemological rigour — a mandatory non-causal disclaimer.
 
 ### Model Answer
@@ -82,6 +85,7 @@ This is why we included mandatory non-causal disclaimers on every dashboard page
 ## Q4: How did you handle right-censoring (19.12% intervals; 63.7% non-recurrent segments) in the mixed first-event/recurrent-event survival cohort?
 
 ### Professor's Intent
+
 Testing survival analysis methodological rigour and understanding of censored data.
 
 ### Model Answer
@@ -89,6 +93,7 @@ Testing survival analysis methodological rigour and understanding of censored da
 Right-censoring is a fundamental property of any survival analysis on observational administrative data — it is not a data quality failure, but a structural feature that must be handled correctly.
 
 In our cohort, **30,559 segments (63.7%)** have zero observed recurrent repair events in the constructed cohort. At the interval level, 47,900 of 250,495 records are right-censored (19.12%).
+
 - **Zero-repair segments (55.1%):** Never received a recorded repair during the study window (2016–2025). Their true time-to-first-repair is unknown — we only know it exceeds the study duration.
 - **Single-repair segments (8.6%):** Received exactly one repair date, after which no subsequent repair was recorded. Their next inter-repair interval is right-censored at the study end date.
 
@@ -109,6 +114,7 @@ The critical assumption we made is **non-informative censoring** — segments th
 ## Q5: How did the spatial panel prevent data contamination across borough boundaries?
 
 ### Professor's Intent
+
 Testing understanding of spatial data governance and cross-contamination risks.
 
 ### Model Answer
@@ -128,6 +134,7 @@ The spatial containment protocol operated at three levels:
 ## Q6: Why did the validation AP (0.806) drop so significantly to the test AP (0.506)?
 
 ### Professor's Intent
+
 Testing understanding of temporal distribution shift, train-test generalization, and realistic deployment expectations.
 
 ### Model Answer
@@ -147,6 +154,7 @@ The AP drop from `0.806` (validation) to `0.506` (final test) is a **real and ex
 ## Q7: How did you verify that the XGBoost null controls confirmed no data leakage?
 
 ### Professor's Intent
+
 Testing understanding of the negative control experiment design (Phase 6 Gate A).
 
 ### Model Answer
@@ -174,6 +182,7 @@ This proves the `perm=137` elevation is a **stochastic subsampling artefact** fr
 ## Q8: What does the Concordance Index (C-index) measure and how does it differ from ROC-AUC?
 
 ### Professor's Intent
+
 Testing understanding of survival analysis evaluation metrics and the distinction from classification metrics.
 
 ### Model Answer
@@ -197,6 +206,7 @@ Probability that for two randomly selected segments where segment $i$ experience
 ## Q9: How did you select the Top-10% operational policy over the Top-5% or Top-20% alternatives?
 
 ### Professor's Intent
+
 Testing understanding of precision-recall trade-offs and operational deployment context.
 
 ### Model Answer
@@ -212,6 +222,7 @@ The three policies represent different precision-recall trade-offs:
 | **Top 20%** | 23.77% | 82.08% | 4.10× | High recall — catches 4/5 of repairs, lower precision |
 
 **Decision framework for operators:**
+
 - If budget is **very constrained** (limited inspection teams): use **Top-5%** to maximize precision
 - If the goal is **high coverage** of deteriorating segments: use **Top-20%** for 82% recall
 - If **balanced operational utility** is desired: **Top-10%** is the standard academic benchmark
@@ -223,6 +234,7 @@ The **frozen threshold policy** (HIGH ≥ 0.177, MEDIUM ≥ 0.089) provides an a
 ## Q10: Why did you choose Weibull AFT over Cox Proportional Hazards for the survival model?
 
 ### Professor's Intent
+
 Testing knowledge of parametric vs. semi-parametric survival model selection.
 
 ### Model Answer

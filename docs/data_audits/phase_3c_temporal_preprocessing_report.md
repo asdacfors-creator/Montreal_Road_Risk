@@ -16,12 +16,14 @@ The table below shows the record counts, observed date ranges, missing counts, a
 | **Weather Daily (Canonical)** | $6,209$ | 2009-01-01 | 2025-12-31 | $0$ | $0$ | $0$ | $0$ | $0$ |
 
 ### A. Wording and Definition of "Repeated Dates"
+
 - **Distinct Repeated Dates**: The number of unique calendar dates that appear more than once in the dataset.
 - **Rows in Repeated Dates**: The total number of rows associated with these repeated dates.
 - **Excess Rows**: The number of additional rows beyond one row per repeated date (which corresponds to `duplicated().sum()`).
 - *Note*: Legitimate multiple repairs or surveys on the same date are not considered duplicate events; they represent distinct events occurring on the same calendar day.
 
 ### B. Road Assets Construction and Resurfacing Mappings
+
 January 1st is utilized strictly as a computational year lower bound (`construction_date_lower_bound` / `resurfacing_date_lower_bound`) or year start (`construction_year_start` / `resurfacing_year_start`) and does not represent an actual observed date where the source provides only a year or approximate interval. Precision categories are tracked separately:
 
 - **Construction Date Precision Counts**:
@@ -43,6 +45,7 @@ January 1st is utilized strictly as a computational year lower bound (`construct
 Naive timestamps are assumed to represent local time in Montreal and are localized to `America/Toronto` with DST safeguards:
 
 ### Potholes
+
 - **Total Records**: $1,027,267$
 - **Successfully Localized**: $1,027,267$
 - **Ambiguous DST**: $0$
@@ -54,6 +57,7 @@ Naive timestamps are assumed to represent local time in Montreal and are localiz
   - `mismatch`: $5$
 
 ### Genuine Year Mismatch Records
+
 Only five genuine out-of-year records exist in the pothole repairs dataset (which are preserved unmodified in their source files):
 
 | Source File | Source Year | Parsed Event Year | Count | Earliest Date | Latest Date |

@@ -3,6 +3,7 @@
 This guide outlines the step-by-step instructions for manually acquiring the necessary open datasets for the Montreal Road Risk project. 
 
 ## Strict General Rules
+
 1. **Official Domains Only**: You must remain on the official Ville de Montréal Open Data portal (`donnees.montreal.ca`) or the official Government of Canada Weather portal (`climate.weather.gc.ca`). **Do not use third-party mirrors, unauthorized API proxies, or random download links.**
 2. **VPN Usage**: You may use a reputable VPN if needed to access municipal or federal data portals. **Never share VPN credentials with Antigravity.**
 3. **No Modification**: Preserve the original downloaded filenames exactly as they are served. **Do not rename, edit, or unzip the downloaded files.** Keep them in their raw, native states.
@@ -16,6 +17,7 @@ This guide outlines the step-by-step instructions for manually acquiring the nec
 Please download the datasets in the following strict order:
 
 ### 1. Géobase Road Network
+
 *   **Dataset ID**: `montreal_geobase`
 *   **Role**: Canonical Montreal road-segment geometries, names, segment identifiers, and road classes.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/geobase](https://donnees.montreal.ca/dataset/geobase)
@@ -27,6 +29,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: File size, original filename, download date, and SHA-256 hash.
 
 ### 2. Mechanized Pothole Repair Records
+
 *   **Dataset ID**: `mechanized_pothole_repairs`
 *   **Role**: Primary maintenance repair event log for constructing the 90-day binary classification target.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/refection-de-chaussee-par-remplissage-mecanise-de-nid-de-poule](https://donnees.montreal.ca/dataset/refection-de-chaussee-par-remplissage-mecanise-de-nid-de-poule)
@@ -47,6 +50,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: File size, original filename, download date, and SHA-256 hash.
 
 ### 3. Road Assets — Aggregated Pavement
+
 *   **Dataset ID**: `road_assets_pavement`
 *   **Role**: Candidate construction/resurfacing dates, foundation classes, and pavement materials.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/voirie-chaussee-intersection](https://donnees.montreal.ca/dataset/voirie-chaussee-intersection)
@@ -58,6 +62,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: Original filename, file size, and SHA-256 hash.
 
 ### 4. Pavement-Condition Indicators
+
 *   **Dataset ID**: `pavement_condition`
 *   **Role**: Pavement Condition Index (PCI) and International Roughness Index (IRI) indicators.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/condition-chaussees-reseau-routier](https://donnees.montreal.ca/dataset/condition-chaussees-reseau-routier)
@@ -74,6 +79,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: Original filenames, file sizes, and SHA-256 hashes in `pavement_condition_resource_manifest.csv`.
 
 ### 5. Borough Boundaries
+
 *   **Dataset ID**: `borough_boundaries`
 *   **Role**: Administrative boundaries used for spatial grouping, spatial overlay filters, and validation.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/limites-administratives-agglomeration](https://donnees.montreal.ca/dataset/limites-administratives-agglomeration)
@@ -89,6 +95,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: Filename, size, and SHA-256 hash in `data/metadata/data_manifest.csv`.
 
 ### 6. ECCC Weather
+
 *   **Dataset ID**: `eccc_daily_weather`
 *   **Role**: Environment and Climate Change Canada historical daily weather variables (minimum/maximum/mean temperature, precipitation, snowfall, freeze-thaw count).
 *   **Official Landing Page**: [https://climate.weather.gc.ca/historical_data/search_historic_data_e.html](https://climate.weather.gc.ca/historical_data/search_historic_data_e.html)
@@ -104,6 +111,7 @@ Please download the datasets in the following strict order:
 *   **To Record After Download**: Filenames, sizes, and SHA-256 hashes in `data/metadata/eccc_weather_resource_manifest.csv`.
 
 ### 7. Optional Traffic Counts
+
 *   **Dataset ID**: `traffic_counts`
 *   **Role**: Optional traffic-exposure density proxy.
 *   **Official Landing Page**: [https://donnees.montreal.ca/dataset/comptage-vehicules-pietons](https://donnees.montreal.ca/dataset/comptage-vehicules-pietons)

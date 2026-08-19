@@ -17,11 +17,13 @@
 | **Affects** | Figure 2 (Chronological Split) |
 
 ### Nov–Dec 2022 Development Gap
+
 - **Scale:** 2 monthly anchors (95,966 rows).
 - **Panel Status:** Retained in the complete 102-anchor panel.
 - **Partition Assignment:** Nov–Dec 2022 are retained in the complete 102-anchor panel but are unassigned to governed model fitting or evaluation. No additional leakage-control or buffer rationale is asserted beyond the documented partition schedule.
 
 ### Nov–Dec 2023 Excluded Transition
+
 - **Scale:** 2 monthly anchors (95,966 rows).
 - **Panel Status:** Retained in the complete 102-anchor panel.
 - **Exclusion Rationale:** Nov–Dec 2023 are excluded because their 90-day outcome windows extend into Gate B1 calibration.
@@ -41,6 +43,7 @@
 **Description:** Several subgroup strata meet the stratification key (functional road class, PCI availability, etc.) but have either fewer than 500 rows or fewer than 50 positive labels in the Gate B2 evaluation set. These groups carry status `INSUFFICIENT_SAMPLE` in `models/phase_6/test_subgroup_results.json` and are excluded from plots.
 
 **Affected strata (partial list):**
+
 - PCI Missing (`condition_missing_flag=1`): Only ~3,200 rows total, some anchors have zero positives
 - Functional Road Class 9 (Expressway ramps): n < 200 across test period
 - No Prior Repair flag = 1: Positive prevalence ≈ 1.2% (< 50 positives in some sub-periods)

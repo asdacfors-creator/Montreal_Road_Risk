@@ -53,6 +53,7 @@ This risk register evaluates technical, spatial, temporal, and schedule risks th
 ## Phase Gate
 
 To transition to Phase 1, the risk register must be reviewed and approved.
+
 * [ ] All 17 feasibility risks logged.
 * [ ] Mitigations and fallbacks defined.
 * [ ] No implementation started.

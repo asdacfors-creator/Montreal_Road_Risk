@@ -19,6 +19,7 @@ This document details the evaluation, final selection, and implementation parame
 The project has established **`EPSG:32188` (NAD83 / MTM zone 8)** as the canonical working coordinate reference system.
 
 ### Rationale:
+
 1. **Native Alignment**: The official Ville de Montréal administrative boundaries are published natively in EPSG:32188. Selecting it as the working CRS avoids any reprojection error on boundary shapes.
 2. **Measurement Consistency**: All spatial joining, distance calculations, and buffer generation (e.g., segment proximity to pothole repairs or assets) require coordinates in meters. EPSG:32188 uses meters natively.
 3. **Regional Standard**: Recommended by the Ville de Montréal open data portal for local GIS operations.

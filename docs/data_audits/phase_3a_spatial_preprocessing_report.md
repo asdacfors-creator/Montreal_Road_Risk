@@ -18,6 +18,7 @@ This report summarizes the execution, validation, and final outputs of Phase 3A:
 ## 2. Consumed & Generated Files
 
 ### Consumed Raw Files:
+
 1. `data/raw/montreal/borough_boundaries/limites-administratives-agglomeration-nad83.geojson`
 2. `data/raw/montreal/geobase/geobase.json`
 3. `data/raw/montreal/road_assets/voi_chaussee_s_c22_geojson.zip`
@@ -28,6 +29,7 @@ This report summarizes the execution, validation, and final outputs of Phase 3A:
 8. Pavement condition GPKG files (2022, 2024) under `data/raw/montreal/pavement_condition/`
 
 ### Generated Interim Files:
+
 1. `data/interim/spatial_base/administrative_boundaries_32188.parquet`
 2. `data/interim/spatial_base/geobase_32188.parquet`
 3. `data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet`

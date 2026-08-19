@@ -1,11 +1,13 @@
 # Data Audit Report — 2017 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2017 annual portion of the Montreal mechanized pothole repairs dataset. No other years (2016 or 2018–2025) are covered by this audit.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule-_2017.csv`
 *   **Size**: `8616313` bytes
 *   **SHA-256 Checksum**: `af4f1fede65dee1d171b01e261929168621408526d2746a17875119c3f328069`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2017 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **Encoding**: UTF-8
 *   **Delimiter**: `,` (Comma)
 *   **Line-Ending Style**: CRLF (Windows)
@@ -27,6 +30,7 @@ This audit is strictly limited to the 2017 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format Change from 2016
+
 *   **2016 Time Format**: `%I:%M:%S %p` (12-hour AM/PM format)
 *   **2017 Time Format**: `%H:%M:%S` (24-hour time format)
 *   *Audit Note: The time-of-day representation differs between annual files. The reusable auditor script was updated to dynamically detect and support both formats. In the 2017 file, 100% of the rows (205,437) are formatted as `%H:%M:%S`.*
@@ -34,6 +38,7 @@ This audit is strictly limited to the 2017 annual portion of the Montreal mechan
 ---
 
 ## 5. Temporal Coverage and July–November Gap
+
 *   **DateJour Parser Format**: `%Y-%m-%d`
 *   **DateHeure Parser Format**: `%H:%M:%S`
 *   **Invalid Dates (`DateJour`)**: `0`
@@ -46,6 +51,7 @@ This audit is strictly limited to the 2017 annual portion of the Montreal mechan
 *   **Timezone**: Not declared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2017-01`: `30455`
 *   `2017-02`: `30267`
 *   `2017-03`: `40762`
@@ -64,6 +70,7 @@ This audit is strictly limited to the 2017 annual portion of the Montreal mechan
 ---
 
 ## 6. Device Distribution (`Appareil`)
+
 `Appareil` is a categorical operational metadata identifier representing the device/equipment performing the repair. It must not be treated as a physical road characteristic or used directly as a predictive feature.
 *   **Unique Devices**: `12`
 *   **Missingness & Validity**:

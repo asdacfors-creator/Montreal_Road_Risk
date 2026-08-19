@@ -45,12 +45,14 @@ The table below summarizes input and output row counts and matching statistics f
 ## 3. Pothole Distance & Candidate Distributions
 
 ### Snapping Distance Percentiles (overall 1,027,267 repairs)
+
 - **50th percentile (Median)**: $3.73$ meters
 - **90th percentile**: $9.43$ meters
 - **95th percentile**: $11.84$ meters
 - **Maximum distance**: $14,132.85$ meters (indicates outlier GPS points outside municipal boundaries)
 
 ### Candidate Count within Sensitivity Distance Bands (Cumulative)
+
 - **Within 10m**: $940,404$ records
 - **Within 15m**: $1,004,821$ records
 - **Within 20m**: $1,020,583$ records
@@ -58,6 +60,7 @@ The table below summarizes input and output row counts and matching statistics f
 - **Within 50m**: $1,026,366$ records
 
 ### Recommendation Justification
+
 Since **95.0% of all repair points snap within 11.84 meters**, and match rate leveling occurs at 20 meters ($1,020,583$ matches), a snapping threshold of **20.0 meters** is recommended. Increasing the threshold to 30m or 50m adds negligible valid matches while significantly increasing risk of incorrect laneway assignment and coordinate error. 
 All points exceeding $20.0$m ($6,684$ points) are preserved as `unmatched` with `canonical_segment_id = None`.
 
@@ -74,6 +77,7 @@ Pavement asset match counts evaluated at multiple candidate overlap fractions:
 - **Tied cases (competing polygons)**: $40$ segments overall ($33$ ties at the recommended $0.10$ threshold)
 
 ### Recommendation Justification
+
 A candidate threshold of **0.10** is recommended as the minimum overlap fraction. This filters out segment intersections that merely graze the boundary edges of pavement polygons (under 10% length), while preserving over 91.4% of valid polygon matches. The 10% rule identifies a primary candidate and does not prove that the road-asset polygon is historically correct for every observation date.
 
 ---
@@ -98,6 +102,7 @@ A candidate threshold of **0.10** is recommended as the minimum overlap fraction
 ## 6. Verification & Pipeline Artifacts Created
 
 ### Output Files Generated
+
 1. `data/interim/phase_3b/pothole_segment_links.parquet` ($1,027,267$ rows)
 2. `data/interim/phase_3b/pavement_condition_segment_links.parquet` ($121,163$ rows)
 3. `data/interim/phase_3b/road_asset_segment_crosswalk.parquet` ($47,983$ rows)
@@ -106,6 +111,7 @@ A candidate threshold of **0.10** is recommended as the minimum overlap fraction
 6. `data/interim/phase_3b/phase_3b_run_manifest.json`
 
 ### Verification Checks Passed
+
 - **JSON Validation**: Config parses successfully using standard json validation.
 - **Ruff Inquiries**: Zero syntax or format warnings.
 - **Parquet Roundtrip**: Read-back check confirmed that file length, schema, and values are identical to data before serialization.

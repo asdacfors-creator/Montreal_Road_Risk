@@ -1,6 +1,7 @@
 # Data Audit Report — Montreal Géobase Routière
 
 ## 1. Source and Purpose
+
 *   **Dataset ID**: `montreal_geobase`
 *   **Official Name**: Géobase — réseau routier
 *   **Source URL**: [https://donnees.montreal.ca/dataset/geobase](https://donnees.montreal.ca/dataset/geobase)
@@ -10,6 +11,7 @@
 ---
 
 ## 2. File Integrity
+
 *   **Filename**: `geobase.json`
 *   **Size**: `43145805` bytes
 *   **SHA-256 Checksum**: `fbb1a46f4fd64ae156a778a3bfe3ef176583967607de33762d26b07f53572c25`
@@ -18,6 +20,7 @@
 ---
 
 ## 3. Schema Summary
+
 The dataset contains `47983` features and 18 attributes:
 
 | Column Name | Data Type | Null Count | Description |
@@ -44,6 +47,7 @@ The dataset contains `47983` features and 18 attributes:
 ---
 
 ## 4. Geometry Audit
+
 *   **Total Geometry Count**: `47983` (100% of rows have geometries)
 *   **Geometry Type**: `LineString` (`47983` features)
 *   **Null Geometries**: `0`
@@ -54,6 +58,7 @@ The dataset contains `47983` features and 18 attributes:
 ---
 
 ## 5. Identifier Audit (`ID_TRC`)
+
 *   **Total Values**: `47983`
 *   **Unique Values**: `47983`
 *   **Null Values**: `0`
@@ -68,6 +73,7 @@ The dataset contains `47983` features and 18 attributes:
 ## 6. Attribute Audits
 
 ### Road Class (`CLASSE`)
+
 *   **Null Values**: `0`
 *   **Value Range**: All values lie strictly within the range `0–9` (no values outside this range).
 *   **Class Frequencies & Descriptions**:
@@ -83,16 +89,19 @@ The dataset contains `47983` features and 18 attributes:
     *   Class 9 (Rue projetée / Projected street): `76`
 
 ### Road Names (`ODONYME`)
+
 *   **Null Values**: `0`
 *   **Blank or Empty String Values**: `0`
 
 ### Borough-Side Fields (`ARR_GCH` / `ARR_DRT`)
+
 *   **Null `ARR_GCH`**: `0`
 *   **Null `ARR_DRT`**: `0`
 *   **Both Missing**: `0`
 *   *Note: These fields contain administrative borough identifiers assigned to the left and right sides of each segment.*
 
 ### Missingness Summary
+
 The critical identifier, geometry, road-class, borough-side and complete-street-name fields are populated. However, LIE_VOIE, DIR_VOIE and a small number of TYP_VOIE values are null or blank. These components can be optional within the road-name structure and must not be imputed during this basic audit.
 
 The complete missingness counts for all 17 non-geometry attributes are detailed below:
@@ -120,6 +129,7 @@ The complete missingness counts for all 17 non-geometry attributes are detailed 
 ---
 
 ## 7. Coordinate and CRS Findings
+
 *   **Reported CRS**: CRS interpreted by GeoPandas as EPSG:4326. The raw GeoJSON does not contain an explicit crs member; WGS 84 longitude/latitude interpretation is consistent with GeoJSON conventions and the observed Montréal coordinate bounds.
 *   **Geographic Coordinate Bounds**:
     *   Minimum Longitude: `-73.98318853`
@@ -131,6 +141,7 @@ The complete missingness counts for all 17 non-geometry attributes are detailed 
 ---
 
 ## 8. Scientific Limitations
+
 1.  **Unique Identifier Scope**: While `ID_TRC` is verified as the unique identifier within this Géobase file, this does **not** yet prove that other datasets (such as pothole repairs or pavement conditions) use this identifier or are directly compatible. Cross-dataset joining compatibility still requires Phase 2 audits and Phase 3 validation.
 2.  **Lack of Historical Dimension**: The Géobase represents a current, single-point-in-time network snapshot. It does **not** provide a historical observation date for every road segment. Consequently, it cannot be used to reconstruct historical network topologies.
 3.  **Borough Assignments**: Left-hand (`ARR_GCH`) and right-hand (`ARR_DRT`) borough identifiers may diverge for boundary segments (e.g., bordering streets). Any deterministic assignment of a segment to a single borough must be governed by a documented spatial assignment rule established in Phase 3.
@@ -139,9 +150,11 @@ The complete missingness counts for all 17 non-geometry attributes are detailed 
 ---
 
 ## 9. Audit Decision
+
 **PASS — suitable as the canonical road-network candidate (basic structural and content audit only; does not approve spatial joins or cross-dataset compatibility)**
 
 ---
 
 ## 10. Next Permitted Action
+
 Begin manual download and basic content audit of the second dataset in the sequence: **mechanized pothole repairs** (`mechanized_pothole_repairs`).

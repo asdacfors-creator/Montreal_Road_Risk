@@ -5,6 +5,7 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 1. Dataset Identity and Metadata
+
 *   **Dataset ID**: `borough_boundaries`
 *   **Official Publisher**: Service des infrastructures du réseau routier (SIRR), Ville de Montréal
 *   **Official Landing Page**: [donnees.montreal.ca](https://donnees.montreal.ca/dataset/limites-administratives-agglomeration)
@@ -14,6 +15,7 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 2. File Verification & Paths
+
 *   **Source File Selected**: `<DOWNLOADS_DIR>\limites-administratives-agglomeration-nad83 (1).geojson`
 *   **Source Size**: `1,470,723` bytes
 *   **Source SHA-256**: `7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192`
@@ -26,9 +28,11 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 3. Raw GeoJSON Structure and CRS
+
 *   **Root Type**: `FeatureCollection`
 *   **Root Keys**: `['type', 'crs', 'features']`
 *   **CRS Declaration**:
+
     ```json
     "crs": {
       "type": "name",
@@ -37,6 +41,7 @@ This document presents the content audit and quality checks performed on the Mon
       }
     }
     ```
+
 *   **CRS Interpretation**: Resolves to `EPSG:32188` (NAD83 / MTM zone 8).
 *   **Official CRS Methodology Warning**: The Ville de Montréal states that administrative boundaries were constituted in NAD83 / MTM Zone 8. The portal recommends working in this native reference system to preserve homogeneity. Alternative coordinate reference system transformations provided by the portal (such as WGS 84 GeoJSON versions) have not been validated by the city's geomatics division.
 *   **Project Working CRS Status**: **UNDECIDED**. While EPSG:32188 is the native reference system, the final approved project-wide coordinate reference system remains undecided in Phase 2.
@@ -44,10 +49,12 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 4. Feature and Schema Completeness
+
 *   **Feature Count**: `34`
 *   **Properties Schema**: `['ABREV', 'CODEID', 'CODEMAMH', 'CODE_3C', 'COMMENT', 'DATEMODIF', 'NOM', 'NOM_OFFICIEL', 'NUM', 'TYPE']`
 
 ### Property Completeness (Missingness Table)
+
 | Property | Null Count | Blank Count | Populated Count | Value Types |
 | :--- | :--- | :--- | :--- | :--- |
 | **ABREV** | 0 | 0 | 34 | `str` |
@@ -69,6 +76,7 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 5. Identifier Uniqueness Table
+
 | Identifier | Null Count | Blank Count | Unique Count | Duplicate Count | Unique in Snapshot |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **CODEID** | 0 | 0 | 34 | 0 | **Yes** |
@@ -84,11 +92,13 @@ This document presents the content audit and quality checks performed on the Mon
 ---
 
 ## 6. Entity-Type Distribution
+
 The dataset contains 34 administrative divisions classified by `TYPE`:
 *   **Arrondissement** (Montréal Boroughs): `19` features
 *   **Ville liée** (Related Municipalities): `15` features
 
 ### Exact Borough List (TYPE = "Arrondissement")
+
 1.  Ahuntsic-Cartierville
 2.  Anjou
 3.  Côte-des-Neiges-Notre-Dame-de-Grâce
@@ -110,6 +120,7 @@ The dataset contains 34 administrative divisions classified by `TYPE`:
 19. Villeray-Saint-Michel-Parc-Extension
 
 ### Exact Related-Municipality List (TYPE = "Ville liée")
+
 1.  Baie-D'Urfé
 2.  Beaconsfield
 3.  Côte-Saint-Luc
@@ -132,6 +143,7 @@ The dataset contains 34 administrative divisions classified by `TYPE`:
 ---
 
 ## 7. Geometry Quality and Topology
+
 *   **Geometry-Type**: 100% `MultiPolygon` (34 features)
 *   **Null Geometries**: `0`
 *   **Empty Geometries**: `0`
@@ -157,20 +169,24 @@ The dataset contains 34 administrative divisions classified by `TYPE`:
 ---
 
 ## 8. In-Memory Feasibility Check with Géobase
+
 A read-only, in-memory feasibility comparison was executed against the Géobase road network (`data/raw/montreal/geobase/geobase.json`) by projecting the road geometries from EPSG:4326 to EPSG:32188 in memory. No reprojected or joined datasets were saved.
 
 ### Intersection Statistics
+
 *   Total Géobase road features analyzed: `47,983`
 *   Roads intersecting **zero** administrative polygons: `1` segment (99.998% intersect rate)
 *   Roads intersecting **exactly one** administrative polygon: `46,898` segments
 *   Roads intersecting **multiple** administrative polygons (boundary-crossing roads): `1,084` segments
 
 ### Intersections by Boundary Type
+
 *   **Arrondissement**: `37,595` segments
 *   **Ville liée**: `10,049` segments
 *   **Mixed** (road segment crosses an Arrondissement and a Ville liée boundary): `338` segments
 
 ### Name Domain Comparison
+
 *   **Boundary Names (34)**: Matches all 34 names.
 *   **Geobase Names (20)**: Contains 19 arrondissements names plus `'N/A'`.
 *   **Unmatched in Geobase**: `'N/A'`
@@ -180,6 +196,7 @@ A read-only, in-memory feasibility comparison was executed against the Géobase 
 ---
 
 ## 9. Coverage and Temporal Limitations
+
 1.  **Current Snapshot Constraint**: This dataset is a static administrative-boundary snapshot (last modified on `2023-11-29`).
 2.  **Temporal Mismatch**: The historical road-repair observations in this project extend back to 2016. Municipal administrative boundaries can change over time.
 3.  **Historical Mismatch Warning**: Because `DATEMODIF` does not provide a complete historical version history, applying 2023 administrative polygons to 2016–2022 observations assumes boundary stability. This assumption must be registered as an active limitation (`L2.27`).
@@ -187,6 +204,7 @@ A read-only, in-memory feasibility comparison was executed against the Géobase 
 ---
 
 ## 10. Audit Decision
+
 *   **Audit Decision**: **PASS WITH LIMITATIONS**
 *   **Limitations Summary**:
     1.  *Current administrative snapshot vs historical observations*: Potential temporal mismatch for earlier years (`L2.27`).

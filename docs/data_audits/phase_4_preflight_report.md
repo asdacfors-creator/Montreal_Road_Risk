@@ -16,6 +16,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 ## 2. Input Verification Results
 
 ### 2.1 Géobase Road Segments
+
 | Item | Value |
 |---|---|
 | Source | `data/interim/spatial_base/geobase_32188.parquet` |
@@ -24,6 +25,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 | CRS | EPSG:32188 |
 
 ### 2.2 Phase 3C Pothole Events
+
 | Item | Value |
 |---|---|
 | Source | `data/interim/phase_3c/pothole_repairs_linked.parquet` + annual Phase 3A files |
@@ -35,6 +37,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 | Source-year mismatches | **5** |
 
 ### 2.3 Weather Data
+
 | Item | Value |
 |---|---|
 | Source | ECCC daily climate records |
@@ -43,6 +46,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 | Anchor weather rows (102 month-end dates) | 102 |
 
 ### 2.4 Pavement Condition Surveys
+
 | Item | Value |
 |---|---|
 | Source | Pavement condition linkage via Phase 3B |
@@ -52,6 +56,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 | As-of rule | `survey_date <= as_of_date` strictly enforced |
 
 ### 2.5 Road Assets
+
 | Item | Value |
 |---|---|
 | Source | Road assets Phase 3B linkage |
@@ -60,6 +65,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 | Date contradiction tracking | `date_contradiction_status` field |
 
 ### 2.6 Borough Boundaries
+
 | Item | Value |
 |---|---|
 | Source | `data/interim/spatial_base/administrative_boundaries_32188.parquet` |
@@ -107,6 +113,7 @@ The preflight verification confirms that all required Phase 4 inputs exist, are 
 ---
 
 ## 6. Pre-run Immutability Snapshot
+
 - 88 files hashed under `data/raw/` and `data/interim/phase_3a/b/c/`
 - Snapshot saved: `data/processed/phase_4/pre_run_snapshot.json`
 - Comparison performed after run completion (see Phase 4 Gate Report §7)

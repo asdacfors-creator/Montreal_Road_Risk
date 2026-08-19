@@ -1,6 +1,7 @@
 # Pavement Condition Campaign Audit: 2018
 
 ## 1. Official Identity & Metadata
+
 - **Campaign Label**: 2018 Campaign
 - **Network Scope**: Réseau artériel (RAAV)
 - **Source URL**: [https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/85085655-4ac0-4114-9793-715c0b63e2a0/download/auscultation-chaussees-2018-arteriel.csv](https://donnees.montreal.ca/dataset/cee47404-08bc-40e6-af71-cfcdce4617e8/resource/85085655-4ac0-4114-9793-715c0b63e2a0/download/auscultation-chaussees-2018-arteriel.csv)
@@ -12,23 +13,27 @@
 - **Encoding**: UTF-8
 
 ## 2. Row and Field Counts
+
 - **Physical Row / Feature Count**: 14115
 - **Total Data Record Count**: 14114
 - **Header Columns**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice PCI', 'Etat PCI', 'Indice IRI', 'Etat IRI']`
 - **Normalized In-Memory Headers**: `['ID_TRC', 'Rue', 'De', 'A', 'Longueur', 'Arrondissement', 'DateReleve', 'Indice_PCI', 'Etat_PCI', 'Indice_IRI', 'Etat_IRI']`
 
 ## 3. Survey Dates & Observed Temporal Coverage
+
 - **Min DateReleve**: `2018-07-04`
 - **Max DateReleve**: `2018-08-19`
 - **Year Distribution**:
   - `2018`: 14114 records
 
 ## 4. Identifier Uniqueness
+
 - **ID Column**: `ID_TRC`
 - **Unique ID_TRC Count**: 14114
 - **Duplicate ID_TRC Excess**: 0
 
 ## 5. PCI (Pavement Condition Index) Results
+
 - **Parsed Successfully**: 14114
 - **Missing / Null Count**: 0
 - **PCI range**: `5.0` to `100.0`
@@ -49,6 +54,7 @@
   - `Très mauvais`: 3090 rows
 
 ## 6. IRI (International Roughness Index) Results
+
 - **Parsed Successfully**: 14099
 - **Missing / Null Count**: 15
 - **Sentinel Candidates (IRI = 0 with State = "-")**: 0
@@ -71,22 +77,26 @@
   - `Excellent`: 295 rows
 
 ## 7. Consistency Checks
+
 - **PCI index exists but state label missing**: 0
 - **PCI state exists but index missing**: 0
 - **IRI index exists but state label missing**: 0
 - **IRI state exists but index missing**: 0
 
 ## 8. Geometry and Spatial Attributes
+
 - **Format Geometry**: None
 - **CRS declaration**: `No source geometry is included in this selected campaign resource.`
 - **Geometry Details**: No source geometry is included in this selected campaign resource.
 
 ## 9. Current Géobase ID Feasibility Check
+
 - **Matched current Géobase IDs**: 13336 / 14114 (94.49%)
 - **Unmatched campaign IDs**: 778
 - **Feasibility Wording**: "Most historical condition identifiers still appear in the current Géobase snapshot, but unmatched identifiers remain and may reflect segment renumbering, reconstruction, geometry changes or coverage differences."
 
 ## 10. Schema Definitions (Attributes table)
+
 | Field | Types | Null Count | Null % | Blank Count |
 | --- | --- | --- | --- | --- |
 | ID_TRC | int | 0 | 0.00% | 0 |
@@ -102,6 +112,7 @@
 | Etat_IRI | str | 0 | 0.00% | 15 |
 
 ## 11. Scientific Limitations & Audit Decisions
+
 - **Scientific Warnings**:
   1. Historical ID_TRC drift relative to the current Géobase.
   2. IRI missingness or sentinel values (e.g. 1326 zeroes in 2020) require a downstream strategy.

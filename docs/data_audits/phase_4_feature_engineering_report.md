@@ -18,7 +18,9 @@ This report documents the feature engineering methodologies, feature groups, and
 The features are grouped into five distinct logical categories:
 
 ### 2.1 Historical Repairs (Lagged Target Features)
+
 These features characterize a segment's historical repair activity strictly on or before the anchor date ($t$).
+
 - **`days_since_last_repair`**: Number of days from the most recent accepted repair on the segment to $t$.
 - **`no_prior_repair_flag`**: Binary flag (1 if no repairs were recorded on the segment before $t$, 0 otherwise).
 - **`repair_event_count_raw_{W}d`**: Total raw accepted pothole repairs on the segment in the trailing $W$-day window ($W \in \{30, 90, 180, 365\}$).
@@ -27,7 +29,9 @@ These features characterize a segment's historical repair activity strictly on o
 - **`prior_repair_months_12m`**: Number of distinct calendar months with at least one accepted repair in the past 12 months.
 
 ### 2.2 Rolling Weather Features
+
 Weather features are compiled from daily Environment and Climate Change Canada (ECCC) records, using a robust multi-station fallback strategy. They represent rolling climate metrics for the trailing $W$-day window ($W \in \{30, 90, 180, 365\}$).
+
 - **`total_precip_sum_{W}d`**: Cumulative precipitation (mm) in the window.
 - **`mean_temp_mean_{W}d`**: Average daily mean temperature (°C).
 - **`min_temp_min_{W}d`**: Minimum daily temperature (°C).
@@ -39,7 +43,9 @@ Weather features are compiled from daily Environment and Climate Change Canada (
 - **`{metric}_fallback_days_{W}d`**: Number of days in the window where a fallback station was used.
 
 ### 2.3 Pavement Condition Surveys
+
 Pavement condition metrics represent the structural health of the road, updated dynamically using an as-of join key (`survey_date <= t`).
+
 - **`latest_pci`**: Median Pavement Condition Index (PCI) score from the most recent survey.
 - **`pci_min`**, **`pci_max`**, **`pci_std`**: PCI distribution statistics for the segment.
 - **`latest_iri`**: Median International Roughness Index (IRI) score.
@@ -49,7 +55,9 @@ Pavement condition metrics represent the structural health of the road, updated 
 - **`days_since_condition_survey`**: Time elapsed since the most recent survey.
 
 ### 2.4 Road Assets
+
 Asset construction and resurfacing age details are joined relative to $t$. If construction lies in the future or crosses the anchor, it is censored.
+
 - **`years_since_construction_lower` / `_upper`**: Age interval of the road asset.
 - **`years_since_resurfacing_lower` / `_upper`**: Resurfacing age interval.
 - **`future_asset_record_hidden_flag`**: 1 if construction starts after $t$.
@@ -59,7 +67,9 @@ Asset construction and resurfacing age details are joined relative to $t$. If co
 - **`resurfacing_before_construction_candidate_flag`** & **`date_contradiction_status`**: Data quality audits.
 
 ### 2.5 Static Road Features
+
 Static descriptors of the segment derived from the Geobase road network and administrative boundary crosswalks.
+
 - **`functional_road_class`**: Functional category (e.g. collector, local).
 - **`road_type` / `road_category`**: Structural type (e.g. bridge, tunnel, street).
 - **`segment_length_m`**: Length of the road segment in metres.

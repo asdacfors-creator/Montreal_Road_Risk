@@ -13,6 +13,7 @@
 Commit `edd95d6` claimed "XGBoost subsampling variance" as the root cause of seed 137's
 elevated AP/AUC. This claim was not experimentally proven because the original null-control
 protocol used the same integer for both `np.random.default_rng(seed)` (label shuffle) and
+
 `params["seed"] = seed` (XGBoost row/column sampling), creating an unresolved confound.
 
 This experiment separates the two seeds and answers: **does the elevation follow the label
@@ -64,10 +65,12 @@ Fresh DMatrix + Booster per run, isolated temp dir per run, nthread=1.
 ### Full comparison matrix
 
 ```
+
                    model_seed=42            model_seed=137          model_seed=2026
 perm_seed=42     AP=0.0690 AUC=0.5288      (not run)               (not run)
 perm_seed=137    AP=0.0908 AUC=0.6416      AP=0.0992 AUC=0.6476    AP=0.0641 AUC=0.5367
 perm_seed=2026   AP=0.0690 AUC=0.5480      (not run)               (not run)
+
 ```
 
 ---

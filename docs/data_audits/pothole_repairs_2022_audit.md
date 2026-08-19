@@ -1,11 +1,13 @@
 # Data Audit Report — 2022 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the 2022 annual portion of the Montreal mechanized pothole repairs dataset. No other years are covered.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissage_niddepoule_2022.gpkg`
 *   **Size**: `9093120` bytes
 *   **SHA-256 Checksum**: `2da007281adeb4ff32d22e8b7c9fd9729ec8e5b1aa38d45de6c31822c0050048`
@@ -14,6 +16,7 @@ This audit is strictly limited to the 2022 annual portion of the Montreal mechan
 ---
 
 ## 3. Structural Audit
+
 *   **SQLite/GPKG Integrity Check**: `ok`
 *   **Application ID**: `0x47504b47`
 *   **User Version**: `10200`
@@ -32,6 +35,7 @@ This audit is strictly limited to the 2022 annual portion of the Montreal mechan
 ---
 
 ## 4. Time-Format and Temporal Results
+
 *   **Date declared type**: DATETIME
 *   **Date format**: T separator with 3 fractional digits (e.g. `2022-02-09T07:54:38.063`)
 *   **Date Range**: `2022-02-09 07:54:38.063` to `2022-12-16 10:50:20.063`
@@ -40,6 +44,7 @@ This audit is strictly limited to the 2022 annual portion of the Montreal mechan
 *   **Timezone**: Undeclared (no timezone is assumed).
 
 ### Monthly Counts
+
 *   `2022-02`: `13086`
 *   `2022-03`: `35242`
 *   `2022-04`: `10559`
@@ -53,6 +58,7 @@ This audit is strictly limited to the 2022 annual portion of the Montreal mechan
 ---
 
 ## 5. Device/Vehicle Distribution
+
 `Véhicule` is treated as a non-empty categorical string.
 *   **Unique Vehicles**: `16`
 *   **Vehicle Identifier Patterns**:

@@ -1,11 +1,13 @@
 # Data Audit Report — 2016 Mechanized Pothole Repairs
 
 ## 1. Audit Scope
+
 This audit is strictly limited to the December 2016 portion of the Montreal mechanized pothole repairs dataset. No other years (2017–2025) are covered by this audit.
 
 ---
 
 ## 2. Integrity Evidence
+
 *   **Filename**: `remplissageniddepoule-2016.csv`
 *   **Size**: `612719` bytes
 *   **SHA-256 Checksum**: `b49386f895285ac50f8ec6136723d9c9a7e78b9a762ef4330977833dd09fb8ca`
@@ -14,6 +16,7 @@ This audit is strictly limited to the December 2016 portion of the Montreal mech
 ---
 
 ## 3. Structural Results
+
 *   **Encoding**: UTF-8
 *   **Delimiter**: `,` (Comma)
 *   **Line-Ending Style**: CRLF (Windows)
@@ -24,6 +27,7 @@ This audit is strictly limited to the December 2016 portion of the Montreal mech
 *   **Unexpected Extra Columns**: `0` columns
 
 ### Column-Level Completeness & Missingness
+
 All five columns are 100% complete with no nulls, NaNs, or empty blank strings:
 
 | Column Name | Data Type | Null Count | Blank Count | Description |
@@ -37,6 +41,7 @@ All five columns are 100% complete with no nulls, NaNs, or empty blank strings:
 ---
 
 ## 4. Temporal Results
+
 *   **DateJour Parser Format**: `%Y-%m-%d`
 *   **DateHeure Parser Format**: `%I:%M:%S %p`
 *   **Invalid Dates (`DateJour`)**: `0`
@@ -48,6 +53,7 @@ All five columns are 100% complete with no nulls, NaNs, or empty blank strings:
 *   **Timezone**: Not declared (no timezone member is present in the raw data; no timezone is assumed).
 
 ### Record Count per Observed Calendar Date
+
 *   `2016-12-07`: `1020`
 *   `2016-12-08`: `1464`
 *   `2016-12-09`: `1344`
@@ -61,6 +67,7 @@ All five columns are 100% complete with no nulls, NaNs, or empty blank strings:
 *   `2016-12-24`: `239`
 
 ### Missing Calendar Dates in Range
+
 *   `2016-12-13` to `2016-12-19` (7 consecutive calendar days have zero records).
 
 *Scientific Note: This file represents only a partial December 2016 period of observations (spanning December 7 to December 24), not a complete calendar year of records.*
@@ -68,6 +75,7 @@ All five columns are 100% complete with no nulls, NaNs, or empty blank strings:
 ---
 
 ## 5. Device Distribution (`Appareil`)
+
 `Appareil` is treated as a categorical metadata identifier representing the device/equipment performing the repair. No frequencies should be interpreted as direct road deterioration indicators.
 *   **Unique Devices**: `11`
 *   **Missing Values**: `0`

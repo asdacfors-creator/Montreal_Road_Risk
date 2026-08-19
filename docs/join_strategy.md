@@ -40,15 +40,18 @@ Building the panel requires joining seven heterogeneous datasets. Spatial matchi
 ## Preferred and Fallback Joins
 
 ### Repair-Event Snapping
+
 * **Preferred Method**: Join using the official road segment identifier if documented in the repair dataset.
 * **Fallback Method**: Snap point coordinates of the repair event to the nearest LineString geometry of the road network.
 
 ### Borough and Related Municipality Spatial Joins
+
 * **Preferred Method**: Spatial intersection of the road segment's centroid with administrative boundary polygons (both Arrondissements and Villes liées).
 * **Fallback Method**: Join on the borough name string (`ARR_GCH` / `ARR_DRT`) if present in the segment attributes.
 * **Limitations Warning**: The 15 related municipalities (Ville liée features) are completely absent from the road attributes in the Géobase road network dataset. Therefore, assigning road segments to related municipalities requires a spatial intersection join, rather than an attribute key join.
 
 ### Asset and Resurfacing
+
 * **Preferred Method**: Spatial overlay of road LineStrings with asset polygons.
 * **Provisional Candidate**: Attribute features to the segment if the LineString overlaps the polygon by a provisional candidate threshold (to be evaluated in Phase 3).
 * **Fallback Method**: Direct attribute join on segment identifier if pre-mapped in the source file.
@@ -81,11 +84,13 @@ The weather spatial interpolation and aggregation method will be tested in Phase
 ## Validation Metrics and Rejection Rules
 
 ### Validation Metrics
+
 * Snap distance distribution percentiles (50th, 90th, 95th).
 * Percent of segments containing invalid centroids.
 * Count of mismatched or multi-allocated events.
 
 ### Rejection Rules
+
 * Discard repair events with invalid coordinates or coordinates snapping beyond the maximum selected tolerance.
 * Reject joins that create many-to-many row duplications in the panel.
 * Reject condition indices or weather logs where the inspection/observation date is after the panel observation date $t$ (leakage condition).
@@ -104,6 +109,7 @@ The weather spatial interpolation and aggregation method will be tested in Phase
 ## Phase Gate
 
 To transition to Phase 4, the join strategy must be approved.
+
 * [x] Snapping candidates and selection criteria defined.
 * [x] Weather aggregation candidates established.
 * [x] Temporal preprocessing integration complete.
