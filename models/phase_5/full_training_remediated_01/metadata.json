@@ -1,0 +1,18 @@
+{
+  "model_label": "XGBoost 90-day remediated (prior_repair_months_12m fixed)",
+  "created_utc": "2026-07-20T15:41:10.667125+00:00",
+  "remediated": true,
+  "n_train_rows": 3406793,
+  "n_val_rows": 479830,
+  "best_iteration": 76,
+  "best_score_aucpr": 0.6510228402967395,
+  "val_metrics": {
+    "AP": 0.6510298306713296,
+    "ROC-AUC": 0.9580088350952668,
+    "Brier": 0.03206288814544678,
+    "prediction_sha256": "924f404e6217164ee2a74deaf86556ebd4126b1aceefaee1176a67599a9509f8"
+  },
+  "timing_s": 390.8,
+  "peak_rss_mb": 12396.5,
+  "readback_allclose": true
+}

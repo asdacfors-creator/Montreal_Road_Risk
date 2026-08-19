@@ -1,0 +1,31 @@
+{
+  "model": "LR_C0.01_90d",
+  "Average Precision (AP)": 0.5996455407269102,
+  "ROC-AUC": 0.9530599249514384,
+  "Brier": 0.03279134851083684,
+  "n_total": 479830,
+  "n_positive": 26358,
+  "prevalence": 0.05493195506741971,
+  "precision_at_5pct": 0.593489496498833,
+  "recall_at_5pct": 0.5402154943470673,
+  "lift_at_5pct": 10.804084722097087,
+  "k_rows_5pct": 23992,
+  "k_threshold_5pct": 0.26491067886166886,
+  "precision_at_10pct": 0.4319446470625013,
+  "recall_at_10pct": 0.7863267319219971,
+  "lift_at_10pct": 7.863267319219971,
+  "k_rows_10pct": 47983,
+  "k_threshold_10pct": 0.09356456332775016,
+  "precision_at_20pct": 0.2522351666215118,
+  "recall_at_20pct": 0.9183549586463313,
+  "lift_at_20pct": 4.591774793231656,
+  "k_rows_20pct": 95966,
+  "k_threshold_20pct": 0.039445326049332465,
+  "family": "LogisticRegression",
+  "horizon": "90d",
+  "params": {
+    "C": 0.01,
+    "solver": "lbfgs"
+  },
+  "elapsed_s": 231.2
+}

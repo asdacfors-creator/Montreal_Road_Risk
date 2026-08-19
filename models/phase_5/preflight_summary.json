@@ -1,0 +1,9 @@
+{
+  "protected_file_count": 224,
+  "system_memory_pct": 65.2,
+  "process_rss_gb": 0.07972864,
+  "xgboost_available": true,
+  "xgboost_version": "3.2.0",
+  "panel_files": 102,
+  "preflight_passed": true
+}

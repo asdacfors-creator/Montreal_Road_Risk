@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "description": "Phase 6 evaluation configuration — all values frozen before Gate B1",
+
+  "sealed_test_file": "data/processed/phase_5/test.parquet",
+  "val_file": "data/processed/phase_5/val_90d.parquet",
+  "train_file": "data/processed/phase_5/train_90d.parquet",
+  "split_manifest": "models/phase_6/test_split_manifest.json",
+
+  "seed": 42,
+  "n_jobs": 1,
+
+  "calibration": {
+    "method": "platt_sigmoid",
+    "epsilon": 1e-7,
+    "logistic_C": 1e9,
+    "logistic_solver": "lbfgs",
+    "logistic_max_iter": 1000,
+    "minimum_positive_events": 100,
+    "note": "Fixed Platt/sigmoid only. Isotonic deferred (D6.2 approved)."
+  },
+
+  "metrics": {
+    "primary": "average_precision_score",
+    "primary_note": "Weighted mean of precision at successive recall thresholds (sklearn convention). NOT trapezoidal PR-AUC.",
+    "ece_bins": 10,
+    "ece_bin_edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+    "ece_empty_bin_policy": "zero_weight",
+    "ece_empty_bin_reliability_table": "NaN",
+    "calibration_intercept_ideal": 0,
+    "calibration_slope_ideal": 1,
+    "logit_epsilon": 1e-7
+  },
+
+  "top_k": {
+    "percentages": [5, 10, 20],
+    "row_count_formula": "ceil(N * K / 100)",
+    "tie_break_order": [
+      "score_descending",
+      "canonical_segment_id_ascending",
+      "as_of_date_ascending",
+      "segment_month_id_ascending"
+    ],
+    "identifiers_never_used_as_features": true
+  },
+
+  "bootstrap": {
+    "primary_unit": "segment_cluster",
+    "secondary_unit": "row_level",
+    "seed": 42,
+    "smoke_repetitions": 100,
+    "final_repetitions": 500,
+    "confidence_level": 0.95,
+    "method": "percentile",
+    "index_only": true,
+    "note": "D6.4 and D6.5 approved. Segment-cluster bootstrap samples canonical_segment_id with replacement."
+  },
+
+  "thresholds": {
+    "top_k_percents": [5, 10, 20],
+    "recall_diagnostic_target": 0.50,
+    "probability_descriptive": 0.50
+  },
+
+  "memory": {
+    "abort_pct": 85.0,
+    "soft_rss_gb": 6.0,
+    "hard_rss_gb": 8.0,
+    "min_disk_free_gb": 8.0,
+    "batch_size": 100000,
+    "watchdog_poll_seconds": 20
+  },
+
+  "subgroup": {
+    "minimum_rows": 500,
+    "minimum_positive_events": 50,
+    "minimum_top_k_positives": 10,
+    "insufficient_marker": "INSUFFICIENT_SAMPLE",
+    "note": "Cardinality of borough and road_class read from panel metadata at Gate A"
+  },
+
+  "null_controls": {
+    "seeds": [42, 137, 2026],
+    "permutation_type": "global",
+    "fixed_rounds": 184,
+    "use_validation_early_stopping": false,
+    "data": "val_only",
+    "prevalence_check": true
+  },
+
+  "output_dirs": {
+    "predictions": "data/processed/phase_6/predictions",
+    "bootstrap": "data/processed/phase_6/bootstrap",
+    "subgroup": "data/processed/phase_6/subgroup",
+    "temp": "data/processed/phase_6/temp",
+    "smoke": "data/processed/phase_6/_smoke_test",
+    "benchmark": "data/processed/phase_6/_preflight_benchmark"
+  }
+}

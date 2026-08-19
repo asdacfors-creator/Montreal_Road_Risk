@@ -1,0 +1,82 @@
+[
+  {
+    "feature": "numeric__repair_event_count_collapsed_365d",
+    "gain": 5461.021484375
+  },
+  {
+    "feature": "numeric__mean_temp_mean_30d",
+    "gain": 3960.183349609375
+  },
+  {
+    "feature": "numeric__prior_repair_months_12m",
+    "gain": 3422.295166015625
+  },
+  {
+    "feature": "numeric__min_temp_fallback_days_30d",
+    "gain": 1859.92138671875
+  },
+  {
+    "feature": "numeric__mean_temp_mean_180d",
+    "gain": 1692.176025390625
+  },
+  {
+    "feature": "numeric__freeze_thaw_max_ge_zero_sum_180d",
+    "gain": 1685.553466796875
+  },
+  {
+    "feature": "numeric__max_temp_max_30d",
+    "gain": 1548.194091796875
+  },
+  {
+    "feature": "numeric__days_since_last_repair",
+    "gain": 1069.5372314453125
+  },
+  {
+    "feature": "numeric__days_since_condition_survey",
+    "gain": 814.2979736328125
+  },
+  {
+    "feature": "numeric__repair_active_days_365d",
+    "gain": 802.7532958984375
+  },
+  {
+    "feature": "numeric__repair_history_coverage_ratio_180d",
+    "gain": 669.6531982421875
+  },
+  {
+    "feature": "numeric__max_temp_max_180d",
+    "gain": 576.765380859375
+  },
+  {
+    "feature": "categorical__functional_road_class_0",
+    "gain": 529.0505981445312
+  },
+  {
+    "feature": "numeric__max_temp_max_90d",
+    "gain": 514.5370483398438
+  },
+  {
+    "feature": "numeric__freeze_thaw_min_le_zero_sum_180d",
+    "gain": 470.6336975097656
+  },
+  {
+    "feature": "numeric__mean_temp_mean_90d",
+    "gain": 466.12078857421875
+  },
+  {
+    "feature": "categorical__administrative_category_Arrondissement",
+    "gain": 450.94219970703125
+  },
+  {
+    "feature": "numeric__min_temp_min_365d",
+    "gain": 450.345458984375
+  },
+  {
+    "feature": "numeric__min_temp_min_180d",
+    "gain": 440.2127990722656
+  },
+  {
+    "feature": "numeric__max_temp_fallback_days_365d",
+    "gain": 339.7662658691406
+  }
+]

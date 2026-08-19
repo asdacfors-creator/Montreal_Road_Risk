@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "approved_working_crs": "EPSG:32188",
+  "inputs": {
+    "geobase": "data/interim/spatial_base/geobase_32188.parquet",
+    "borough_boundaries": "data/interim/spatial_base/administrative_boundaries_32188.parquet",
+    "road_assets": "data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet",
+    "potholes_pattern": "data/interim/phase_3a/pothole_repairs/pothole_repairs_{YEAR}_32188.parquet",
+    "potholes_years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+    "pavement_pattern": "data/interim/phase_3a/pavement_condition/pavement_condition_{YEAR}_32188.parquet",
+    "pavement_campaigns": ["2010", "2015", "2018", "2020", "2022", "2024"]
+  },
+  "outputs": {
+    "pothole_links": "data/interim/phase_3b/pothole_segment_links.parquet",
+    "pavement_links": "data/interim/phase_3b/pavement_condition_segment_links.parquet",
+    "road_asset_crosswalk": "data/interim/phase_3b/road_asset_segment_crosswalk.parquet",
+    "road_boundary_crosswalk": "data/interim/phase_3b/road_boundary_crosswalk.parquet",
+    "qa_summary": "data/interim/phase_3b/linkage_qa_summary.json",
+    "run_manifest": "data/interim/phase_3b/phase_3b_run_manifest.json"
+  },
+  "pothole_linkage": {
+    "candidate_distance_bands_m": [10.0, 15.0, 20.0, 30.0, 50.0],
+    "tie_tolerance_m": 0.5
+  },
+  "road_asset_linkage": {
+    "candidate_overlap_fractions": [0.0, 0.10, 0.25, 0.50]
+  }
+}

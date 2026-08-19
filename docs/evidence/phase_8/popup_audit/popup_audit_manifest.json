@@ -1,0 +1,78 @@
+{
+  "completed_at": "2026-07-22T17:41:05.800200+00:00",
+  "headless": false,
+  "browser": "Playwright Chromium / Chrome",
+  "url": "http://localhost:8501/Interactive_Risk_Map",
+  "target_segments_audited": [
+    {
+      "tier_label": "Tier 1: HIGH (p >= 0.177239)",
+      "segment_month_id": "1180005_2024-09",
+      "canonical_segment_id": "1180005",
+      "date_str": "2024-09-30",
+      "borough": "18",
+      "road_class": "5",
+      "raw_probability": 0.18596510589122772,
+      "risk_percentile_rank": 100.0,
+      "priority_band_exclusive": "HIGH",
+      "has_shap_explanation": true,
+      "top_pos_feat_1": "repair_event_count_collapsed_365d",
+      "top_pos_shap_1": 0.8788360953330994
+    },
+    {
+      "tier_label": "Tier 2: MEDIUM (0.089069 <= p < 0.177239)",
+      "segment_month_id": "1010254_2024-09",
+      "canonical_segment_id": "1010254",
+      "date_str": "2024-09-30",
+      "borough": "17",
+      "road_class": "6",
+      "raw_probability": 0.0899660736322403,
+      "risk_percentile_rank": 96.90619594439698,
+      "priority_band_exclusive": "HIGH",
+      "has_shap_explanation": true,
+      "top_pos_feat_1": "repair_event_count_collapsed_365d",
+      "top_pos_shap_1": 0.8402746319770813
+    },
+    {
+      "tier_label": "Tier 3: WATCH (0.038477 <= p < 0.089069)",
+      "segment_month_id": "1010235_2024-09",
+      "canonical_segment_id": "1010235",
+      "date_str": "2024-09-30",
+      "borough": "17",
+      "road_class": "6",
+      "raw_probability": 0.05882059782743454,
+      "risk_percentile_rank": 92.13679844945085,
+      "priority_band_exclusive": "MEDIUM",
+      "has_shap_explanation": false,
+      "top_pos_feat_1": "Explanation outside frozen Phase 7 scope",
+      "top_pos_shap_1": null
+    },
+    {
+      "tier_label": "Tier 4: Below WATCH (p < 0.038477)",
+      "segment_month_id": "1010001_2024-07",
+      "canonical_segment_id": "1010001",
+      "date_str": "2024-07-31",
+      "borough": "17",
+      "road_class": "0",
+      "raw_probability": 0.0005884828278794885,
+      "risk_percentile_rank": 69.88829377071046,
+      "priority_band_exclusive": "OTHER",
+      "has_shap_explanation": false,
+      "top_pos_feat_1": "Explanation outside frozen Phase 7 scope",
+      "top_pos_shap_1": null
+    },
+    {
+      "tier_label": "Tier 5: Segment ID 1625036",
+      "segment_month_id": "1625036_2024-07",
+      "canonical_segment_id": "1625036",
+      "date_str": "2024-07-31",
+      "borough": "12",
+      "road_class": "7",
+      "raw_probability": 0.0013211834011599422,
+      "risk_percentile_rank": 99.9124689994373,
+      "priority_band_exclusive": "HIGH",
+      "has_shap_explanation": false,
+      "top_pos_feat_1": "Explanation outside frozen Phase 7 scope",
+      "top_pos_shap_1": null
+    }
+  ]
+}

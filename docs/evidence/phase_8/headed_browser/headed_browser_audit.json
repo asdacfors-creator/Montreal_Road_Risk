@@ -1,0 +1,110 @@
+{
+  "completed_at": "2026-07-21T16:48:34.436738+00:00",
+  "verdict": "PASS",
+  "headless": false,
+  "browser_channel": "Google Chrome / Playwright Chromium",
+  "base_url": "http://localhost:8501",
+  "health_status": "HTTP 200 OK",
+  "pages": {
+    "executive_overview": {
+      "status": "PASS",
+      "checks": {
+        "527813_rows": true,
+        "47983_segs": true,
+        "11_anchors": true,
+        "AP_0505693": true,
+        "AUC_0920953": true,
+        "Brier_0039827": true,
+        "GateB2_notice": true,
+        "Causal_disclaimer": true
+      }
+    },
+    "interactive_risk_map": {
+      "status": "PASS",
+      "checks": {
+        "anchor_2025-05-31": true,
+        "matched_4799": true,
+        "HIGH_MEDIUM_visible": true,
+        "over_5000_warning": true
+      }
+    },
+    "segment_details": {
+      "status": "PASS",
+      "searches_tested": [
+        "HIGH Top-5% (1)",
+        "MEDIUM 5-10% (2500)",
+        "Outside Top-10% (40000)",
+        "Nonexistent (99999999)",
+        "Blank ()"
+      ]
+    },
+    "model_performance": {
+      "status": "PASS",
+      "sections_found": 9
+    },
+    "model_interpretation": {
+      "status": "PASS",
+      "sections_found": 6,
+      "dependence_plots_cycled": 5
+    }
+  },
+  "map_controls_tested": [
+    "anchor_month",
+    "borough",
+    "road_class",
+    "priority_bands_HIGH_MEDIUM_WATCH_OTHER",
+    "top_k_5_10_20",
+    "risk_slider",
+    "condition_survey",
+    "prior_repair",
+    "over_5000_warning",
+    "map_pan_popup"
+  ],
+  "csv_download": {
+    "status": "PASS",
+    "filename": "montreal_road_risk_candidates.csv",
+    "row_count": 4799,
+    "forbidden_columns": [],
+    "headers_sample": [
+      "segment_month_id",
+      "canonical_segment_id",
+      "anchor_month",
+      "borough",
+      "functional_class",
+      "raw_probability",
+      "percentile_rank",
+      "priority_band"
+    ]
+  },
+  "viewports": [
+    {
+      "name": "desktop_1440x1000",
+      "width": 1440,
+      "height": 1000,
+      "status": "PASS"
+    },
+    {
+      "name": "laptop_1366x768",
+      "width": 1366,
+      "height": 768,
+      "status": "PASS"
+    },
+    {
+      "name": "tablet_1024x768",
+      "width": 1024,
+      "height": 768,
+      "status": "PASS"
+    },
+    {
+      "name": "mobile_390x844",
+      "width": 390,
+      "height": 844,
+      "status": "PASS"
+    }
+  ],
+  "console_errors": [],
+  "defects_found": [],
+  "fixes_made": [],
+  "screenshots_count": 19,
+  "screenshot_manifest_sha256": "67ae1148e0269f8611c635c886ef67cac2eecbf0e73aa9e0c18c43456444b4d1"
+}

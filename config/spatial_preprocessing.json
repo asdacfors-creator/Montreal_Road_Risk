@@ -1,0 +1,190 @@
+{
+  "version": "1.0.0",
+  "approved_working_crs": "EPSG:32188",
+  "coordinate_validation_ranges": {
+    "latitude": [45.0, 46.5],
+    "longitude": [-74.8, -73.0]
+  },
+  "transformation_qa_tolerances": {
+    "max_roundtrip_error_meters": 0.001
+  },
+  "dataset_rules": {
+    "geobase": {
+      "raw_path": "data/raw/montreal/geobase/geobase.json",
+      "interim_path": "data/interim/spatial_base/geobase_32188.parquet",
+      "interpreted_source_crs": "EPSG:4326",
+      "crs_status": "interpreted",
+      "expected_geometry_type": "LineString",
+      "canonical_fields_keep": [
+        "ID_TRC",
+        "CLASSE",
+        "NOM_RUE",
+        "ARR_GCH",
+        "ARR_DRT"
+      ],
+      "field_mapping": {}
+    },
+    "borough_boundaries": {
+      "raw_path": "data/raw/montreal/borough_boundaries/limites-administratives-agglomeration-nad83.geojson",
+      "interim_path": "data/interim/spatial_base/administrative_boundaries_32188.parquet",
+      "declared_source_crs": "EPSG:32188",
+      "crs_status": "declared",
+      "expected_geometry_type": "MultiPolygon",
+      "canonical_fields_keep": [
+        "CODEID",
+        "CODEMAMH",
+        "CODE_3C",
+        "NUM",
+        "ABREV",
+        "NOM",
+        "NOM_OFFICIEL",
+        "TYPE"
+      ],
+      "field_mapping": {}
+    },
+    "road_assets_pavement": {
+      "raw_path": "data/raw/montreal/road_assets/voi_chaussee_s_c22_geojson.zip",
+      "interim_path": "data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet",
+      "interpreted_source_crs": "EPSG:4326",
+      "crs_status": "interpreted",
+      "expected_geometry_type": "Polygon",
+      "field_mapping": {
+        "ID_VOI_CHAUSSEE_AGR": "asset_id_raw",
+        "DATECONSTRUCTION": "construction_date_raw",
+        "DATECONSTRUCTIONPREC_REF": "construction_precision_raw",
+        "DATERESURFACAGE": "resurfacing_date_raw",
+        "MATERIAUCHAUSSEE_REF": "material_ref_raw"
+      }
+    },
+    "pothole_repairs": {
+      "raw_path_pattern": "data/raw/montreal/pothole_repairs/",
+      "interim_path_pattern": "data/interim/phase_3a/pothole_repairs/pothole_repairs_{YEAR}_32188.parquet",
+      "csv_sources": {
+        "2016": "remplissageniddepoule-2016.csv",
+        "2017": "remplissage_niddepoule-_2017.csv",
+        "2018": "remplissage_niddepoule_2018.csv",
+        "2019": "remplissage_niddepoule_2019.csv",
+        "2020": "remplissage_niddepoule_2020.csv"
+      },
+      "csv_source_crs": "EPSG:4326",
+      "csv_crs_status": "interpreted",
+      "csv_field_mapping": {
+        "Appareil": "vehicle_id_raw",
+        "Latitude": "latitude_raw",
+        "Longitude": "longitude_raw"
+      },
+      "gpkg_2021": {
+        "filename": "remplissage_niddepoule_2021.gpkg",
+        "interpreted_source_crs": "EPSG:4326",
+        "crs_status": "interpreted_override",
+        "field_mapping": {
+          "Véhicule": "vehicle_id_raw"
+        }
+      },
+      "gpkg_projected": {
+        "years": [2022, 2023, 2024, 2025],
+        "declared_source_crs": "EPSG:2950",
+        "crs_status": "declared",
+        "field_mapping": {
+          "Véhicule": "vehicle_id_raw"
+        }
+      }
+    },
+    "pavement_condition": {
+      "raw_path_pattern": "data/raw/montreal/pavement_condition/",
+      "interim_path_pattern": "data/interim/phase_3a/pavement_condition/pavement_condition_{YEAR}_32188.parquet",
+      "campaigns": {
+        "2010": {
+          "filename": "auscultation-chaussees-2010.csv",
+          "scope": "arterial_and_local",
+          "has_geometry": false,
+          "source_crs": "none",
+          "crs_status": "none",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        },
+        "2015": {
+          "filename": "auscultation-chaussees-2015.csv",
+          "scope": "arterial_and_local",
+          "has_geometry": false,
+          "source_crs": "none",
+          "crs_status": "none",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        },
+        "2018": {
+          "filename": "auscultation-chaussees-2018-arteriel.csv",
+          "scope": "arterial",
+          "has_geometry": false,
+          "source_crs": "none",
+          "crs_status": "none",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        },
+        "2020": {
+          "filename": "auscultation-chaussees-2020-arteriel.json",
+          "scope": "arterial",
+          "has_geometry": true,
+          "source_crs": "EPSG:4326",
+          "crs_status": "interpreted",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        },
+        "2022": {
+          "filename": "auscultation-chaussees-2022-local.gpkg",
+          "scope": "local",
+          "has_geometry": true,
+          "source_crs": "EPSG:4326",
+          "crs_status": "interpreted",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        },
+        "2024": {
+          "filename": "auscultation-chaussee-2024.gpkg",
+          "scope": "arterial",
+          "has_geometry": true,
+          "source_crs": "EPSG:32188",
+          "crs_status": "declared",
+          "field_mapping": {
+            "ID_TRC": "source_segment_id",
+            "DateReleve": "survey_date_raw",
+            "Indice_PCI": "pci_raw",
+            "Indice_IRI": "iri_raw",
+            "De": "de_raw",
+            "A": "a_raw"
+          }
+        }
+      }
+    }
+  }
+}

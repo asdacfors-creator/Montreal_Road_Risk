@@ -1,0 +1,518 @@
+{
+  "anchors_compared": 102,
+  "matching": 102,
+  "changed": 0,
+  "missing": 0,
+  "results": [
+    {
+      "anchor": "2016-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 21425
+    },
+    {
+      "anchor": "2017-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 21326
+    },
+    {
+      "anchor": "2017-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 21256
+    },
+    {
+      "anchor": "2017-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 21050
+    },
+    {
+      "anchor": "2017-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 20259
+    },
+    {
+      "anchor": "2017-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19794
+    },
+    {
+      "anchor": "2017-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19773
+    },
+    {
+      "anchor": "2017-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19764
+    },
+    {
+      "anchor": "2018-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19691
+    },
+    {
+      "anchor": "2018-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19640
+    },
+    {
+      "anchor": "2018-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 19432
+    },
+    {
+      "anchor": "2018-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18972
+    },
+    {
+      "anchor": "2018-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18852
+    },
+    {
+      "anchor": "2018-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18711
+    },
+    {
+      "anchor": "2019-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18659
+    },
+    {
+      "anchor": "2019-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 18344
+    },
+    {
+      "anchor": "2019-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 17942
+    },
+    {
+      "anchor": "2019-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 17456
+    },
+    {
+      "anchor": "2019-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16972
+    },
+    {
+      "anchor": "2019-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16754
+    },
+    {
+      "anchor": "2019-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16626
+    },
+    {
+      "anchor": "2020-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16480
+    },
+    {
+      "anchor": "2020-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 16302
+    },
+    {
+      "anchor": "2020-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2020-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15692
+    },
+    {
+      "anchor": "2021-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15573
+    },
+    {
+      "anchor": "2021-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 15435
+    },
+    {
+      "anchor": "2021-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2021-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2022-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14878
+    },
+    {
+      "anchor": "2022-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14759
+    },
+    {
+      "anchor": "2022-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14335
+    },
+    {
+      "anchor": "2022-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14156
+    },
+    {
+      "anchor": "2022-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 14122
+    },
+    {
+      "anchor": "2022-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 13830
+    },
+    {
+      "anchor": "2023-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 13773
+    },
+    {
+      "anchor": "2023-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 13024
+    },
+    {
+      "anchor": "2023-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 11907
+    },
+    {
+      "anchor": "2023-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 11102
+    },
+    {
+      "anchor": "2023-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2023-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10859
+    },
+    {
+      "anchor": "2024-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10147
+    },
+    {
+      "anchor": "2024-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 10147
+    },
+    {
+      "anchor": "2024-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 8313
+    },
+    {
+      "anchor": "2024-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 8188
+    },
+    {
+      "anchor": "2024-05",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-06",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-07",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-08",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-09",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-10",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-11",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2024-12",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7980
+    },
+    {
+      "anchor": "2025-01",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7341
+    },
+    {
+      "anchor": "2025-02",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 7280
+    },
+    {
+      "anchor": "2025-03",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 4619
+    },
+    {
+      "anchor": "2025-04",
+      "status": "MATCHING (Remediated)",
+      "prior_diff_rows": 83
+    },
+    {
+      "anchor": "2025-05",
+      "status": "MATCHING (Identical)",
+      "prior_diff_rows": 0
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-07-22T17:39:50.897921+00:00",
+  "url": "http://localhost:8501",
+  "headless": false,
+  "checks": {
+    "survey_available_filter": {
+      "no_crash": true,
+      "matched_text": true
+    },
+    "survey_missing_filter": {
+      "no_crash": true,
+      "matched_text": true
+    },
+    "no_prior_repair_filter": {
+      "no_crash": true,
+      "matched_text": true
+    }
+  },
+  "screenshots": [
+    {
+      "filename": "01_survey_available_fix.png",
+      "path": "docs\\evidence\\phase_8\\bugfix_verification\\01_survey_available_fix.png",
+      "sha256": "1ddd4ea422155057cee9268ea4fbf477546642b8708ddcb416fbc854b62ec195",
+      "captured_at": "2026-07-22T17:40:06.794280+00:00"
+    },
+    {
+      "filename": "02_survey_missing_fix.png",
+      "path": "docs\\evidence\\phase_8\\bugfix_verification\\02_survey_missing_fix.png",
+      "sha256": "79f14e19808fdb66b1ed70511e8f970b0c9cf4b2f417bbd0741a258f4513b0a9",
+      "captured_at": "2026-07-22T17:40:10.477889+00:00"
+    },
+    {
+      "filename": "03_no_prior_repair_fix.png",
+      "path": "docs\\evidence\\phase_8\\bugfix_verification\\03_no_prior_repair_fix.png",
+      "sha256": "6b2599297f52b6fe736fb428f49cc8f2d2c55206233e6f82ac1b18d2b783fd5a",
+      "captured_at": "2026-07-22T17:40:17.705445+00:00"
+    }
+  ]
+}

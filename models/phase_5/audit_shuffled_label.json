@@ -1,0 +1,9 @@
+{
+  "fixture_n": 50000,
+  "fixture_prevalence": 0.068,
+  "val_prevalence": 0.05493195506741971,
+  "shuffled_ap": 0.12305517644652808,
+  "ap_near_prevalence": false,
+  "threshold": 0.03,
+  "verdict": "FAIL"
+}

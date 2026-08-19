@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "gate": "7A",
+  "execution_timestamp_utc": "2026-07-21T11:13:14.435604+00:00",
+  "commit_basis": "edec87e8ae10d2bcab81eb5cfa8ffbe8eefedfd5",
+  "target_access": false,
+  "input_fingerprints": {
+    "model_sha256": "f034d42f9994cd09059e691220ce75209d8da26040be70e988c418ec9ebb413f",
+    "preprocessor_sha256": "f2dac65ab2a09dd4e978a519a611a14116b25f598277ed8c8ccc2eabc02a3fe7",
+    "sealed_features_sha256": "569e549c9e636bd253bf849c9334a96de08e3152d4f4d6b47c51c84f7e100021",
+    "b2_predictions_sha256": "e84accf6aa2d09e4ac1e567a82113cb2f23cabe981813887bfa8e15de42c737c"
+  },
+  "shap_method": {
+    "primary_method": "XGBoost pred_contribs=True (exact tree contributions)",
+    "margin_scale": "raw_log_odds_margin",
+    "additivity_verified": true,
+    "additivity_max_absolute_residual": 3.814697265625e-06,
+    "prediction_readback_max_diff": 0.0
+  },
+  "population_reconciliation": {
+    "b2_anchors": [
+      "2024-07-31",
+      "2024-08-31",
+      "2024-09-30",
+      "2024-10-31",
+      "2024-11-30",
+      "2024-12-31",
+      "2025-01-31",
+      "2025-02-28",
+      "2025-03-31",
+      "2025-04-30",
+      "2025-05-31"
+    ],
+    "total_b2_rows": 527813,
+    "rows_per_anchor": 47983,
+    "anchor_count": 11
+  },
+  "memory_and_performance": {
+    "batch_size": 50000,
+    "smoke_batch_size": 10000,
+    "peak_process_rss_mb": 2329.7,
+    "peak_system_memory_percent": 45.4,
+    "total_runtime_seconds": 1776.23,
+    "shap_streaming_runtime_seconds": 1065.62,
+    "stability_runtime_seconds": 331.37
+  },
+  "stability_analysis": {
+    "sample_size_per_seed": 50000,
+    "seeds": [
+      42,
+      137,
+      2026
+    ],
+    "sample_fingerprints": {
+      "42": "6a7a9444dec65b905ace839d578aa685dba88abdcccfe93629d771a91d9f0994",
+      "137": "99665f9c67275bea7c2df40b0a721738b347dbb05a79aa416294d279f67964a4",
+      "2026": "d7fce91d6640a8c6ea6a2a4dd78a11b0c29001e3a868f835f88e8b4e6674f286"
+    },
+    "spearman_rank_correlations": {
+      "seed_42_vs_seed_42": 0.9999999999999999,
+      "seed_42_vs_seed_137": 0.999945900863332,
+      "seed_42_vs_seed_2026": 0.9999909834772219,
+      "seed_137_vs_seed_137": 0.9999999999999999,
+      "seed_137_vs_seed_2026": 0.999963933908888,
+      "seed_2026_vs_seed_2026": 0.9999999999999999
+    },
+    "top_10_overlap_count": 10,
+    "top_20_overlap_count": 20,
+    "unstable_top30_features": []
+  },
+  "operational_explanation_records": {
+    "policy": "Top_10_Pct_Risk_Priority_Candidate",
+    "record_count": 52782,
+    "file_path": "data\\processed\\phase_7\\b2_top10_explanation_records.parquet"
+  },
+  "mandated_causality_statement": "SHAP values describe model behavior and association. They do not establish causal effects or prove that changing a feature will change repair risk."
+}

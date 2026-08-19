@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "gate": "A",
+  "created_utc": "2026-07-19T17:28:37Z",
+  "sealed_file": "data/processed/phase_5/test.parquet",
+  "sealed_file_sha256": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+  "schema_fingerprint": "f385c705cbe5183760a70da1efdc813f5c74b0629a0a87ea73e522ba36274a2e",
+  "total_expected_rows": 815711,
+  "total_expected_anchors": 17,
+  "calibration_anchors": [
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31"
+  ],
+  "calibration_expected_rows": 143949,
+  "calibration_per_anchor_rows": 47983,
+  "embargo_anchors": [
+    "2024-04-30",
+    "2024-05-31",
+    "2024-06-30"
+  ],
+  "embargo_expected_rows": 143949,
+  "embargo_per_anchor_rows": 47983,
+  "embargo_note": "Embargo targets must never be used in any gate",
+  "final_test_anchors": [
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31"
+  ],
+  "final_test_expected_rows": 527813,
+  "final_test_per_anchor_rows": 47983,
+  "purge_arithmetic": "3*47983 + 3*47983 + 11*47983 = 143949 + 143949 + 527813 = 815711",
+  "purge_arithmetic_check": "815711 == 815711",
+  "b1_targets_accessed": false,
+  "embargo_targets_accessed": false,
+  "b2_targets_accessed": false,
+  "gate_a_commit": "__placeholder__",
+  "gate_b1_authorized": false,
+  "gate_b2_authorized": false,
+  "physical_split_created": false,
+  "target_column_decoded": false,
+  "prevalence_calculated": false,
+  "total_actual_rows": 815711,
+  "preflight_utc": "2026-07-19T23:40:31.741453+00:00"
+}

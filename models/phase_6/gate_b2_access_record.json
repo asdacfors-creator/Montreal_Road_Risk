@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "gate": "B2",
+  "access_start_utc": "2026-07-21T00:24:09.389374+00:00",
+  "seal_status": "CONSUMED_AND_CLOSED",
+  "authorization_commit": "cc803a74659b72ec72828b809a47ef59be4aee0c",
+  "target_column": "target_repair_90d",
+  "b2_anchors": [
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31"
+  ],
+  "total_rows_decoded": 527813,
+  "access_count": 2,
+  "result_set_count": 1,
+  "access_classification": "B_REPEATED_PROCEDURAL_ACCESS",
+  "future_target_access_prohibited": true,
+  "access_attempts": [
+    {
+      "attempt_index": 1,
+      "task_id": "c5ab3c6e-421c-46dd-a4ea-1210a26a67ee/task-12084",
+      "access_start_utc": "2026-07-21T00:23:57Z",
+      "target_load_utc": "2026-07-21T00:24:09Z",
+      "status": "FAILED_AFTER_OPEN",
+      "exit_code": 1,
+      "failure_cause": "TypeError: expected_calibration_error() got an unexpected keyword argument 'n_bins'",
+      "results_produced": false
+    },
+    {
+      "attempt_index": 2,
+      "task_id": "c5ab3c6e-421c-46dd-a4ea-1210a26a67ee/task-12097",
+      "access_start_utc": "2026-07-21T00:24:48Z",
+      "target_load_utc": "2026-07-21T00:24:59Z",
+      "completion_utc": "2026-07-21T02:54:22Z",
+      "status": "COMPLETE",
+      "exit_code": 0,
+      "results_produced": true
+    }
+  ],
+  "pre_access_fingerprints": {
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=07\\segment_month.parquet": "75e10bfe696a3be3e6c807f983ef0ef93e24cddf1bff440c0d40b8affca7b95f",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=08\\segment_month.parquet": "30bec3ec7ddb2f86b9168bbce4d786eb01d47fb2d51eb53c8aecc18303e2766b",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=09\\segment_month.parquet": "6e3470355c811c31ac4c67712b3fc3e82ae028290b0b102f5d1f17e7111044cb",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=10\\segment_month.parquet": "3f43361a0cc59cbaec3cecd33bee427e6d67fdf8e363126d2bbcf7ce24e4b1d5",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=11\\segment_month.parquet": "e1af047f28de7466bc6aa14bca009b85f2c4d7ac84c1d60670d003bef4d8ef2d",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=12\\segment_month.parquet": "8047f9e6606ad54dd6ee1b3a5d67c3ed865be3d91a63e84889ad1aaef1dd81d5",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=01\\segment_month.parquet": "616360cca2538f80512d9d3198038741ee10ed4024dbf5a325120f517240daf0",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=02\\segment_month.parquet": "cce6705b016543cc24162608842a6584d162f61cd813dc5ba80e847d2bc6b0dc",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=03\\segment_month.parquet": "061377711b9797c3cd51bb16bef8ef76183a28f49c27ea566919d8694cc29dd9",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=04\\segment_month.parquet": "c06ed829790038e36370969b3b1227cecd54fca40f9b3ca639d6de1ac0b186a6",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=05\\segment_month.parquet": "71b8c180d9636ece2bf1924fc12616db2a54755ebe16c7c3685a4cf2f62b0be5"
+  },
+  "evaluation_status": "COMPLETE",
+  "evaluation_completion_utc": "2026-07-21T02:54:22.981653+00:00",
+  "post_access_fingerprints": {
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=07\\segment_month.parquet": "75e10bfe696a3be3e6c807f983ef0ef93e24cddf1bff440c0d40b8affca7b95f",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=08\\segment_month.parquet": "30bec3ec7ddb2f86b9168bbce4d786eb01d47fb2d51eb53c8aecc18303e2766b",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=09\\segment_month.parquet": "6e3470355c811c31ac4c67712b3fc3e82ae028290b0b102f5d1f17e7111044cb",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=10\\segment_month.parquet": "3f43361a0cc59cbaec3cecd33bee427e6d67fdf8e363126d2bbcf7ce24e4b1d5",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=11\\segment_month.parquet": "e1af047f28de7466bc6aa14bca009b85f2c4d7ac84c1d60670d003bef4d8ef2d",
+    "data\\processed\\phase_4\\panel_year=2024\\panel_month=12\\segment_month.parquet": "8047f9e6606ad54dd6ee1b3a5d67c3ed865be3d91a63e84889ad1aaef1dd81d5",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=01\\segment_month.parquet": "616360cca2538f80512d9d3198038741ee10ed4024dbf5a325120f517240daf0",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=02\\segment_month.parquet": "cce6705b016543cc24162608842a6584d162f61cd813dc5ba80e847d2bc6b0dc",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=03\\segment_month.parquet": "061377711b9797c3cd51bb16bef8ef76183a28f49c27ea566919d8694cc29dd9",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=04\\segment_month.parquet": "c06ed829790038e36370969b3b1227cecd54fca40f9b3ca639d6de1ac0b186a6",
+    "data\\processed\\phase_4\\panel_year=2025\\panel_month=05\\segment_month.parquet": "71b8c180d9636ece2bf1924fc12616db2a54755ebe16c7c3685a4cf2f62b0be5"
+  }
+}

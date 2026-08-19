@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-07-20T16:00:27.697306+00:00",
+  "remediated": true,
+  "model_seed": 42,
+  "val_prevalence": 0.054932,
+  "runs": {
+    "perm_42": {
+      "perm_seed": 42,
+      "model_seed": 42,
+      "shuf_label_sha256": "0e7e8117b199640ba1e8ca30fbf2edbf1ae970810b72c94a78dc0d7e3a126ef7",
+      "pred_sha256": "e429e1ce30332ecc263975136c6f961e8df1422ad13d9b66d8a0545e5ab67937",
+      "val_prevalence": 0.054932,
+      "null_ap": 0.066016,
+      "ap_over_prevalence": 1.2018,
+      "null_roc_auc": 0.505895,
+      "null_brier": 0.052045,
+      "elapsed_s": 365.3
+    },
+    "perm_137": {
+      "perm_seed": 137,
+      "model_seed": 42,
+      "shuf_label_sha256": "f7b37f55ab92e659812504961165a832e6b2df1a3c30ee181d178a6514e3204e",
+      "pred_sha256": "b1b8b990ed3521437530999c1a0f03052d6c872d9affb9116c9f35c398e55bce",
+      "val_prevalence": 0.054932,
+      "null_ap": 0.089376,
+      "ap_over_prevalence": 1.627,
+      "null_roc_auc": 0.624762,
+      "null_brier": 0.051849,
+      "elapsed_s": 360.8
+    },
+    "perm_2026": {
+      "perm_seed": 2026,
+      "model_seed": 42,
+      "shuf_label_sha256": "635bf57156506e2c11323bd47410f932725a039e94361096f159c12daa3b8b46",
+      "pred_sha256": "6b7c63bf037e2ec5f260941d9ce1e8485d553916e8a3cb519241c641c23f0821",
+      "val_prevalence": 0.054932,
+      "null_ap": 0.059379,
+      "ap_over_prevalence": 1.081,
+      "null_roc_auc": 0.48317,
+      "null_brier": 0.052168,
+      "elapsed_s": 332.6
+    }
+  }
+}

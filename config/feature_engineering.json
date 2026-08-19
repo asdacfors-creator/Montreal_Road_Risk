@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "panel_settings": {
+    "frequency": "monthly",
+    "anchor": "month-end",
+    "start_month": "2016-12",
+    "end_month": "2025-05",
+    "timezone_assumption": "America/Toronto"
+  },
+  "targets": {
+    "primary_horizon_days": 90,
+    "sensitivity_horizon_days": 180,
+    "eligible_linkage_statuses": ["accepted"]
+  },
+  "features": {
+    "historical_repair_windows": [30, 90, 180, 365],
+    "weather_rolling_windows": [30, 90, 180, 365],
+    "pavement_condition_as_of_rules": {
+      "no_future_surveys": true,
+      "aggregation": "median"
+    },
+    "road_asset_rules": {
+      "no_future_assets": true,
+      "unresolved_on_overlap": true
+    }
+  },
+  "inputs": {
+    "geobase": "data/interim/spatial_base/geobase_32188.parquet",
+    "boundaries": "data/interim/spatial_base/administrative_boundaries_32188.parquet",
+    "potholes": "data/interim/phase_3c/pothole_events_temporal.parquet",
+    "pothole_links": "data/interim/phase_3b/pothole_segment_links.parquet",
+    "pavement": "data/interim/phase_3c/pavement_condition_temporal.parquet",
+    "pavement_links": "data/interim/phase_3b/pavement_condition_segment_links.parquet",
+    "road_assets": "data/interim/phase_3c/road_assets_temporal.parquet",
+    "road_assets_links": "data/interim/phase_3b/road_asset_segment_crosswalk.parquet",
+    "road_boundary_links": "data/interim/phase_3b/road_boundary_crosswalk.parquet",
+    "weather": "data/interim/phase_3c/weather_daily_canonical.parquet"
+  },
+  "outputs": {
+    "panel_dir": "data/processed/phase_4/segment_month_panel",
+    "eligible_90d_view": "data/processed/phase_4/segment_month_panel_90d_eligible.parquet",
+    "eligible_180d_view": "data/processed/phase_4/segment_month_panel_180d_eligible.parquet",
+    "target_event_ledger": "data/processed/phase_4/target_event_ledger.parquet",
+    "target_exclusion_audit": "data/processed/phase_4/target_exclusion_audit.parquet",
+    "target_window_eligibility_audit": "data/processed/phase_4/target_window_eligibility_audit.parquet",
+    "accepted_repair_events_raw": "data/processed/phase_4/accepted_repair_events_raw.parquet",
+    "accepted_repair_events_collapsed": "data/processed/phase_4/accepted_repair_events_collapsed.parquet",
+    "duplicate_group_membership": "data/processed/phase_4/duplicate_group_membership.parquet",
+    "outcome_observation_calendar": "data/processed/phase_4/outcome_observation_calendar.parquet",
+    "outcome_coverage_evidence": "data/processed/phase_4/outcome_coverage_evidence.csv",
+    "outcome_coverage_feasibility": "data/processed/phase_4/outcome_coverage_feasibility.json",
+    "outcome_anchor_eligibility_by_policy": "data/processed/phase_4/outcome_anchor_eligibility_by_policy.csv",
+    "duplicate_sensitivity_summary": "data/processed/phase_4/duplicate_sensitivity_summary.json",
+    "phase_4_qa_summary": "data/processed/phase_4/phase_4_qa_summary.json",
+    "phase_4_run_manifest": "data/processed/phase_4/phase_4_run_manifest.json"
+  }
+}

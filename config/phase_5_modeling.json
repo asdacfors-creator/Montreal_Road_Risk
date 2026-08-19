@@ -1,0 +1,155 @@
+{
+  "version": "1.0.0",
+  "seed": 42,
+  "n_jobs": 1,
+
+  "panel_dir": "data/processed/phase_4",
+  "panel_glob": "data/processed/phase_4/panel_year=*/panel_month=*/segment_month.parquet",
+  "phase5_dir": "data/processed/phase_5",
+  "models_dir": "models/phase_5",
+
+  "split_90d": {
+    "train_end_anchor":     "2022-10-31",
+    "embargo_tv_anchors":   ["2022-11-30", "2022-12-31"],
+    "val_start_anchor":     "2023-01-31",
+    "val_end_anchor":       "2023-10-31",
+    "embargo_vt_anchors":   ["2023-11-30", "2023-12-31"],
+    "test_start_anchor":    "2024-01-31",
+    "test_end_anchor":      "2025-05-31",
+    "expected_train_anchors": 71,
+    "expected_embargo_tv":    2,
+    "expected_val_anchors":   10,
+    "expected_embargo_vt":    2,
+    "expected_test_anchors":  17,
+    "expected_train_rows":    3406793,
+    "expected_embargo_tv_rows": 95966,
+    "expected_val_rows":      479830,
+    "expected_embargo_vt_rows": 95966,
+    "expected_test_rows":     815711,
+    "expected_total_rows":    4894266
+  },
+
+  "split_180d": {
+    "train_end_anchor":     "2022-07-31",
+    "embargo_tv_start":     "2022-08-31",
+    "embargo_tv_end":       "2022-12-31",
+    "val_start_anchor":     "2023-01-31",
+    "val_end_anchor":       "2023-07-31",
+    "embargo_vt_start":     "2023-08-31",
+    "embargo_vt_end":       "2023-12-31",
+    "test_start_anchor":    "2024-01-31",
+    "test_end_anchor":      "2025-05-31",
+    "expected_train_anchors": 68,
+    "expected_embargo_tv":    5,
+    "expected_val_anchors":   7,
+    "expected_embargo_vt":    5,
+    "expected_test_anchors":  17,
+    "expected_train_rows":    3262844,
+    "expected_embargo_tv_rows": 239915,
+    "expected_val_rows":      335881,
+    "expected_embargo_vt_rows": 239915,
+    "expected_test_rows":     815711,
+    "expected_total_rows":    4894266
+  },
+
+  "exclude_from_X": [
+    "segment_month_id", "canonical_segment_id", "as_of_date",
+    "panel_year", "panel_month",
+    "last_repair_date", "latest_condition_survey_date",
+    "target_repair_90d", "target_repair_180d",
+    "target_eligible_90d", "target_eligible_180d",
+    "target_repair_90d_strict", "target_repair_180d_strict",
+    "positive_observed_in_incomplete_window_90d",
+    "positive_observed_in_incomplete_window_180d",
+    "repair_event_count_raw_30d", "repair_event_count_raw_90d",
+    "repair_event_count_raw_180d", "repair_event_count_raw_365d",
+    "__index_level_0__",
+    "primary_borough_id",
+    "boundary_ambiguity_flag"
+  ],
+
+  "binary_passthrough_cols": [
+    "no_prior_repair_flag",
+    "repair_history_complete_30d", "repair_history_complete_90d",
+    "repair_history_complete_180d", "repair_history_complete_365d",
+    "weather_complete_30d", "weather_complete_90d",
+    "weather_complete_180d", "weather_complete_365d",
+    "condition_missing_flag",
+    "future_asset_record_hidden_flag",
+    "age_interval_crosses_as_of_flag",
+    "resurfacing_interval_crosses_as_of_flag",
+    "resurfacing_before_construction_candidate_flag",
+    "unmatched_boundary_flag",
+    "boundary_crossing_flag"
+  ],
+
+  "categorical_cols": [
+    "functional_road_class",
+    "road_type",
+    "road_category",
+    "official_administrative_name",
+    "administrative_category",
+    "condition_campaign_scope",
+    "asset_temporal_eligibility_status",
+    "date_contradiction_status"
+  ],
+
+  "days_since_last_repair_sentinel": -1,
+
+  "benchmark_limits": {
+    "soft_rss_gb": 6.0,
+    "hard_rss_gb": 8.0,
+    "hard_system_pct": 85.0,
+    "grid_reduction_trigger_minutes": 15,
+    "benchmark_hard_timeout_minutes": 30,
+    "projected_grid_target_hours": 4.0,
+    "baseline_memory_max_pct": 50.0
+  },
+
+  "hyperparameters": {
+    "logistic_regression": {
+      "C":            [0.001, 0.01, 0.1, 1.0, 10.0],
+      "solver":       ["saga"],
+      "penalty":      ["l2"],
+      "max_iter":     [1000],
+      "class_weight": [null, "balanced"],
+      "random_state": [42]
+    },
+    "random_forest": {
+      "n_estimators":    [200, 500],
+      "max_depth":       [6, 10, null],
+      "min_samples_leaf":[10, 50],
+      "class_weight":    [null, "balanced"],
+      "n_jobs":          [1],
+      "random_state":    [42]
+    },
+    "xgboost": {
+      "n_estimators":      [200, 500],
+      "max_depth":         [4, 6, 8],
+      "learning_rate":     [0.05, 0.1],
+      "subsample":         [0.8],
+      "colsample_bytree":  [0.8],
+      "tree_method":       ["hist"],
+      "n_jobs":            [1],
+      "seed":              [42],
+      "eval_metric":       ["aucpr"],
+      "early_stopping_rounds": [20]
+    }
+  },
+
+  "metrics": {
+    "primary": "average_precision_score",
+    "primary_label": "Average Precision (AP)",
+    "at_k_percents": [5, 10, 20]
+  },
+
+  "protected_roots": [
+    "data/raw",
+    "data/interim",
+    "data/processed/phase_4",
+    "data/metadata/feature_manifest.csv",
+    "config/feature_engineering.json"
+  ],
+
+  "grid_reduction_log": []
+}

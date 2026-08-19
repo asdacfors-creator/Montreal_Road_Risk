@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "gate": "B1",
+  "created_utc": "2026-07-20T23:51:50.517589+00:00",
+  "authorization_scope": "B1_CALIBRATION_ONLY",
+  "n_b1_rows": 143949,
+  "n_b1_positive": 12081,
+  "b1_prevalence": 0.08392555696809287,
+  "b1_anchor_allowlist": [
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31"
+  ],
+  "embargo_targets_used": false,
+  "b2_targets_used": false,
+  "top_k_formula": "ceil(N * K / 100)",
+  "tie_break_order": [
+    "score_descending",
+    "canonical_segment_id_ascending",
+    "as_of_date_ascending",
+    "segment_month_id_ascending"
+  ],
+  "top_k_policies": {
+    "top_5_pct": {
+      "k_pct": 5,
+      "formula": "ceil(N * 5 / 100)",
+      "row_count": 7198,
+      "b1_precision": 0.600861,
+      "b1_recall": 0.358,
+      "b1_lift": 7.159456
+    },
+    "top_10_pct": {
+      "k_pct": 10,
+      "formula": "ceil(N * 10 / 100)",
+      "row_count": 14395,
+      "b1_precision": 0.473567,
+      "b1_recall": 0.564274,
+      "b1_lift": 5.642706
+    },
+    "top_20_pct": {
+      "k_pct": 20,
+      "formula": "ceil(N * 20 / 100)",
+      "row_count": 28790,
+      "b1_precision": 0.319729,
+      "b1_recall": 0.76194,
+      "b1_lift": 3.809675
+    }
+  },
+  "recall_diagnostic_target": 0.5,
+  "recall_threshold": 0.201947590041076,
+  "recall_achieved_at_threshold": 0.5000413873023757,
+  "precision_at_recall_threshold": 0.5048470666889521,
+  "f1_at_recall_threshold": 0.502432735892211,
+  "lift_at_recall_threshold": 6.015415147985097,
+  "recall_overshoot": 4.138730237568389e-05,
+  "selected_row_count": 11966,
+  "boundary_row_segment_month_id": "4010781_2024-01",
+  "last_tie_row_segment_month_id": "4010781_2024-01",
+  "probability_descriptive_0_50": 0.5,
+  "b1_cutoff_p50": 0.0329666557146246,
+  "b1_cutoff_p75": 0.052407396010347496,
+  "b1_cutoff_p90": 0.16287295887579661,
+  "b1_cutoff_p95": 0.3445396604382931,
+  "config_sha256": "1b284ead07c470c834fa174db276e57e238a1e671922acf210bed0428c56d7a0",
+  "top_k_rank_based_note": "Top-K policies remain rank-based for B2. K values NOT optimized using B2.",
+  "embargo_not_used_statement": "No embargo or B2 targets were used to derive any threshold.",
+  "superseded_threshold_manifest": {
+    "recall_threshold": 0.028471,
+    "recall_achieved_at_threshold": 1.0,
+    "selected_row_count": 143949,
+    "reason_for_correction": "Initial recall threshold was computed incorrectly by selecting the first index in ascending order rather than descending recall ranking, resulting in recall of 1.0. Corrected to select the highest probability threshold satisfying target recall >= 0.50."
+  },
+  "calibration_manifest_sha256": "92c481c0f682a1b393fa6e3560dd8e32462b7ae38328beb10385013da763d282",
+  "primary_domain": "raw_probability",
+  "primary_raw_recall_threshold": 0.30805489,
+  "sensitivity_platt_recall_threshold": 0.20194759,
+  "evaluation_manifest_sha256": "272f0bf80cad00aaf253863a68d98f6bc436e1d13fa9a2188c22278e31c8aa3a"
+}

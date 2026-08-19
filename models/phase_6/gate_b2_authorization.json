@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "gate": "B2",
+  "created_utc": "2026-07-21T00:23:10Z",
+  "authorization_status": "EXPLICITLY_AUTHORIZED",
+  "pre_access_head": "8863637269df4944a7c6fc5b5df03e3850b0f66a",
+  "authorization_scope": "ONE_TIME_FINAL_90D_EVALUATION_ONLY",
+  "supervisor_decision": {
+    "procedural_deviation_accepted": true,
+    "deviation_note": "The earlier unrestricted read procedurally decoded target_repair_180d across test rows. No target_repair_90d B2 values were decoded, displayed, or evaluated. The deviation is accepted for continuation of the primary 90-day analysis. The 180-day final-test evaluation remains permanently disabled.",
+    "one_time_evaluation_permitted": true
+  },
+  "fingerprints": {
+    "model_sha256": "f034d42f9994cd09059e691220ce75209d8da26040be70e988c418ec9ebb413f",
+    "preprocessor_sha256": "f2dac65ab2a09dd4e978a519a611a14116b25f598277ed8c8ccc2eabc02a3fe7",
+    "sealed_features_sha256": "569e549c9e636bd253bf849c9334a96de08e3152d4f4d6b47c51c84f7e100021",
+    "ordered_110_features_sha256": "b31c5e9dc4caa835e4398287f3abb0e3738a1682b4c30e411ef4e202689c6695",
+    "evaluation_manifest_sha256": "272f0bf80cad00aaf253863a68d98f6bc436e1d13fa9a2188c22278e31c8aa3a"
+  },
+  "b2_anchors": [
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31"
+  ],
+  "expected_b2_rows": 527813,
+  "allowed_target_column": "target_repair_90d",
+  "allowed_target_partitions": [
+    "data/processed/phase_4/panel_year=2024/panel_month=07/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2024/panel_month=08/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2024/panel_month=09/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2024/panel_month=10/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2024/panel_month=11/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2024/panel_month=12/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2025/panel_month=01/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2025/panel_month=02/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2025/panel_month=03/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2025/panel_month=04/segment_month.parquet",
+    "data/processed/phase_4/panel_year=2025/panel_month=05/segment_month.parquet"
+  ],
+  "forbidden_embargo_anchors": [
+    "2024-04-30",
+    "2024-05-31",
+    "2024-06-30"
+  ],
+  "rules": {
+    "180d_target_prohibited": true,
+    "one_time_access_only": true,
+    "no_retuning_or_recalibration": true,
+    "fail_safe_on_error": true
+  }
+}

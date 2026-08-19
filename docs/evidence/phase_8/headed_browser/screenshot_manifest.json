@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-07-21T16:48:34.409293+00:00",
+  "evidence_dir": "docs\\evidence\\phase_8\\headed_browser",
+  "screenshot_count": 19,
+  "screenshots": [
+    {
+      "filename": "01_overview_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\01_overview_visible.png",
+      "sha256": "1c7aebe65dfa9b06ff371bf8550274369347f30f8598566b3a5ff2fd8f79f3b9",
+      "captured_at": "2026-07-21T16:48:34.295639+00:00"
+    },
+    {
+      "filename": "02_csv_download_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02_csv_download_visible.png",
+      "sha256": "ab99f205245159657786305ae599e32a5658bf3cd90a102551143da97aff9e3e",
+      "captured_at": "2026-07-21T16:48:34.297651+00:00"
+    },
+    {
+      "filename": "02_map_default_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02_map_default_visible.png",
+      "sha256": "8299850a91a5960b99111970905282b4ba89c0185f19971d6b2daba53a7f8e1b",
+      "captured_at": "2026-07-21T16:48:34.297651+00:00"
+    },
+    {
+      "filename": "02e_priority_bands.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02e_priority_bands.png",
+      "sha256": "485b0bf4b534ddfa9318069546dc7765122f699ac04e5a296aa13ff7471239c4",
+      "captured_at": "2026-07-21T16:48:34.297651+00:00"
+    },
+    {
+      "filename": "02f_topk.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02f_topk.png",
+      "sha256": "f15021766e6a387701a06def15afe5488876e2935dbfa44998b54e45addd1a5e",
+      "captured_at": "2026-07-21T16:48:34.299664+00:00"
+    },
+    {
+      "filename": "02g_slider_50pct.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02g_slider_50pct.png",
+      "sha256": "d83f692eb5d00ba4db40d0cb5290f44ba0421cbfbde9206a280ec2fac58ec6d1",
+      "captured_at": "2026-07-21T16:48:34.299664+00:00"
+    },
+    {
+      "filename": "02h_survey.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02h_survey.png",
+      "sha256": "77efb29d2f11d6a561625fc10b36837e165e6b1be5c5cd0b7f733a31bc68f346",
+      "captured_at": "2026-07-21T16:48:34.299664+00:00"
+    },
+    {
+      "filename": "02i_repair.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02i_repair.png",
+      "sha256": "8444083a07b266efad61a29faee0ce1ebea33612c6892da58d0728d8f9678a32",
+      "captured_at": "2026-07-21T16:48:34.301676+00:00"
+    },
+    {
+      "filename": "02k_over5000.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\02k_over5000.png",
+      "sha256": "8eac28ca84e585f86fa51e64ec2b67f5f5d213a903cca0303ecfe0b7a20ef0ae",
+      "captured_at": "2026-07-21T16:48:34.301676+00:00"
+    },
+    {
+      "filename": "03_csv_download.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\03_csv_download.png",
+      "sha256": "130251af1355646d7b0521978ce2ca4883e04982a263e8c921d2291b7fbc7be1",
+      "captured_at": "2026-07-21T16:48:34.305698+00:00"
+    },
+    {
+      "filename": "04_segment_details.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\04_segment_details.png",
+      "sha256": "b0c07a3699c5758dd808732d3d394eb9ac731b40f53e5408dffff3ec45cbd7cf",
+      "captured_at": "2026-07-21T16:48:34.307442+00:00"
+    },
+    {
+      "filename": "05_interpretation_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\05_interpretation_visible.png",
+      "sha256": "df4bec3efc9f19edd882271bf94d25b85fb609fd3b19c4196bb3d48fcf4493e6",
+      "captured_at": "2026-07-21T16:48:34.308077+00:00"
+    },
+    {
+      "filename": "05_performance.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\05_performance.png",
+      "sha256": "fe185821e49eaabbf2448e7ee162350ea7856a898c3f3a644f7c9dad690ac183",
+      "captured_at": "2026-07-21T16:48:34.308077+00:00"
+    },
+    {
+      "filename": "05b_interp_dependence_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\05b_interp_dependence_visible.png",
+      "sha256": "4d96ef6b50d79c20f154397d4fe915ec74965859726ee7266184015d26999f37",
+      "captured_at": "2026-07-21T16:48:34.328314+00:00"
+    },
+    {
+      "filename": "06_desktop_1440x1000_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\06_desktop_1440x1000_visible.png",
+      "sha256": "9b6ed2eaf25b2f3588a74688f03ae18c86932c99018f8c798233433a0cb8bb50",
+      "captured_at": "2026-07-21T16:48:34.339522+00:00"
+    },
+    {
+      "filename": "06_laptop_1366x768_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\06_laptop_1366x768_visible.png",
+      "sha256": "67b11abfb3d6ead4b4a9d744a3ecfc9c88585568d9fa8093acb6a7d9dc541565",
+      "captured_at": "2026-07-21T16:48:34.363805+00:00"
+    },
+    {
+      "filename": "06_mobile_390x844_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\06_mobile_390x844_visible.png",
+      "sha256": "4de6cd29acf0e30a61309350e4f195179b753d272ec3ecd58d9f1d74a1adc8b1",
+      "captured_at": "2026-07-21T16:48:34.371274+00:00"
+    },
+    {
+      "filename": "06_tablet_1024x768_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\06_tablet_1024x768_visible.png",
+      "sha256": "96910308bb565b6d0b5bfc14ea5c702c6782774a5315117cb5b3e083456bf09e",
+      "captured_at": "2026-07-21T16:48:34.387038+00:00"
+    },
+    {
+      "filename": "07_final_state_visible.png",
+      "path": "docs\\evidence\\phase_8\\headed_browser\\07_final_state_visible.png",
+      "sha256": "c00de32c6ca429a9e72ae3ae20328ff5e2b9b634b0f487058a331bc34ebd4a3a",
+      "captured_at": "2026-07-21T16:48:34.409293+00:00"
+    }
+  ],
+  "sha256_self": "67ae1148e0269f8611c635c886ef67cac2eecbf0e73aa9e0c18c43456444b4d1"
+}

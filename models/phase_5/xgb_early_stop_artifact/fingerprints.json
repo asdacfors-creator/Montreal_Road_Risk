@@ -1,0 +1,8 @@
+{
+  "preprocessor.joblib": "64bee19943833bb3d241bd1dc28d022b51e126e2d64b4262b1e513d4da51ad36",
+  "model.joblib": "b2f512863b2a9c92513175b39b3cb8e7afe97c243f1ca4a43fedacd9ae4ae79b",
+  "best_iteration": 90,
+  "AP_val": 0.7959027011420328,
+  "xgb_version": "3.2.0",
+  "readback_allclose": true
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "gate": "B1",
+  "access_start_utc": "2026-07-20T22:16:05.322122+00:00",
+  "access_end_utc": "2026-07-20T22:16:06.989715+00:00",
+  "source_path": "data/processed/phase_5/test.parquet",
+  "source_sha256_before": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+  "source_sha256_after": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+  "source_unchanged": true,
+  "columns_accessed": [
+    "segment_month_id",
+    "canonical_segment_id",
+    "as_of_date",
+    "target_repair_90d"
+  ],
+  "columns_note": "Features accessed via full load minus non-feature cols; target accessed via seal guard B1-only load.",
+  "filters_applied": {
+    "as_of_date": "IN ('2024-01-31', '2024-02-29', '2024-03-31')",
+    "method": "logical filter via seal guard \u2014 no physical split"
+  },
+  "b1_anchors": [
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31"
+  ],
+  "b1_anchor_count": 3,
+  "b1_row_count": 143949,
+  "b1_per_anchor_count": 47983,
+  "n_positive": 12081,
+  "prevalence": 0.08392555696809287,
+  "unique_segment_month_ids": 143949,
+  "target_col_accessed": "target_repair_90d",
+  "embargo_anchors_accessed": false,
+  "b2_anchors_accessed": false,
+  "model_sha256_before": "f034d42f9994cd09059e691220ce75209d8da26040be70e988c418ec9ebb413f",
+  "model_sha256_after": "f034d42f9994cd09059e691220ce75209d8da26040be70e988c418ec9ebb413f",
+  "preprocessor_sha256_before": "f2dac65ab2a09dd4e978a519a611a14116b25f598277ed8c8ccc2eabc02a3fe7",
+  "preprocessor_sha256_after": "f2dac65ab2a09dd4e978a519a611a14116b25f598277ed8c8ccc2eabc02a3fe7",
+  "model_unchanged": true,
+  "preprocessor_unchanged": true,
+  "calibrator_sha256": "b1597c6b5f07b6d3dabe874b0cda5f42b22e87e2a03e21d930e36982f89c779b",
+  "calibration_manifest_sha256": "f540b45f2bc17be39afa363f6ae14e663305707000eb87e3e194e54a5715a464",
+  "threshold_manifest_sha256": "423cfc7b1163c825107b02a2fa98863a03c25ae6f0279d0b4ada8ea700b6d76b",
+  "process_exit_status": 0,
+  "notes": [
+    "No embargo or B2 targets accessed.",
+    "Seal guard validated sealed file SHA before and after access.",
+    "Model and preprocessor fingerprints verified unchanged."
+  ],
+  "correction_history": [
+    {
+      "timestamp": "2026-07-21T03:15:00Z",
+      "action": "Corrected recall threshold algorithm to sort descending by calibrated probability and select minimal prefix satisfying target recall >= 0.50.",
+      "superseded_values": {
+        "recall_threshold": 0.028471,
+        "achieved_recall": 1.0
+      }
+    }
+  ]
+}

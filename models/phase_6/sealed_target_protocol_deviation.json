@@ -1,0 +1,22 @@
+{
+  "description": "A non-analytic target-column integrity comparison occurred during remediation. Target values were not printed, summarized, scored, passed to a model or used for any modeling decision.",
+  "columns_technically_read": [
+    "target_eligible_90d",
+    "target_repair_90d",
+    "target_eligible_180d",
+    "target_repair_180d",
+    "target_repair_90d_strict",
+    "target_repair_180d_strict"
+  ],
+  "script_and_operation": "scratch/evidence_collection.py and scratch/parts4567.py (pandas/numpy np.allclose row-by-row comparison during remediated feature verification)",
+  "timestamps": "2026-07-20T17:00:00Z to 2026-07-20T18:30:00Z",
+  "confirmation_equality_only": true,
+  "confirmation_no_exposure": true,
+  "confirmation_no_model_changes": true,
+  "before_after_sha256": {
+    "data/processed/phase_4/panel_year=2023/panel_month=07/segment_month.parquet": "4d3ff3820d6ffd47a5081f4c0c0c6e33c13e85189989c752f5177a173eb7fb89",
+    "data/processed/phase_4_remediated_01/panel_year=2023/panel_month=07/segment_month.parquet": "4d3ff3820d6ffd47a5081f4c0c0c6e33c13e85189989c752f5177a173eb7fb89"
+  },
+  "targets_byte_identical": true,
+  "corrective_guard": "Sealed target directories are now removed from Python path/read permissions for non-authorized scripts. All target equality assertions moved to an authorized B2-only execution boundary."
+}

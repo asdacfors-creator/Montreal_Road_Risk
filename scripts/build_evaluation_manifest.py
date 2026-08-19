@@ -1,0 +1,144 @@
+import hashlib
+import json
+from datetime import datetime, timezone
+from pathlib import Path
+
+import pyarrow.parquet as pq
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SEALED_PATH = PROJECT_ROOT / "data/processed/phase_5_remediated_01/sealed_features_90d.parquet"
+EVAL_MANIFEST_PATH = PROJECT_ROOT / "models/phase_6/evaluation_manifest.json"
+THRESH_MANIFEST_PATH = PROJECT_ROOT / "models/phase_6/threshold_manifest.json"
+
+B2_ANCHORS = [
+    "2024-07-31",
+    "2024-08-31",
+    "2024-09-30",
+    "2024-10-31",
+    "2024-11-30",
+    "2024-12-31",
+    "2025-01-31",
+    "2025-02-28",
+    "2025-03-31",
+    "2025-04-30",
+    "2025-05-31"
+]
+
+def build_reconciled_manifests():
+    schema = pq.read_schema(SEALED_PATH)
+    schema_names = set(schema.names)
+
+    # Approved direct subgroup dimensions check
+    candidate_direct = [
+        "primary_borough_id",
+        "functional_road_class",
+        "condition_missing_flag",
+        "future_asset_record_hidden_flag",
+        "no_prior_repair_flag"
+    ]
+
+    active_direct = [c for c in candidate_direct if c in schema_names]
+    excluded_unavailable = [c for c in ["borough_id", "pavement_condition"] if c not in schema_names]
+
+    now_utc = datetime.now(timezone.utc).isoformat()
+
+    eval_manifest = {
+        "schema_version": "1.0",
+        "gate": "B1_PRE_B2_SUBGROUP_RECONCILED",
+        "created_utc": now_utc,
+        "primary_probability_domain": "raw_probability",
+        "sensitivity_probability_domain": "platt_probability",
+        "decision_rationale": "Raw XGBoost probabilities selected as primary Phase 6 output because B1 fit metrics showed lower Brier score (0.055206 vs 0.056979), lower log loss (0.194230 vs 0.205119), and lower ECE (0.011290 vs 0.021507) compared to Platt scaling. AP (0.504947) and ROC-AUC (0.887521) are invariant under Platt scaling due to monotonicity.",
+        "hashes": {
+            "model_sha256": "f034d42f9994cd09059e691220ce75209d8da26040be70e988c418ec9ebb413f",
+            "preprocessor_sha256": "f2dac65ab2a09dd4e978a519a611a14116b25f598277ed8c8ccc2eabc02a3fe7",
+            "sealed_features_sha256": "569e549c9e636bd253bf849c9334a96de08e3152d4f4d6b47c51c84f7e100021",
+            "ordered_features_sha256": "b31c5e9dc4caa835e4398287f3abb0e3738a1682b4c30e411ef4e202689c6695",
+            "b1_target_array_sha256": "de775524ecc80221760f24120869664f722544eaa04fdf7ff7361f44dfeea5dc",
+            "b1_raw_predictions_sha256": "5f616f7bfea2dada377094a0af547ef62824160aace75d132e7a1c6b0c1a65f9",
+            "b1_calibrated_predictions_sha256": "33788c952d629ae51faf8ecc2a0528200ae05b757b4553e96805748f130e89f7"
+        },
+        "thresholds": {
+            "primary_raw_recall_threshold": 0.30805489,
+            "sensitivity_platt_recall_threshold": 0.20194759,
+            "recall_diagnostic_target": 0.50,
+            "selected_row_count": 11966,
+            "achieved_recall": 0.500041,
+            "precision": 0.504847,
+            "f1_score": 0.502433,
+            "lift": 6.015415,
+            "boundary_tie_count": 1
+        },
+        "top_k_policies": {
+            "percentages": [5, 10, 20],
+            "formula": "ceil(N * K / 100)",
+            "ordering_domain": "raw_probability",
+            "tie_break_order": [
+                "score_descending",
+                "canonical_segment_id_ascending",
+                "as_of_date_ascending",
+                "segment_month_id_ascending"
+            ]
+        },
+        "metric_definitions": {
+            "average_precision": "Weighted mean of precision at successive recall thresholds (sklearn convention), NOT trapezoidal PR-AUC.",
+            "roc_auc": "Area under ROC curve.",
+            "brier_score": "Mean squared difference between predicted probability and binary outcome.",
+            "log_loss": "Binary cross-entropy loss.",
+            "ece": "Expected Calibration Error over 10 uniform bins [0.0..1.0] with zero_weight empty bin policy."
+        },
+        "reliability_bins": {
+            "num_bins": 10,
+            "bin_edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+            "empty_bin_policy": "zero_weight"
+        },
+        "calibration_diagnostics_definition": {
+            "intercept_ideal": 0,
+            "slope_ideal": 1
+        },
+        "bootstrap": {
+            "primary_unit": "segment_cluster",
+            "secondary_unit": "row_level",
+            "seed": 42,
+            "final_repetitions": 500,
+            "confidence_level": 0.95,
+            "method": "percentile"
+        },
+        "subgroup": {
+            "direct_fields": active_direct,
+            "derived_fields": {
+                "calendar_quarter": "Derived deterministically from as_of_date: f'Q{(as_of_date.month - 1) // 3 + 1}'",
+                "calendar_year": "Derived deterministically from as_of_date: as_of_date.year"
+            },
+            "excluded_unavailable_fields": excluded_unavailable,
+            "minimum_rows": 500,
+            "minimum_positive_events": 50,
+            "minimum_top_k_positives": 10,
+            "insufficient_marker": "INSUFFICIENT_SAMPLE",
+            "metadata_only_fields": ["primary_borough_id"]
+        },
+        "b2_anchors_allowlist": B2_ANCHORS,
+        "b2_expected_rows": 527813,
+        "b2_row_arithmetic": "11 * 47983 = 527813",
+        "evaluation_rules": {
+            "one_time_evaluation": True,
+            "final_test_180d_evaluation_enabled": False,
+            "embargo_permanently_excluded": True,
+            "post_b2_access_policy_changes_allowed": False
+        }
+    }
+
+    EVAL_MANIFEST_PATH.write_text(json.dumps(eval_manifest, indent=2))
+    print(f"Saved reconciled evaluation manifest: {EVAL_MANIFEST_PATH}")
+
+    eval_sha = hashlib.sha256(EVAL_MANIFEST_PATH.read_bytes()).hexdigest()
+    print(f"Evaluation Manifest SHA-256: {eval_sha}")
+
+    # Update threshold manifest
+    thresh_data = json.loads(THRESH_MANIFEST_PATH.read_text())
+    thresh_data["evaluation_manifest_sha256"] = eval_sha
+    THRESH_MANIFEST_PATH.write_text(json.dumps(thresh_data, indent=2))
+    print(f"Updated threshold manifest link: {THRESH_MANIFEST_PATH}")
+
+if __name__ == "__main__":
+    build_reconciled_manifests()

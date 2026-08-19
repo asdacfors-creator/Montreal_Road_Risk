@@ -1,0 +1,12 @@
+{
+  "python": "3.11.9",
+  "xgboost": "3.2.0",
+  "api": "ExtMemQuantileDMatrix",
+  "has_dataiter": true,
+  "has_extmem_qdm": true,
+  "ram_avail_gb": 9.64,
+  "ram_pct": 43.4,
+  "c_free_gb": 21.2,
+  "d_free_gb": 41.6,
+  "all_conditions_pass": true
+}

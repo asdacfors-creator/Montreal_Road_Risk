@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "gate": "B1",
+  "created_utc": "2026-07-21T03:30:00Z",
+  "deviation_type": "PROCEDURAL_BREACH_SOURCE_PATH_AND_TARGET_DECODING",
+  "remediation_status": "REMEDIATED_AND_VERIFIED",
+  "target_only_artifact": "data/processed/phase_6/gate_b1_authorized_targets_90d.parquet",
+  "target_array_sha256": "de775524ecc80221760f24120869664f722544eaa04fdf7ff7361f44dfeea5dc",
+  "partition_restoration": {
+    "partitions_restored": 3,
+    "total_partitions_audited": 102,
+    "matching": 102,
+    "changed": 0,
+    "missing": 0
+  },
+  "quarantined_artifacts": {
+    "calibration_manifest": "models/phase_6/quarantine/gate_b1_contaminated_01/calibration_manifest.json",
+    "threshold_manifest": "models/phase_6/quarantine/gate_b1_contaminated_01/threshold_manifest.json",
+    "access_record": "models/phase_6/quarantine/gate_b1_contaminated_01/gate_b1_access_record.json",
+    "calibrator_joblib": "models/phase_6/quarantine/gate_b1_contaminated_01/calibrator_90d.joblib",
+    "calibrator_joblib_sha256": "b1597c6b5f07b6d3dabe874b0cda5f42b22e87e2a03e21d930e36982f89c779b"
+  },
+  "gate_b2_status": "LOCKED",
+  "seal_180d_status": "PROCEDURALLY_COMPROMISED"
+}

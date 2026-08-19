@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "phase": 8,
+  "gate": "8A",
+  "app_title": "Montreal Road Pavement Risk Assessment & Maintenance Dashboard",
+  "environment": "local",
+  "default_anchor_month": "2025-05-31",
+  "geometry_crs_working": "EPSG:32188",
+  "geometry_crs_output": "EPSG:4326",
+  "simplification_tolerance_m": 10.0,
+  "preserve_topology": true,
+  "max_map_segments_render": 5000,
+  "color_palette": {
+    "HIGH": "#d62728",
+    "MEDIUM": "#ff7f0e",
+    "WATCH": "#bcbd22",
+    "OTHER": "#7f7f7f"
+  },
+  "data_sources": {
+    "data_mart_parquet": "data/processed/phase_8/dashboard_data_mart.parquet",
+    "simplified_geojson": "data/processed/phase_8/geobase_simplified.geojson",
+    "test_evaluation_results": "models/phase_6/test_evaluation_results.json",
+    "test_bootstrap_ci": "models/phase_6/test_bootstrap_ci.json",
+    "test_subgroup_results": "models/phase_6/test_subgroup_results.json",
+    "gate_7a_manifest": "models/phase_7/gate_7a_manifest.json",
+    "global_importance_csv": "data/processed/phase_7/global_importance_source.csv"
+  },
+  "mandated_non_causal_statement": "SHAP values describe model behavior and association. They do not establish causal effects or prove that changing a feature will change repair risk."
+}

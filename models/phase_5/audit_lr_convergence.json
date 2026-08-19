@@ -1,0 +1,38 @@
+[
+  {
+    "name": "LR_saga_C0.1_mi3000",
+    "solver": "saga",
+    "C": 0.1,
+    "max_iter": 3000,
+    "tol": 0.0001,
+    "n_iter_": null,
+    "converged": false,
+    "convergence_warnings": null,
+    "elapsed_s": ">2880 (killed at 48 min)",
+    "rss_before_gb": 4.33,
+    "rss_peak_gb": null,
+    "AP": null,
+    "ROC": null,
+    "Brier": null,
+    "promotion_eligible": false,
+    "note": "COMPUTATIONALLY INFEASIBLE \u2014 saga on 1M x 201 features x 3000 epochs requires ~3 billion SGD updates. Killed after 48 min with no convergence output. Excluded from model promotion."
+  },
+  {
+    "name": "LR_lbfgs_C0.1_mi2000",
+    "solver": "lbfgs",
+    "C": 0.1,
+    "max_iter": 2000,
+    "tol": 0.0001,
+    "n_iter_": 2000,
+    "converged": false,
+    "convergence_warnings": 1,
+    "elapsed_s": 1808.3,
+    "rss_before_gb": 4.32,
+    "rss_peak_gb": 4.2,
+    "AP": 0.6269773316164465,
+    "ROC": 0.9499201127785075,
+    "Brier": 0.05254339251669344,
+    "promotion_eligible": false,
+    "note": "NON-CONVERGED DIAGNOSTIC RESULT \u2014 excluded from model promotion"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-07-19T23:40:13.349306+00:00",
+  "gate": "A",
+  "checks": {
+    "git_clean": false,
+    "head_is_phase5": true,
+    "model_fingerprint": true,
+    "prep_fingerprint": true,
+    "test_seal_sha256": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+    "test_seal_schema_fp": "f385c705cbe5183760a70da1efdc813f5c74b0629a0a87ea73e522ba36274a2e",
+    "test_seal_rows": true,
+    "backup_readable": true,
+    "ram_pct": 47.9,
+    "disk_free_gb": 41.58,
+    "disk_ok": true,
+    "manifest_written": true,
+    "anchors_count": 17,
+    "anchors_match_17": true,
+    "feature_manifest_rows": 95,
+    "asset_flag_in_manifest": true,
+    "smoke_test_all_finite": true,
+    "smoke_top_k_5": 25,
+    "benchmark_ok": true,
+    "benchmark_rss_delta_gb": 0.067,
+    "benchmark_elapsed_s": 0.09,
+    "target_column_accessed": false,
+    "protected_inputs_immutable": true,
+    "all_pass": true
+  },
+  "model_sha": "f9fab0ec1d8e257f8f201085aa62123056a424552a05e4aa3da9c0affff70c07",
+  "test_sha": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+  "schema_fp": "f385c705cbe5183760a70da1efdc813f5c74b0629a0a87ea73e522ba36274a2e"
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-07-19T17:28:36.934623+00:00",
+  "gate": "A",
+  "snapshot": {
+    "models/phase_5/full_training_external_memory_candidate/model.joblib": "f9fab0ec1d8e257f8f201085aa62123056a424552a05e4aa3da9c0affff70c07",
+    "models/phase_5/full_training_external_memory_candidate/preprocessor.joblib": "6bfe7209f95b86e962e50249ea2492bc7630f9a37d1700f350e4d748a64492ff",
+    "models/phase_5/full_training_external_memory_candidate/metadata.json": "e0d3391cef798b0495b7dbc2707d698f70d499050ae25643fc446ac4ee7d378e",
+    "models/phase_5/full_training_external_memory_candidate/fingerprints.json": "a802ff32a01c416fd8ffc536a8025c723830dde2ba9abfd1cd52116f97d7d5fe",
+    "models/phase_5/model_selection_manifest.json": "2af32cad48acbe8ffc4b285162e18ad7689974a2f30a4cc051b973d4b4a600ef",
+    "models/phase_5/environment_manifest.json": "9296538435501b23f4329157a5179c82d820a6adc9be1ccdf117c068deb964ba",
+    "config/phase_5_modeling.json": "cb48f0526a569e48860daa60db6c957eeac0022d33f95808d711dba68d3c01cb",
+    "data/processed/phase_5/test.parquet": "ebc42e3d99b837a3c8742344bb82ffde37c823dfc5d0094d20b25170c5dfe74c",
+    "docs/phase_5_gate_report.md": "695bb7ed2521c22e980a1dae1606c38265901ef44cb20aa42c8983a25b61f848",
+    "docs/phase_5_validation_report.md": "60a04cd019ec38793c11f7d5f1e346abcd46833de43f7c09acae7b6171961f51",
+    "docs/leakage_prevention.md": "9825f16e278ba3def1a001785dc2628b01301abf6e8a713a493db98024c90d37",
+    "docs/target_definition.md": "4d6a6f2e6926e6067c1d5bc295ec35d89684f4765d21b9c90a4605c6e9bcd2db"
+  }
+}

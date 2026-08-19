@@ -1,0 +1,27 @@
+{
+  "gate": "8A_E2E_AUDIT",
+  "timestamp": "2026-07-21T12:58:13.176058+00:00",
+  "live_url": "http://localhost:8501",
+  "health_status": "200 OK",
+  "verdict": "PASS",
+  "total_screenshots_captured": 48,
+  "target_access": "ZERO",
+  "locked_reconciliation": {
+    "eval_rows": 527813,
+    "canonical_segments": 47983,
+    "b2_anchors": 11,
+    "primary_raw_ap": 0.505693,
+    "primary_raw_roc_auc": 0.920953,
+    "primary_raw_brier": 0.039827,
+    "top5_rows": 26391,
+    "top10_rows": 52782,
+    "top20_rows": 105563
+  },
+  "csv_download_audit": {
+    "matched_rows": 4799,
+    "downloaded_rows": 4799,
+    "forbidden_target_columns": 0,
+    "formula_injection_escaped": true,
+    "segment_month_id_unique": true
+  }
+}

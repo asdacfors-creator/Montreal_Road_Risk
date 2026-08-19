@@ -1,0 +1,32 @@
+{
+  "model": "XGB_ne300_md4_lr0.1_180d",
+  "Average Precision (AP)": 0.7869383884946658,
+  "ROC-AUC": 0.9748324228566543,
+  "Brier": 0.04518133029341698,
+  "n_total": 335881,
+  "n_positive": 26313,
+  "prevalence": 0.07834024550361586,
+  "precision_at_5pct": 0.8271509377791009,
+  "recall_at_5pct": 0.5279519629080682,
+  "lift_at_5pct": 10.558441991874062,
+  "k_rows_5pct": 16795,
+  "k_threshold_5pct": 0.198340505361557,
+  "precision_at_10pct": 0.6214534520229837,
+  "recall_at_10pct": 0.7932960893854749,
+  "lift_at_10pct": 7.932748334242839,
+  "k_rows_10pct": 33589,
+  "k_threshold_10pct": 0.06649339199066162,
+  "precision_at_20pct": 0.37953466216115633,
+  "recall_at_20pct": 0.9689507087751301,
+  "lift_at_20pct": 4.844695848491291,
+  "k_rows_20pct": 67177,
+  "k_threshold_20pct": 0.009415671229362488,
+  "family": "XGBoost",
+  "horizon": "180d",
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.1
+  },
+  "elapsed_s": 156.0
+}

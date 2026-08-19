@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "ccab4b7",
+  "baseline_snapshot_sha256": "137a753fa042feba352fc79be10e134df9cc836b8721426d5df106c55994ea27",
+  "comparison_timestamp": "2026-07-20T20:19:36.220370+00:00",
+  "total_files": 12,
+  "matching_files_count": 11,
+  "changed_files_count": 1,
+  "missing_files_count": 0,
+  "added_files_count": 0,
+  "changed_files": [
+    "docs/phase_5_gate_report.md"
+  ],
+  "missing_files": [],
+  "added_files": [],
+  "classifications": {
+    "docs/phase_5_gate_report.md": "expected documentation change"
+  }
+}

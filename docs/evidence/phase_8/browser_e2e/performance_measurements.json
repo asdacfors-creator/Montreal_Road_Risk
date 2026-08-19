@@ -1,0 +1,23 @@
+{
+  "execution_timestamp": "2026-07-21T12:58:13.149663+00:00",
+  "streamlit_initial_rss_mb": 4.17,
+  "streamlit_peak_rss_mb": 4.17,
+  "system_memory_percent": 53.7,
+  "page_readiness_seconds": {
+    "p1_executive_overview": 5.419,
+    "p2_interactive_risk_map_reps": [
+      5.271,
+      5.505,
+      6.679
+    ],
+    "p2_interactive_risk_map_mean": 5.818,
+    "p2_interactive_risk_map_median": 5.505,
+    "p2_interactive_risk_map_max": 6.679,
+    "p3_segment_details": 5.185,
+    "p4_model_performance": 5.143,
+    "p5_model_interpretation": 5.189
+  },
+  "csv_generation_seconds": 0.75,
+  "console_errors_count": 18,
+  "failed_requests_count": 0
+}

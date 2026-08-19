@@ -1,0 +1,2158 @@
+{
+  "schema_version": "1.1.0",
+  "baseline_snapshot_path": "state/phase_5_protected_input_snapshot.json",
+  "baseline_snapshot_sha256": "a484c4f4ceee24358d7a1577ba7cf863ec7a2e5cfac703f2729394d5ba5c5499",
+  "baseline_commit": "ccab4b7",
+  "comparison_timestamp": "2026-07-20T21:17:03.075340+00:00",
+  "total_protected_files": 224,
+  "summary": {
+    "raw_data": {
+      "total": 56,
+      "matching": 56,
+      "changed": 0,
+      "missing": 0,
+      "added": 0
+    },
+    "phase_3": {
+      "total": 35,
+      "matching": 35,
+      "changed": 0,
+      "missing": 0,
+      "added": 0
+    },
+    "phase_4_5_evidence": {
+      "total": 144,
+      "matching": 124,
+      "expected_changes": 9,
+      "unexpected_changes": 0,
+      "missing": 0,
+      "added": 11
+    }
+  },
+  "lists": {
+    "matching": [
+      "config/feature_engineering.json",
+      "data/interim/.gitkeep",
+      "data/interim/phase_3a/manifests/preprocessing_manifest.json",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2010_32188.parquet",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2015_32188.parquet",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2018_32188.parquet",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2020_32188.parquet",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2022_32188.parquet",
+      "data/interim/phase_3a/pavement_condition/pavement_condition_2024_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2016_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2017_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2018_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2019_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2020_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2021_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2022_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2023_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2024_32188.parquet",
+      "data/interim/phase_3a/pothole_repairs/pothole_repairs_2025_32188.parquet",
+      "data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet",
+      "data/interim/phase_3b/linkage_qa_summary.json",
+      "data/interim/phase_3b/pavement_condition_segment_links.parquet",
+      "data/interim/phase_3b/phase_3b_run_manifest.json",
+      "data/interim/phase_3b/pothole_segment_links.parquet",
+      "data/interim/phase_3b/road_asset_segment_crosswalk.parquet",
+      "data/interim/phase_3b/road_boundary_crosswalk.parquet",
+      "data/interim/phase_3c/dataset_temporal_coverage.parquet",
+      "data/interim/phase_3c/pavement_condition_temporal.parquet",
+      "data/interim/phase_3c/phase_3c_run_manifest.json",
+      "data/interim/phase_3c/pothole_events_temporal.parquet",
+      "data/interim/phase_3c/road_assets_temporal.parquet",
+      "data/interim/phase_3c/temporal_qa_summary.json",
+      "data/interim/phase_3c/weather_daily_canonical.parquet",
+      "data/interim/phase_3c/weather_station_daily.parquet",
+      "data/interim/spatial_base/administrative_boundaries_32188.parquet",
+      "data/interim/spatial_base/geobase_32188.parquet",
+      "data/processed/phase_4/_cache/accepted_events.parquet",
+      "data/processed/phase_4/_cache/anchor_weather.parquet",
+      "data/processed/phase_4/_cache/assets_sub.parquet",
+      "data/processed/phase_4/_cache/collapsed_events.parquet",
+      "data/processed/phase_4/_cache/dup_membership.parquet",
+      "data/processed/phase_4/_cache/pavement_grouped.parquet",
+      "data/processed/phase_4/_cache/pothole_links_full.parquet",
+      "data/processed/phase_4/_cache/static_segments.parquet",
+      "data/processed/phase_4/accepted_repair_events_collapsed.parquet",
+      "data/processed/phase_4/accepted_repair_events_raw.parquet",
+      "data/processed/phase_4/duplicate_group_membership.parquet",
+      "data/processed/phase_4/duplicate_sensitivity_summary.json",
+      "data/processed/phase_4/outcome_anchor_eligibility_by_policy.csv",
+      "data/processed/phase_4/outcome_coverage_evidence.csv",
+      "data/processed/phase_4/outcome_coverage_feasibility.json",
+      "data/processed/phase_4/panel_statistics.json",
+      "data/processed/phase_4/panel_year=2016/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2017/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2018/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2019/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2020/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2021/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2022/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2023/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=06/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=07/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=08/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=09/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=10/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=11/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2024/panel_month=12/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2025/panel_month=01/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2025/panel_month=02/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2025/panel_month=03/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2025/panel_month=04/segment_month.parquet",
+      "data/processed/phase_4/panel_year=2025/panel_month=05/segment_month.parquet",
+      "data/processed/phase_4/phase_4_partition_manifest.json",
+      "data/processed/phase_4/phase_4_qa_summary.json",
+      "data/processed/phase_4/phase_4_run_manifest.json",
+      "data/processed/phase_4/target_exclusion_audit.parquet",
+      "data/processed/phase_4/true_determinism_verification_result.json",
+      "data/raw/.gitkeep",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2009_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2010_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2011_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2012_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2013_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2014_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2015_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2016_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2017_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2018_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2019_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2020_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2021_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2022_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2023_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2024_P1D.csv",
+      "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2025_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2009_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2010_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2011_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2012_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2013_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2014_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2015_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2016_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2017_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2018_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2019_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2020_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2021_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2022_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2023_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2024_P1D.csv",
+      "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2025_P1D.csv",
+      "data/raw/eccc_weather/station_inventory/Station Inventory EN.csv",
+      "data/raw/montreal/borough_boundaries/limites-administratives-agglomeration-nad83.geojson",
+      "data/raw/montreal/geobase/geobase.json",
+      "data/raw/montreal/pavement_condition/auscultation-chaussee-2024.gpkg",
+      "data/raw/montreal/pavement_condition/auscultation-chaussees-2010.csv",
+      "data/raw/montreal/pavement_condition/auscultation-chaussees-2015.csv",
+      "data/raw/montreal/pavement_condition/auscultation-chaussees-2018-arteriel.csv",
+      "data/raw/montreal/pavement_condition/auscultation-chaussees-2020-arteriel.json",
+      "data/raw/montreal/pavement_condition/auscultation-chaussees-2022-local.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule-_2017.csv",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2018.csv",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2019.csv",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2020.csv",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2021.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2022.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2023.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2024.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2025.gpkg",
+      "data/raw/montreal/pothole_repairs/remplissageniddepoule-2016.csv",
+      "data/raw/montreal/road_assets/voi_chaussee_s_c22_geojson.zip",
+      "data/raw/montreal/road_assets/voi_liste_valeurs_csv.csv"
+    ],
+    "changed": [
+      "data/metadata/feature_manifest.csv",
+      "data/processed/phase_4/_cache/accepted_events.parquet.meta.json",
+      "data/processed/phase_4/_cache/anchor_weather.parquet.meta.json",
+      "data/processed/phase_4/_cache/assets_sub.parquet.meta.json",
+      "data/processed/phase_4/_cache/collapsed_events.parquet.meta.json",
+      "data/processed/phase_4/_cache/dup_membership.parquet.meta.json",
+      "data/processed/phase_4/_cache/pavement_grouped.parquet.meta.json",
+      "data/processed/phase_4/_cache/pothole_links_full.parquet.meta.json",
+      "data/processed/phase_4/_cache/static_segments.parquet.meta.json"
+    ],
+    "missing": [],
+    "added": [
+      "config/.gitkeep",
+      "config/data_sources.json",
+      "config/phase_5_modeling.json",
+      "config/phase_6_evaluation.json",
+      "config/spatial_linkage.json",
+      "config/spatial_preprocessing.json",
+      "config/temporal_preprocessing.json",
+      "data/metadata/data_manifest.csv",
+      "data/metadata/eccc_weather_resource_manifest.csv",
+      "data/metadata/pavement_condition_resource_manifest.csv",
+      "data/metadata/pothole_resource_manifest.csv"
+    ]
+  },
+  "records": {
+    "config/feature_engineering.json": {
+      "baseline_sha256": "b5b2e1d253a36ccb794646bc0062a68e81bdf1a760a954ad6dd50a5596829991",
+      "current_sha256": "b5b2e1d253a36ccb794646bc0062a68e81bdf1a760a954ad6dd50a5596829991",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/.gitkeep": {
+      "baseline_sha256": "97de1335081bc1208fd09feded9a4210dc4fbfb0afb1b92ea3fbfcf468c39b90",
+      "current_sha256": "97de1335081bc1208fd09feded9a4210dc4fbfb0afb1b92ea3fbfcf468c39b90",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/manifests/preprocessing_manifest.json": {
+      "baseline_sha256": "67c353967d4464caa87ec391b7e4f2d50001d5807e29a595d8cf7fa7b754561d",
+      "current_sha256": "67c353967d4464caa87ec391b7e4f2d50001d5807e29a595d8cf7fa7b754561d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2010_32188.parquet": {
+      "baseline_sha256": "d0eb36c6e357bd632adf3d370aabb747deb10113be4cf6e46d5e43e4a4fb24a4",
+      "current_sha256": "d0eb36c6e357bd632adf3d370aabb747deb10113be4cf6e46d5e43e4a4fb24a4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2015_32188.parquet": {
+      "baseline_sha256": "a2b7aff40fdea573094d8e6dec5fdad80e74b188b8b3638038fabe3b3d2e1f1e",
+      "current_sha256": "a2b7aff40fdea573094d8e6dec5fdad80e74b188b8b3638038fabe3b3d2e1f1e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2018_32188.parquet": {
+      "baseline_sha256": "15fe55c1bb8dbbec6761477a4f64d4c18e5d9a21e33d70c05b2121c668cc6b17",
+      "current_sha256": "15fe55c1bb8dbbec6761477a4f64d4c18e5d9a21e33d70c05b2121c668cc6b17",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2020_32188.parquet": {
+      "baseline_sha256": "463513a25e097cf65e278f6b4818f143523f8f0704d087ef18400189a303196a",
+      "current_sha256": "463513a25e097cf65e278f6b4818f143523f8f0704d087ef18400189a303196a",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2022_32188.parquet": {
+      "baseline_sha256": "69893115d1b8c533c6d05cc36ecaff5079cc2e4d93da58e8440e2f26835817c2",
+      "current_sha256": "69893115d1b8c533c6d05cc36ecaff5079cc2e4d93da58e8440e2f26835817c2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pavement_condition/pavement_condition_2024_32188.parquet": {
+      "baseline_sha256": "1f9c4e4591409c7cd46d8a75750439df2c4c84cd24f1e9ff333e27e2ba5afd72",
+      "current_sha256": "1f9c4e4591409c7cd46d8a75750439df2c4c84cd24f1e9ff333e27e2ba5afd72",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2016_32188.parquet": {
+      "baseline_sha256": "a0618f5317883658e8e984e38308df35281b272210192f2e8003bc0c6f7b4a61",
+      "current_sha256": "a0618f5317883658e8e984e38308df35281b272210192f2e8003bc0c6f7b4a61",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2017_32188.parquet": {
+      "baseline_sha256": "9bb791102e25058740a7c4513bca3e6af31bb1a1bedb4ce2b940a97046d4e326",
+      "current_sha256": "9bb791102e25058740a7c4513bca3e6af31bb1a1bedb4ce2b940a97046d4e326",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2018_32188.parquet": {
+      "baseline_sha256": "ecfdd9a23ab1030f7e682068364900f1c98870b17e4c5e1bdec7fe892ce11620",
+      "current_sha256": "ecfdd9a23ab1030f7e682068364900f1c98870b17e4c5e1bdec7fe892ce11620",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2019_32188.parquet": {
+      "baseline_sha256": "2f07fbd7ee2da98a1a36ec21d52ed2041d3f7dd3c6e5a66f5727fbfe6e784222",
+      "current_sha256": "2f07fbd7ee2da98a1a36ec21d52ed2041d3f7dd3c6e5a66f5727fbfe6e784222",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2020_32188.parquet": {
+      "baseline_sha256": "74e7fb858a712e34af8a8a4c05ffa364218e76de58b30252bb02876f35b46a9b",
+      "current_sha256": "74e7fb858a712e34af8a8a4c05ffa364218e76de58b30252bb02876f35b46a9b",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2021_32188.parquet": {
+      "baseline_sha256": "181c76925084e8989921c3abd38ce2d23c8ccf9261e132cea54432f2d600d8ea",
+      "current_sha256": "181c76925084e8989921c3abd38ce2d23c8ccf9261e132cea54432f2d600d8ea",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2022_32188.parquet": {
+      "baseline_sha256": "9e7c57bc5ae444e425430714ef08ca712d807191a1c83c76b4484ad369f216f6",
+      "current_sha256": "9e7c57bc5ae444e425430714ef08ca712d807191a1c83c76b4484ad369f216f6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2023_32188.parquet": {
+      "baseline_sha256": "15b89ebae0a590b383bd40630442639087ee1c5733bf0de1db3c85497543cf35",
+      "current_sha256": "15b89ebae0a590b383bd40630442639087ee1c5733bf0de1db3c85497543cf35",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2024_32188.parquet": {
+      "baseline_sha256": "e1a8c1f1ffef5ec649e0c3615ad5e510cc12cd018da89b47aff662d97fa7a47e",
+      "current_sha256": "e1a8c1f1ffef5ec649e0c3615ad5e510cc12cd018da89b47aff662d97fa7a47e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/pothole_repairs/pothole_repairs_2025_32188.parquet": {
+      "baseline_sha256": "23c14dd7ddcba7d51c0c4b4ae2b47b784e6329b4dfb2e5ef464e7e50fa1b47bb",
+      "current_sha256": "23c14dd7ddcba7d51c0c4b4ae2b47b784e6329b4dfb2e5ef464e7e50fa1b47bb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet": {
+      "baseline_sha256": "fde0829dc162890aaec4ea54bebecdd10fb05eafd9eb83c7650960988e704f5d",
+      "current_sha256": "fde0829dc162890aaec4ea54bebecdd10fb05eafd9eb83c7650960988e704f5d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/linkage_qa_summary.json": {
+      "baseline_sha256": "bf2bd197a43ed61e6b44e72685d4fd67d02a0d66e4f25dc0f4baf62029a203ee",
+      "current_sha256": "bf2bd197a43ed61e6b44e72685d4fd67d02a0d66e4f25dc0f4baf62029a203ee",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/pavement_condition_segment_links.parquet": {
+      "baseline_sha256": "c69f08bd096a95196155a0f154a84b43175bd2c319b6257026e71166004c1df4",
+      "current_sha256": "c69f08bd096a95196155a0f154a84b43175bd2c319b6257026e71166004c1df4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/phase_3b_run_manifest.json": {
+      "baseline_sha256": "13cd9f0736d85151bde6e1559b069a8aa722b1778e6f8722b717d53dd9a92b07",
+      "current_sha256": "13cd9f0736d85151bde6e1559b069a8aa722b1778e6f8722b717d53dd9a92b07",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/pothole_segment_links.parquet": {
+      "baseline_sha256": "c96f553ca74f4dbd906f4fe8fe897861781aaed3cf307dd951794c742949a511",
+      "current_sha256": "c96f553ca74f4dbd906f4fe8fe897861781aaed3cf307dd951794c742949a511",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/road_asset_segment_crosswalk.parquet": {
+      "baseline_sha256": "68705fdb2dbc818643a3b52a23062e3458cc6f2a703a61d57fd1b88be3413a12",
+      "current_sha256": "68705fdb2dbc818643a3b52a23062e3458cc6f2a703a61d57fd1b88be3413a12",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3b/road_boundary_crosswalk.parquet": {
+      "baseline_sha256": "39cad5c51b815319a4664ae1dd39416f13815c3317c8864fc542097e4dfc9967",
+      "current_sha256": "39cad5c51b815319a4664ae1dd39416f13815c3317c8864fc542097e4dfc9967",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/dataset_temporal_coverage.parquet": {
+      "baseline_sha256": "a15ef7c04a5ef4746c71471d66841957f95122c4f9a6648a201b3d6d0916cc22",
+      "current_sha256": "a15ef7c04a5ef4746c71471d66841957f95122c4f9a6648a201b3d6d0916cc22",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/pavement_condition_temporal.parquet": {
+      "baseline_sha256": "0e1b0c0addc3fb2a9f5266bffa1201f25b19ee3d1b5657aae4f1b87d1d04d140",
+      "current_sha256": "0e1b0c0addc3fb2a9f5266bffa1201f25b19ee3d1b5657aae4f1b87d1d04d140",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/phase_3c_run_manifest.json": {
+      "baseline_sha256": "ae4c7e43340ee5b96657042f933413eab3f3d2dfcd93805b6a4a3b8437c76baf",
+      "current_sha256": "ae4c7e43340ee5b96657042f933413eab3f3d2dfcd93805b6a4a3b8437c76baf",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/pothole_events_temporal.parquet": {
+      "baseline_sha256": "d3551f0cd30732b422262b0a7e376819b2f2578d25ef8bdbd3b40790e726577d",
+      "current_sha256": "d3551f0cd30732b422262b0a7e376819b2f2578d25ef8bdbd3b40790e726577d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/road_assets_temporal.parquet": {
+      "baseline_sha256": "6a4faa6c04d154c1ff120befe45a8214347b6d042ab06df51b45bf43978b1a49",
+      "current_sha256": "6a4faa6c04d154c1ff120befe45a8214347b6d042ab06df51b45bf43978b1a49",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/temporal_qa_summary.json": {
+      "baseline_sha256": "6481bd51a427450acdc5875d9c8f127a17099adb1aff4e16b8bc8ea2e86fc7dc",
+      "current_sha256": "6481bd51a427450acdc5875d9c8f127a17099adb1aff4e16b8bc8ea2e86fc7dc",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/weather_daily_canonical.parquet": {
+      "baseline_sha256": "99ea2449255245159679db3bb4aa2ea03cddeddd04cccda00aec30b5ccc434d2",
+      "current_sha256": "99ea2449255245159679db3bb4aa2ea03cddeddd04cccda00aec30b5ccc434d2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/phase_3c/weather_station_daily.parquet": {
+      "baseline_sha256": "57b730341d7b623d6744e13082a8df4d4472d7f98ce02113cb3bc0936396f92d",
+      "current_sha256": "57b730341d7b623d6744e13082a8df4d4472d7f98ce02113cb3bc0936396f92d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/spatial_base/administrative_boundaries_32188.parquet": {
+      "baseline_sha256": "247974a52ad13dad3b9200b4fec66ece3e72152a0acff7914cc9253319c38686",
+      "current_sha256": "247974a52ad13dad3b9200b4fec66ece3e72152a0acff7914cc9253319c38686",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/interim/spatial_base/geobase_32188.parquet": {
+      "baseline_sha256": "ec2d078089bba67775ca9aecf147f0b46fe480efb9aaaa6f1e49c1ce870537bd",
+      "current_sha256": "ec2d078089bba67775ca9aecf147f0b46fe480efb9aaaa6f1e49c1ce870537bd",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/metadata/feature_manifest.csv": {
+      "baseline_sha256": "612aecb2b067382bf110e4a8df0dd37fb13f300e40fcf57f7718f05148dd0679",
+      "current_sha256": "e3792948933198289e8c1c41a63a8fb10a22bd985c33862f893c2c626425a8c8",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Tracked metadata feature manifest updated to document leakage risk of prior_repair_months_12m.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/accepted_events.parquet": {
+      "baseline_sha256": "9c582181ac18b9809967e60188bd1bb55ed7d759a32df5c4d713b5629cac2d7e",
+      "current_sha256": "9c582181ac18b9809967e60188bd1bb55ed7d759a32df5c4d713b5629cac2d7e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/accepted_events.parquet.meta.json": {
+      "baseline_sha256": "9834f7f911a3bbe56bd5f1fd8d3a0a7d0166b974e6c86ebb710f0ad8b074cf6d",
+      "current_sha256": "3d7424575915d7cebeaf2ab0124c7c66a695432960572f0911a7d9be32bdadc7",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/anchor_weather.parquet": {
+      "baseline_sha256": "24235faf2b9a42250cce3e567cbf59bd04ce928fc3e8820a4f04cab9bb0490d8",
+      "current_sha256": "24235faf2b9a42250cce3e567cbf59bd04ce928fc3e8820a4f04cab9bb0490d8",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/anchor_weather.parquet.meta.json": {
+      "baseline_sha256": "b61ebf33ac247959102f1d452322232e3bf9001bba7fa045943d82122b981ca3",
+      "current_sha256": "a20ef4a3de8f1e012b1481fa932651cede2d78b9ef71dcbc7bb4afb5a3e31603",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/assets_sub.parquet": {
+      "baseline_sha256": "24176722d9322fb0c952254525a927897af0180e29ef395a6324a481122c80f2",
+      "current_sha256": "24176722d9322fb0c952254525a927897af0180e29ef395a6324a481122c80f2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/assets_sub.parquet.meta.json": {
+      "baseline_sha256": "9992f4d272cd6ba16b1227f43a68721edec071b81ee1ef36bdee77e12dafc423",
+      "current_sha256": "ec79c00a81bd1a0f7dc1645e86c27e8d0cc0a65d597e4d30e7ba74c0df97e36f",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/collapsed_events.parquet": {
+      "baseline_sha256": "4b3780328acc9f7a8e989ce00cf1c69a7516955a4e838b6ef2e61fdd2c614472",
+      "current_sha256": "4b3780328acc9f7a8e989ce00cf1c69a7516955a4e838b6ef2e61fdd2c614472",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/collapsed_events.parquet.meta.json": {
+      "baseline_sha256": "220ee0168a5a8e37afcc99340d706d03056e2b379406c0ef561b58ce42d24f25",
+      "current_sha256": "cf692410f6de3fa2ccb332a0d43ddb216406228cbbfa166afc6d25883e5e7845",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/dup_membership.parquet": {
+      "baseline_sha256": "36597f95ae60d3351efeb9a1a373559f14ad01dc708a7b2aadcccb9ffbaad113",
+      "current_sha256": "36597f95ae60d3351efeb9a1a373559f14ad01dc708a7b2aadcccb9ffbaad113",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/dup_membership.parquet.meta.json": {
+      "baseline_sha256": "ce9f8a7bb92f8c6f65ea71369a91544c438fbb45a986b55331a7e4b805b20386",
+      "current_sha256": "44e26507acb2518d5da52e436236f74c0dcc18c75e1c6bbce0e106912500fd45",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/pavement_grouped.parquet": {
+      "baseline_sha256": "05451f8b234650fb73c1395016180305f0ca0fecf77af2fb72ff21e4c0fd9c82",
+      "current_sha256": "05451f8b234650fb73c1395016180305f0ca0fecf77af2fb72ff21e4c0fd9c82",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/pavement_grouped.parquet.meta.json": {
+      "baseline_sha256": "63314ba27584e5e50c0e0be6fd780a677c8d795194be62ca12e65aceb7926d32",
+      "current_sha256": "5b3097812debbf0967118603db7145cf91d240aced4caac9623b46cbe190176d",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/pothole_links_full.parquet": {
+      "baseline_sha256": "ee6d5136bd93f911590cda798784c39bbe780c4deacb9dfa6df633b67d1384de",
+      "current_sha256": "ee6d5136bd93f911590cda798784c39bbe780c4deacb9dfa6df633b67d1384de",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/pothole_links_full.parquet.meta.json": {
+      "baseline_sha256": "a2a3185e8d29de1dabbd3875a24579c9a8bc21f2a545bd901d5cc72d0e1094b9",
+      "current_sha256": "0dc1d1b24cea60c53505622bfc711de51e24fb8ef5592ed92b2cecc3c2202b2a",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/_cache/static_segments.parquet": {
+      "baseline_sha256": "3d45b90aacc6def1d70a60826fce5f1233f899a3f8adf7d7dc1cddc209c4a383",
+      "current_sha256": "3d45b90aacc6def1d70a60826fce5f1233f899a3f8adf7d7dc1cddc209c4a383",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/_cache/static_segments.parquet.meta.json": {
+      "baseline_sha256": "98299935aa1a2132c744ce778e1f2464827beb49029de153d6e942d63488d122",
+      "current_sha256": "b2b3fa9c13643f546f42caef235c78b2da2d8b0b822e45031cf9b1764eccdbf2",
+      "status": "changed",
+      "classification": "expected remediation change",
+      "explanation": "Generated cache metadata automatically regenerated during the remediation process.",
+      "used_as_remediation_input": false
+    },
+    "data/processed/phase_4/accepted_repair_events_collapsed.parquet": {
+      "baseline_sha256": "b927b7cccb6370b4a1546178fdf223d3b1bab19e58e8ba7f6d60c649ed318fc4",
+      "current_sha256": "b927b7cccb6370b4a1546178fdf223d3b1bab19e58e8ba7f6d60c649ed318fc4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/accepted_repair_events_raw.parquet": {
+      "baseline_sha256": "095ac5c00544f2b8b2e16204c72b0a764f5e87f3d6e24d9679659e8381b7bbc5",
+      "current_sha256": "095ac5c00544f2b8b2e16204c72b0a764f5e87f3d6e24d9679659e8381b7bbc5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/duplicate_group_membership.parquet": {
+      "baseline_sha256": "4daa31e28ba1c533357d7c092fab65c544f1ed77fe435334acbddd628e3eb5b4",
+      "current_sha256": "4daa31e28ba1c533357d7c092fab65c544f1ed77fe435334acbddd628e3eb5b4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/duplicate_sensitivity_summary.json": {
+      "baseline_sha256": "ab307813894daebe3ae44fd64dbfa7f60417336dd766e19e4fffbb25c65a2ef6",
+      "current_sha256": "ab307813894daebe3ae44fd64dbfa7f60417336dd766e19e4fffbb25c65a2ef6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/outcome_anchor_eligibility_by_policy.csv": {
+      "baseline_sha256": "b50eba5988e62103d8d8a6b7657088e572b68cd313df0fa98d4be704510a3133",
+      "current_sha256": "b50eba5988e62103d8d8a6b7657088e572b68cd313df0fa98d4be704510a3133",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/outcome_coverage_evidence.csv": {
+      "baseline_sha256": "8eb688fd4354918a3dbd12e6ff466b1a6de075d5b84996e918b84ccaabaab714",
+      "current_sha256": "8eb688fd4354918a3dbd12e6ff466b1a6de075d5b84996e918b84ccaabaab714",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/outcome_coverage_feasibility.json": {
+      "baseline_sha256": "b842ece802133b32e3476a2229151d49e2cc8dcf3fb9ad3d292d59c5b19a8c06",
+      "current_sha256": "b842ece802133b32e3476a2229151d49e2cc8dcf3fb9ad3d292d59c5b19a8c06",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_statistics.json": {
+      "baseline_sha256": "edd38eee787a02904757a1c1f237c195df536b1d71c992fe024bac5689e01bef",
+      "current_sha256": "edd38eee787a02904757a1c1f237c195df536b1d71c992fe024bac5689e01bef",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2016/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "ff8bcc7eedf1599ca376be18a9bf318ab8c21c8e2996f6016aa62c05a3bfb762",
+      "current_sha256": "ff8bcc7eedf1599ca376be18a9bf318ab8c21c8e2996f6016aa62c05a3bfb762",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "3747587acb7d405b2b4acd2d699d08fbeddd1de76dcdedf1688e3ecd09116eea",
+      "current_sha256": "3747587acb7d405b2b4acd2d699d08fbeddd1de76dcdedf1688e3ecd09116eea",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "2bea922c295c076ad366a1213eb67982655e72bc08ce1cdba22134a3b299f4ee",
+      "current_sha256": "2bea922c295c076ad366a1213eb67982655e72bc08ce1cdba22134a3b299f4ee",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "240facadead8ffc43a49aaec666ef702dddde4b920a953f4151ac6be85fbe2fb",
+      "current_sha256": "240facadead8ffc43a49aaec666ef702dddde4b920a953f4151ac6be85fbe2fb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "18b170d7a572692163c5ee0f0517fccf3f3137d1e5d73acd9055c994f7cd67da",
+      "current_sha256": "18b170d7a572692163c5ee0f0517fccf3f3137d1e5d73acd9055c994f7cd67da",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "e0d45fc7334ca1162434c28eb626c3441c5c562821aefc0d383e30104adaf26a",
+      "current_sha256": "e0d45fc7334ca1162434c28eb626c3441c5c562821aefc0d383e30104adaf26a",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "6149eca2f74bc9f6e123bfbeb284d1d0441c25fd755d2a41976b572d3724aa31",
+      "current_sha256": "6149eca2f74bc9f6e123bfbeb284d1d0441c25fd755d2a41976b572d3724aa31",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "8781d28e5f25dc7f1a1261ea0ff98df139e845911a9a6959786d7fb7e0265fa4",
+      "current_sha256": "8781d28e5f25dc7f1a1261ea0ff98df139e845911a9a6959786d7fb7e0265fa4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "f188bc36e76c925a3e690be1c553b8b18bde37b6b9f65a639a02d14a0131c8ba",
+      "current_sha256": "f188bc36e76c925a3e690be1c553b8b18bde37b6b9f65a639a02d14a0131c8ba",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "ee8b2329127d04d137333e0b7e1ca912334729a8455fe19847ca36899e7f3475",
+      "current_sha256": "ee8b2329127d04d137333e0b7e1ca912334729a8455fe19847ca36899e7f3475",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "b85eae3286ad03c82e7e2540de3225b3c72082d38297c3d987530c85d1daa606",
+      "current_sha256": "b85eae3286ad03c82e7e2540de3225b3c72082d38297c3d987530c85d1daa606",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "3cf758b5f36f2d2af60487ab83b1c8aec86ea56f5a6085f81cd2d66ee4c57086",
+      "current_sha256": "3cf758b5f36f2d2af60487ab83b1c8aec86ea56f5a6085f81cd2d66ee4c57086",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2017/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "0eb51f1280fb773d3404945891db1239427c5c83de6f10ae090d5a399f73fc61",
+      "current_sha256": "0eb51f1280fb773d3404945891db1239427c5c83de6f10ae090d5a399f73fc61",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "eab44d976b1417102f766dfd4efc7cd77d796f6a2017cb413e774152ff2bbc74",
+      "current_sha256": "eab44d976b1417102f766dfd4efc7cd77d796f6a2017cb413e774152ff2bbc74",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "72ccc23f939f103807d90666600e12886a9562c686d05abce117fe46732fd81c",
+      "current_sha256": "72ccc23f939f103807d90666600e12886a9562c686d05abce117fe46732fd81c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "295dbf9f2d22219aa3cf367de4cfdaf20b0b7ae474ee67d1e66eab709eb2881d",
+      "current_sha256": "295dbf9f2d22219aa3cf367de4cfdaf20b0b7ae474ee67d1e66eab709eb2881d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "0d46b9e7220e08adbb08489ff5e219a2e907f1b8fd6e8f2711eaef7d6166af9c",
+      "current_sha256": "0d46b9e7220e08adbb08489ff5e219a2e907f1b8fd6e8f2711eaef7d6166af9c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "e9642f4e0db623c8a3b28db58bf0159a8cad317606e8d0d92f1ad455336de573",
+      "current_sha256": "e9642f4e0db623c8a3b28db58bf0159a8cad317606e8d0d92f1ad455336de573",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "0eae1878baaaf99254c4937e8b594f3d71f2c9c241eebe0617e73aeb477bf175",
+      "current_sha256": "0eae1878baaaf99254c4937e8b594f3d71f2c9c241eebe0617e73aeb477bf175",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "14a24b4ada6841175dc54f1b7510cd06b431fdb1d1c85d1bc7e7320377b189c6",
+      "current_sha256": "14a24b4ada6841175dc54f1b7510cd06b431fdb1d1c85d1bc7e7320377b189c6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "5f881def8c70e37559d88a6490189a21370fbcf07b81eb48aa7126c1372472f8",
+      "current_sha256": "5f881def8c70e37559d88a6490189a21370fbcf07b81eb48aa7126c1372472f8",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "3e7e844306b55cc4bfdf34ca176288eace51334ca1feba3922cf3510fb185424",
+      "current_sha256": "3e7e844306b55cc4bfdf34ca176288eace51334ca1feba3922cf3510fb185424",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "ab88cb86cdf4275ad3261294a451c3bff5a51c40d350711473f1b28265bb14b0",
+      "current_sha256": "ab88cb86cdf4275ad3261294a451c3bff5a51c40d350711473f1b28265bb14b0",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "3d6bef5f4932a3fdc12dd92b5783387a54601681c28f0ded41292971c184b1b7",
+      "current_sha256": "3d6bef5f4932a3fdc12dd92b5783387a54601681c28f0ded41292971c184b1b7",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2018/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "87abca7058ea76f41e955f10bd3f9a7813b13266a300563a7cd8a3f563e6c50c",
+      "current_sha256": "87abca7058ea76f41e955f10bd3f9a7813b13266a300563a7cd8a3f563e6c50c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "c197c4f462bf24f58b7d1e584234d1274d3193a9ac5c616d86f7248517f59da6",
+      "current_sha256": "c197c4f462bf24f58b7d1e584234d1274d3193a9ac5c616d86f7248517f59da6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "e5cfd1df093011113347f7f42b12d9d1fbbe3fcae19b1c0c53c24f1b45eb5df9",
+      "current_sha256": "e5cfd1df093011113347f7f42b12d9d1fbbe3fcae19b1c0c53c24f1b45eb5df9",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "c923603d1d69eae9fba8c1b62de885acd7db56e4a8144e2e3f9d5ab52f0e26e1",
+      "current_sha256": "c923603d1d69eae9fba8c1b62de885acd7db56e4a8144e2e3f9d5ab52f0e26e1",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "e0a68d0fb483cb1670f1548a4d1121e69c49f5fc0bc4cf985a62d7e794146f88",
+      "current_sha256": "e0a68d0fb483cb1670f1548a4d1121e69c49f5fc0bc4cf985a62d7e794146f88",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "7bd319f1cb7a2f9d48d52b8f2549ae39824639b850e465a9a98fb01f3745b58f",
+      "current_sha256": "7bd319f1cb7a2f9d48d52b8f2549ae39824639b850e465a9a98fb01f3745b58f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "801177536a505b75eb3861d1916062b28952624df848b40318266c842413b34e",
+      "current_sha256": "801177536a505b75eb3861d1916062b28952624df848b40318266c842413b34e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "4f65343e02f2fad41bb07719f19d92820f4c5d9d39f3f23a30760048d95afefb",
+      "current_sha256": "4f65343e02f2fad41bb07719f19d92820f4c5d9d39f3f23a30760048d95afefb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "fbe055b35ca059fcd3e1c63cd1514ead0fbc75addc1db8e7f8d4f1441fa2768d",
+      "current_sha256": "fbe055b35ca059fcd3e1c63cd1514ead0fbc75addc1db8e7f8d4f1441fa2768d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "00264726bf3242e46796c7a41a799b0e1ac965b24566c532aea4c70b2e219f7b",
+      "current_sha256": "00264726bf3242e46796c7a41a799b0e1ac965b24566c532aea4c70b2e219f7b",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "97eb397bf7ac8c41e08021d47acd171bec18e2750ecd01f3dbfcf5c9133afab5",
+      "current_sha256": "97eb397bf7ac8c41e08021d47acd171bec18e2750ecd01f3dbfcf5c9133afab5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "e55321d47897d23bebdef8c1cb071799136c1e40c93cecca0714f8130959df7b",
+      "current_sha256": "e55321d47897d23bebdef8c1cb071799136c1e40c93cecca0714f8130959df7b",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2019/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "662ce01be596d51f68137e58990a59be62f5b80af300325897d7c3d77f99a61f",
+      "current_sha256": "662ce01be596d51f68137e58990a59be62f5b80af300325897d7c3d77f99a61f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "c89911c998b65aa58e99e64118cdfe4f350b4bc61aa69e8742052c1e9e060007",
+      "current_sha256": "c89911c998b65aa58e99e64118cdfe4f350b4bc61aa69e8742052c1e9e060007",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "14f69f5ce5b4494b51d3e6f7cef5caf5c05b9e58be3386c7716a18d589cc151d",
+      "current_sha256": "14f69f5ce5b4494b51d3e6f7cef5caf5c05b9e58be3386c7716a18d589cc151d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "92694c6195b1a971dca21429ec91bd9b982723eb0ce40af517bed2ce104aae30",
+      "current_sha256": "92694c6195b1a971dca21429ec91bd9b982723eb0ce40af517bed2ce104aae30",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "c9e5c8acdac87ef0a0ad724de7763b97ec2de8c63a0d1c8f4cc398a064ff3dc1",
+      "current_sha256": "c9e5c8acdac87ef0a0ad724de7763b97ec2de8c63a0d1c8f4cc398a064ff3dc1",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "ea42b95f6add18d2eee6661c20b9d7c8f5d9265874d75a12c7b8660421513713",
+      "current_sha256": "ea42b95f6add18d2eee6661c20b9d7c8f5d9265874d75a12c7b8660421513713",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "b733dd09485e4f86b0f1aa552c2995fbf1920ab44a00bf2ba6685cb96c3ceb38",
+      "current_sha256": "b733dd09485e4f86b0f1aa552c2995fbf1920ab44a00bf2ba6685cb96c3ceb38",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "da444f535e74880987a066eeb9dc55cae64ad0d14664fb1fddb51cad7f0b04a9",
+      "current_sha256": "da444f535e74880987a066eeb9dc55cae64ad0d14664fb1fddb51cad7f0b04a9",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "992c6532202680d21813818a6a0fa916f5efe99e257635c0fd2ea2cc055ab594",
+      "current_sha256": "992c6532202680d21813818a6a0fa916f5efe99e257635c0fd2ea2cc055ab594",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "c7e9d566a30b995a3f86ee5fdaeea3e50e09185846afa3bb752f260c62050978",
+      "current_sha256": "c7e9d566a30b995a3f86ee5fdaeea3e50e09185846afa3bb752f260c62050978",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "0167a1b05618264e0241eb0c4a709c4b013c5883b2c7a72db516786322ad3299",
+      "current_sha256": "0167a1b05618264e0241eb0c4a709c4b013c5883b2c7a72db516786322ad3299",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "cc27ebcdc6b31b37b671cd0ff593279f921b0f9931a95010417790f1d2479392",
+      "current_sha256": "cc27ebcdc6b31b37b671cd0ff593279f921b0f9931a95010417790f1d2479392",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2020/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "1651013d0e030f3394a6f654a7dd3aca8f3c01925841c6de680872129e47d339",
+      "current_sha256": "1651013d0e030f3394a6f654a7dd3aca8f3c01925841c6de680872129e47d339",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "e770e39c9abd3d738efa2ac4a04d5a32cab75aa8e0e6c08b2ca9974cebb10172",
+      "current_sha256": "e770e39c9abd3d738efa2ac4a04d5a32cab75aa8e0e6c08b2ca9974cebb10172",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "d019badcb83961dd25d41dda2b8ef36813bf3b41f546611d8902e277ef561435",
+      "current_sha256": "d019badcb83961dd25d41dda2b8ef36813bf3b41f546611d8902e277ef561435",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "2a7a20c0fbddf490c3c9f95f9b344216ef7c5f19daa2e39c0be42ca0ef737596",
+      "current_sha256": "2a7a20c0fbddf490c3c9f95f9b344216ef7c5f19daa2e39c0be42ca0ef737596",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "4505ae5f382748e0319315d7277a93f560a1a7226e133fd17dbf49b0c4bca760",
+      "current_sha256": "4505ae5f382748e0319315d7277a93f560a1a7226e133fd17dbf49b0c4bca760",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "4184f3a2694cc1aba2307bf3d4bc24955a0375d06849229d9a3aed31b5af7376",
+      "current_sha256": "4184f3a2694cc1aba2307bf3d4bc24955a0375d06849229d9a3aed31b5af7376",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "a9564264460bf4c108bb875f4d5222325ddbed08eac8ec6d0c36e7d7ee7e7710",
+      "current_sha256": "a9564264460bf4c108bb875f4d5222325ddbed08eac8ec6d0c36e7d7ee7e7710",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "ae881aa1ca259522db9c7a01aff220272184b91ae06695edee541a22c6feb26c",
+      "current_sha256": "ae881aa1ca259522db9c7a01aff220272184b91ae06695edee541a22c6feb26c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "4dbde258a05c01ee275f3dfaa87fd268af79fd6a1fd102e4364e8484e8a06890",
+      "current_sha256": "4dbde258a05c01ee275f3dfaa87fd268af79fd6a1fd102e4364e8484e8a06890",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "24b215513f06396f782aca373a80be4856cbf629b57f12a1570797cc7be00ea6",
+      "current_sha256": "24b215513f06396f782aca373a80be4856cbf629b57f12a1570797cc7be00ea6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "7f562e3e2b5abc33b265eb1d09d2b58bbfa51a639a99f98698790cc2513b8cc2",
+      "current_sha256": "7f562e3e2b5abc33b265eb1d09d2b58bbfa51a639a99f98698790cc2513b8cc2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "b0fb3f7b82f638ac51786c30140e45903500faa64c558112cd4e0264e1788844",
+      "current_sha256": "b0fb3f7b82f638ac51786c30140e45903500faa64c558112cd4e0264e1788844",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2021/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "ca48c41d33958b25fbceb283c887d78baae07316fdfaec19d36e6355c0d9798e",
+      "current_sha256": "ca48c41d33958b25fbceb283c887d78baae07316fdfaec19d36e6355c0d9798e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "6a17db0fc56d1ac6ba826f9e20bd3b5553ffbccdf3ff796ca3939df4f143252c",
+      "current_sha256": "6a17db0fc56d1ac6ba826f9e20bd3b5553ffbccdf3ff796ca3939df4f143252c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "d23208c8fe839e71f3745c5ce1c7dfc3455e75d807b9b79d36ed3b565db6ebdb",
+      "current_sha256": "d23208c8fe839e71f3745c5ce1c7dfc3455e75d807b9b79d36ed3b565db6ebdb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "170d7ab93491b878f10ec32de8c48ec276b99775303ae96919437391aca10a24",
+      "current_sha256": "170d7ab93491b878f10ec32de8c48ec276b99775303ae96919437391aca10a24",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "630949c81f90ca3dd2d6d3cc174605ab5ba6c6feea6c7e285f40f57f722ccd05",
+      "current_sha256": "630949c81f90ca3dd2d6d3cc174605ab5ba6c6feea6c7e285f40f57f722ccd05",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "c76ebb240b2f33ede5e30b788507db283cadc7054b2594de6935adc1d7c23128",
+      "current_sha256": "c76ebb240b2f33ede5e30b788507db283cadc7054b2594de6935adc1d7c23128",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "2b3d906bda27b57006c07c8094fcb1ab833c853c8f9ea9243521516fd8f650e6",
+      "current_sha256": "2b3d906bda27b57006c07c8094fcb1ab833c853c8f9ea9243521516fd8f650e6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "58913561d9ff64e56a3daa343c367b025cf61447403b50619318635af5d6502c",
+      "current_sha256": "58913561d9ff64e56a3daa343c367b025cf61447403b50619318635af5d6502c",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "51bf9a6293f865df5c8c4d6c8e7157a8d9f7b151336baa5faa3154302cec09f9",
+      "current_sha256": "51bf9a6293f865df5c8c4d6c8e7157a8d9f7b151336baa5faa3154302cec09f9",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "1931846352940967229503d4d6330670c886e6ab929531cd0d0c8acff90bb594",
+      "current_sha256": "1931846352940967229503d4d6330670c886e6ab929531cd0d0c8acff90bb594",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "f8cd3db7dde54690899b1406816bf4499fed16e4813ff6fb1785d0b4d7c36610",
+      "current_sha256": "f8cd3db7dde54690899b1406816bf4499fed16e4813ff6fb1785d0b4d7c36610",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "4a3d4ed2218112363f3d70e3b6a420409d51cd50ea5c9b7471faac7765cef182",
+      "current_sha256": "4a3d4ed2218112363f3d70e3b6a420409d51cd50ea5c9b7471faac7765cef182",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2022/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "5e16bcbb2cd656119f59cf653a91a83941f82db570598673f35c41277e52a0a5",
+      "current_sha256": "5e16bcbb2cd656119f59cf653a91a83941f82db570598673f35c41277e52a0a5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "68d90f58446adad60831299b36ac983f3bdeae1bc716f75825a0c3d81970dbf1",
+      "current_sha256": "68d90f58446adad60831299b36ac983f3bdeae1bc716f75825a0c3d81970dbf1",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "a9d676ccabd9347871219daaceb6e3a4639bef5f447041f388f92eaad039a4a2",
+      "current_sha256": "a9d676ccabd9347871219daaceb6e3a4639bef5f447041f388f92eaad039a4a2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "09e166ce84e5d6b86d7e974d40b77d0913635b0aede78573d0253897c192401e",
+      "current_sha256": "09e166ce84e5d6b86d7e974d40b77d0913635b0aede78573d0253897c192401e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "646a0c661ccf645872e877967ee7ada829ae4a8ea53002577c72ecc478680793",
+      "current_sha256": "646a0c661ccf645872e877967ee7ada829ae4a8ea53002577c72ecc478680793",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "6cd88407b5e97d4c0fa144ac3a64ec085f47f82a597ef238be3ca41dda8bb9da",
+      "current_sha256": "6cd88407b5e97d4c0fa144ac3a64ec085f47f82a597ef238be3ca41dda8bb9da",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "63f641dc17f41c8c793b3c7fed1424623316dc19b4cd5487a1d7f8d17906e41a",
+      "current_sha256": "63f641dc17f41c8c793b3c7fed1424623316dc19b4cd5487a1d7f8d17906e41a",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "4d3ff3820d6ffd47a5081f4c0c0c6e33c13e85189989c752f5177a173eb7fb89",
+      "current_sha256": "4d3ff3820d6ffd47a5081f4c0c0c6e33c13e85189989c752f5177a173eb7fb89",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "601f9acab6c34829f882e93df196898bc57590045a9a6ef4995d24a7e9c7e015",
+      "current_sha256": "601f9acab6c34829f882e93df196898bc57590045a9a6ef4995d24a7e9c7e015",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "811d9433b36291ce422fa2c17e03da3c65c5f418d360e873e0221339623adaa2",
+      "current_sha256": "811d9433b36291ce422fa2c17e03da3c65c5f418d360e873e0221339623adaa2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "5923d148c6baffa0d2ece8d10a6193260eafaf7368fda267748c892bc441e817",
+      "current_sha256": "5923d148c6baffa0d2ece8d10a6193260eafaf7368fda267748c892bc441e817",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "f29e72684654ca8147ca57811fab7c199cbcaa84958354f9b358f35474d213fb",
+      "current_sha256": "f29e72684654ca8147ca57811fab7c199cbcaa84958354f9b358f35474d213fb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2023/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "67ba1c0493bb566739c6065989c65540dc86c0fd9ae6f0ab112f8e8b98ac61e9",
+      "current_sha256": "67ba1c0493bb566739c6065989c65540dc86c0fd9ae6f0ab112f8e8b98ac61e9",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "c96374c4f677ddacf1008d9a258afedc7a68661a36bebca998dce0a8a21e0e31",
+      "current_sha256": "c96374c4f677ddacf1008d9a258afedc7a68661a36bebca998dce0a8a21e0e31",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "6c048957ad44722e4957e369a2cf6a1a98ab7556165c08077c21a86b1e573d08",
+      "current_sha256": "6c048957ad44722e4957e369a2cf6a1a98ab7556165c08077c21a86b1e573d08",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "dee647c5faa31f7951eef4f2161e1c58a7f95937f6be09246652c730fb9dda06",
+      "current_sha256": "dee647c5faa31f7951eef4f2161e1c58a7f95937f6be09246652c730fb9dda06",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "7317c00e17a3d2f04159df823a149eaa7011fccc6134d3eec983c8cd100d13df",
+      "current_sha256": "7317c00e17a3d2f04159df823a149eaa7011fccc6134d3eec983c8cd100d13df",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "4c49b15ca99d1073d54e9b55600afbd791df9e2e8d0d8d8202a4e5e8d4a72d8f",
+      "current_sha256": "4c49b15ca99d1073d54e9b55600afbd791df9e2e8d0d8d8202a4e5e8d4a72d8f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=06/segment_month.parquet": {
+      "baseline_sha256": "b43345bd83eda050dee4abddd8edf5d9549625e43609ad951dfdfe5c1d423234",
+      "current_sha256": "b43345bd83eda050dee4abddd8edf5d9549625e43609ad951dfdfe5c1d423234",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=07/segment_month.parquet": {
+      "baseline_sha256": "75e10bfe696a3be3e6c807f983ef0ef93e24cddf1bff440c0d40b8affca7b95f",
+      "current_sha256": "75e10bfe696a3be3e6c807f983ef0ef93e24cddf1bff440c0d40b8affca7b95f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=08/segment_month.parquet": {
+      "baseline_sha256": "30bec3ec7ddb2f86b9168bbce4d786eb01d47fb2d51eb53c8aecc18303e2766b",
+      "current_sha256": "30bec3ec7ddb2f86b9168bbce4d786eb01d47fb2d51eb53c8aecc18303e2766b",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=09/segment_month.parquet": {
+      "baseline_sha256": "6e3470355c811c31ac4c67712b3fc3e82ae028290b0b102f5d1f17e7111044cb",
+      "current_sha256": "6e3470355c811c31ac4c67712b3fc3e82ae028290b0b102f5d1f17e7111044cb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=10/segment_month.parquet": {
+      "baseline_sha256": "3f43361a0cc59cbaec3cecd33bee427e6d67fdf8e363126d2bbcf7ce24e4b1d5",
+      "current_sha256": "3f43361a0cc59cbaec3cecd33bee427e6d67fdf8e363126d2bbcf7ce24e4b1d5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=11/segment_month.parquet": {
+      "baseline_sha256": "e1af047f28de7466bc6aa14bca009b85f2c4d7ac84c1d60670d003bef4d8ef2d",
+      "current_sha256": "e1af047f28de7466bc6aa14bca009b85f2c4d7ac84c1d60670d003bef4d8ef2d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2024/panel_month=12/segment_month.parquet": {
+      "baseline_sha256": "8047f9e6606ad54dd6ee1b3a5d67c3ed865be3d91a63e84889ad1aaef1dd81d5",
+      "current_sha256": "8047f9e6606ad54dd6ee1b3a5d67c3ed865be3d91a63e84889ad1aaef1dd81d5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2025/panel_month=01/segment_month.parquet": {
+      "baseline_sha256": "616360cca2538f80512d9d3198038741ee10ed4024dbf5a325120f517240daf0",
+      "current_sha256": "616360cca2538f80512d9d3198038741ee10ed4024dbf5a325120f517240daf0",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2025/panel_month=02/segment_month.parquet": {
+      "baseline_sha256": "cce6705b016543cc24162608842a6584d162f61cd813dc5ba80e847d2bc6b0dc",
+      "current_sha256": "cce6705b016543cc24162608842a6584d162f61cd813dc5ba80e847d2bc6b0dc",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2025/panel_month=03/segment_month.parquet": {
+      "baseline_sha256": "061377711b9797c3cd51bb16bef8ef76183a28f49c27ea566919d8694cc29dd9",
+      "current_sha256": "061377711b9797c3cd51bb16bef8ef76183a28f49c27ea566919d8694cc29dd9",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2025/panel_month=04/segment_month.parquet": {
+      "baseline_sha256": "c06ed829790038e36370969b3b1227cecd54fca40f9b3ca639d6de1ac0b186a6",
+      "current_sha256": "c06ed829790038e36370969b3b1227cecd54fca40f9b3ca639d6de1ac0b186a6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/panel_year=2025/panel_month=05/segment_month.parquet": {
+      "baseline_sha256": "71b8c180d9636ece2bf1924fc12616db2a54755ebe16c7c3685a4cf2f62b0be5",
+      "current_sha256": "71b8c180d9636ece2bf1924fc12616db2a54755ebe16c7c3685a4cf2f62b0be5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/phase_4_partition_manifest.json": {
+      "baseline_sha256": "8db80e61418981d944faed7cbfe55eb7e9f7bb03292f34dda798e839e5efb488",
+      "current_sha256": "8db80e61418981d944faed7cbfe55eb7e9f7bb03292f34dda798e839e5efb488",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/phase_4_qa_summary.json": {
+      "baseline_sha256": "d6aab70e4d4ee542c53f8e2ecd4b190f032214f63f5246b19ac0d6ee15477492",
+      "current_sha256": "d6aab70e4d4ee542c53f8e2ecd4b190f032214f63f5246b19ac0d6ee15477492",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/phase_4_run_manifest.json": {
+      "baseline_sha256": "274e4530913e01d5540e45aa5e28438a5267c1c4d7fc8b5786e0874150590309",
+      "current_sha256": "274e4530913e01d5540e45aa5e28438a5267c1c4d7fc8b5786e0874150590309",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/target_exclusion_audit.parquet": {
+      "baseline_sha256": "17cc67c8a6ba090e03d5f4da090227deba21b8992e52953a1fc5dcdf7c2d7f52",
+      "current_sha256": "17cc67c8a6ba090e03d5f4da090227deba21b8992e52953a1fc5dcdf7c2d7f52",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/processed/phase_4/true_determinism_verification_result.json": {
+      "baseline_sha256": "a3738e52ed71d5459943cce44b1df29ce6ddd3ec69a9ff3782991ccdf7d5400a",
+      "current_sha256": "a3738e52ed71d5459943cce44b1df29ce6ddd3ec69a9ff3782991ccdf7d5400a",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/.gitkeep": {
+      "baseline_sha256": "97de1335081bc1208fd09feded9a4210dc4fbfb0afb1b92ea3fbfcf468c39b90",
+      "current_sha256": "97de1335081bc1208fd09feded9a4210dc4fbfb0afb1b92ea3fbfcf468c39b90",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2009_P1D.csv": {
+      "baseline_sha256": "9f98878187a47c784ac656c9c1a18c446b4ddbaa8bdec42cf67f48cba0b4e195",
+      "current_sha256": "9f98878187a47c784ac656c9c1a18c446b4ddbaa8bdec42cf67f48cba0b4e195",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2010_P1D.csv": {
+      "baseline_sha256": "ea140d25c49f2bb71a2695e3b1eba13b3a60037ab81b4421117be44fe688ba85",
+      "current_sha256": "ea140d25c49f2bb71a2695e3b1eba13b3a60037ab81b4421117be44fe688ba85",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2011_P1D.csv": {
+      "baseline_sha256": "147274956ac7280a582515c0cace51e33b5f68cf1f39f26e0b7276d9fbce3237",
+      "current_sha256": "147274956ac7280a582515c0cace51e33b5f68cf1f39f26e0b7276d9fbce3237",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2012_P1D.csv": {
+      "baseline_sha256": "d8929f1105f65183b674bab45270c99f91c72961c9c6625697d5d94806aada13",
+      "current_sha256": "d8929f1105f65183b674bab45270c99f91c72961c9c6625697d5d94806aada13",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2013_P1D.csv": {
+      "baseline_sha256": "3746af44901c1ab5570f89a8a64d86c2db20d0242160c51ca762565937d23836",
+      "current_sha256": "3746af44901c1ab5570f89a8a64d86c2db20d0242160c51ca762565937d23836",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2014_P1D.csv": {
+      "baseline_sha256": "72985055247132168379ffda52b744ea788cd07802c9072c5f42e6b882e4e110",
+      "current_sha256": "72985055247132168379ffda52b744ea788cd07802c9072c5f42e6b882e4e110",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2015_P1D.csv": {
+      "baseline_sha256": "efe61374656e0870cca21212e2b99a6be346d5fcb27564acdf692bcfb1601814",
+      "current_sha256": "efe61374656e0870cca21212e2b99a6be346d5fcb27564acdf692bcfb1601814",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2016_P1D.csv": {
+      "baseline_sha256": "cc443b401a25ff6fa39f355d1d502359f257eae11ca29e8acf18bba19865f7da",
+      "current_sha256": "cc443b401a25ff6fa39f355d1d502359f257eae11ca29e8acf18bba19865f7da",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2017_P1D.csv": {
+      "baseline_sha256": "1086042d5d11e7fd83f46b88aeb6a99ee6963adcb88e8dac461cb7bc0510dfcf",
+      "current_sha256": "1086042d5d11e7fd83f46b88aeb6a99ee6963adcb88e8dac461cb7bc0510dfcf",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2018_P1D.csv": {
+      "baseline_sha256": "ccd74ee7f517036928c6eacce9561d6511160d443525b5086c35fd754abbaac2",
+      "current_sha256": "ccd74ee7f517036928c6eacce9561d6511160d443525b5086c35fd754abbaac2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2019_P1D.csv": {
+      "baseline_sha256": "de4fe8a37b5403b8dc67afe7995aec0c95887bbff48b036fa4ad35c256fb75a7",
+      "current_sha256": "de4fe8a37b5403b8dc67afe7995aec0c95887bbff48b036fa4ad35c256fb75a7",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2020_P1D.csv": {
+      "baseline_sha256": "c7a25b89417b8836d4420fe5ab37877b4820245eb1512e1a735f93d52ab01f7e",
+      "current_sha256": "c7a25b89417b8836d4420fe5ab37877b4820245eb1512e1a735f93d52ab01f7e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2021_P1D.csv": {
+      "baseline_sha256": "4caaffa33f90f44a7bd261d4c25b9490a70d1d45e95b1710cdf1684eb672800f",
+      "current_sha256": "4caaffa33f90f44a7bd261d4c25b9490a70d1d45e95b1710cdf1684eb672800f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2022_P1D.csv": {
+      "baseline_sha256": "9665c5ffcfd7dbbc95e7a96b3e1db5d1276500f2919515dda767298479e8ee59",
+      "current_sha256": "9665c5ffcfd7dbbc95e7a96b3e1db5d1276500f2919515dda767298479e8ee59",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2023_P1D.csv": {
+      "baseline_sha256": "6ce5ccffe07c10c1d0ad90d9706ad78f376603eed182953390dcc512c3478f56",
+      "current_sha256": "6ce5ccffe07c10c1d0ad90d9706ad78f376603eed182953390dcc512c3478f56",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2024_P1D.csv": {
+      "baseline_sha256": "d73af2726fcaec4b5c973e245ceee7b009275c7b362434c466e94bb302cd2b6d",
+      "current_sha256": "d73af2726fcaec4b5c973e245ceee7b009275c7b362434c466e94bb302cd2b6d",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/mctavish/en_climate_daily_QC_7024745_2025_P1D.csv": {
+      "baseline_sha256": "3eaa16964c64270e1d30c2ce3aee7a0369991ba89612c94a412588b13dd8e818",
+      "current_sha256": "3eaa16964c64270e1d30c2ce3aee7a0369991ba89612c94a412588b13dd8e818",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2009_P1D.csv": {
+      "baseline_sha256": "d2c13bfc650f5bac57744d668fc92ab125ab8402bce69183f1c3791b6860f5fb",
+      "current_sha256": "d2c13bfc650f5bac57744d668fc92ab125ab8402bce69183f1c3791b6860f5fb",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2010_P1D.csv": {
+      "baseline_sha256": "e41831880f4d8be101b91875d36ba5c029bd04fd45d1176dd8cd5db957377e8f",
+      "current_sha256": "e41831880f4d8be101b91875d36ba5c029bd04fd45d1176dd8cd5db957377e8f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2011_P1D.csv": {
+      "baseline_sha256": "10cddaaa80f565dcc43123d8477989868d730c4a7dcf96ef534418ba0de833f6",
+      "current_sha256": "10cddaaa80f565dcc43123d8477989868d730c4a7dcf96ef534418ba0de833f6",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2012_P1D.csv": {
+      "baseline_sha256": "459bb622afb0514e63019ac23be78dada7307233f6977207fa93664afb3100cc",
+      "current_sha256": "459bb622afb0514e63019ac23be78dada7307233f6977207fa93664afb3100cc",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2013_P1D.csv": {
+      "baseline_sha256": "1844430428b37f3badfd0f9f0fbc7815b618cc77e056e6244af89f2c4e6fcf6b",
+      "current_sha256": "1844430428b37f3badfd0f9f0fbc7815b618cc77e056e6244af89f2c4e6fcf6b",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2014_P1D.csv": {
+      "baseline_sha256": "dda5d8b84cb9884fa182f79be299f459b4b904d46eb735e28943255d54c6dd46",
+      "current_sha256": "dda5d8b84cb9884fa182f79be299f459b4b904d46eb735e28943255d54c6dd46",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2015_P1D.csv": {
+      "baseline_sha256": "3672810e778a3c9f3224f9699cb2aace74acd826a6dffb17377a0545ad28c6ef",
+      "current_sha256": "3672810e778a3c9f3224f9699cb2aace74acd826a6dffb17377a0545ad28c6ef",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2016_P1D.csv": {
+      "baseline_sha256": "600e3699f5f4ad9ce7b4846720e29ce91007a629954d649b457fbab9821ffdff",
+      "current_sha256": "600e3699f5f4ad9ce7b4846720e29ce91007a629954d649b457fbab9821ffdff",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2017_P1D.csv": {
+      "baseline_sha256": "7825cfea7bf0dffbeb4bfbb32268a0036b48ae8aac922042da8d3713014e48b5",
+      "current_sha256": "7825cfea7bf0dffbeb4bfbb32268a0036b48ae8aac922042da8d3713014e48b5",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2018_P1D.csv": {
+      "baseline_sha256": "1ccc053cf0c66be0b5a58270cbd72267b4011da31862e743e559a806b49ac811",
+      "current_sha256": "1ccc053cf0c66be0b5a58270cbd72267b4011da31862e743e559a806b49ac811",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2019_P1D.csv": {
+      "baseline_sha256": "4b5af0895171bf527fc9ba8a845e0d29ebae884c64047bb60d8efe3066592a86",
+      "current_sha256": "4b5af0895171bf527fc9ba8a845e0d29ebae884c64047bb60d8efe3066592a86",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2020_P1D.csv": {
+      "baseline_sha256": "7f040c91a906fa9f7e1e0e4c10a4f791d933947f3c245c000f43f7804e24b305",
+      "current_sha256": "7f040c91a906fa9f7e1e0e4c10a4f791d933947f3c245c000f43f7804e24b305",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2021_P1D.csv": {
+      "baseline_sha256": "0f1d428cbdbb4fef20352969884976e51a5f90d3909380222ebef36fb7f3a866",
+      "current_sha256": "0f1d428cbdbb4fef20352969884976e51a5f90d3909380222ebef36fb7f3a866",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2022_P1D.csv": {
+      "baseline_sha256": "09e858d839056350d9da0f88ceeee1af41834a9de3861db50a562fe42ed436b1",
+      "current_sha256": "09e858d839056350d9da0f88ceeee1af41834a9de3861db50a562fe42ed436b1",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2023_P1D.csv": {
+      "baseline_sha256": "eaeb340fb4d99493b5b0566aa8e82cfd3c744acb390ffe7a4108553d1408f3e4",
+      "current_sha256": "eaeb340fb4d99493b5b0566aa8e82cfd3c744acb390ffe7a4108553d1408f3e4",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2024_P1D.csv": {
+      "baseline_sha256": "a88463d930be99452519422a1392b8159b21e4b0740e8573af8269afb70fd754",
+      "current_sha256": "a88463d930be99452519422a1392b8159b21e4b0740e8573af8269afb70fd754",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/montreal_trudeau/en_climate_daily_QC_702S006_2025_P1D.csv": {
+      "baseline_sha256": "bdf905e288bf1b1f58d4c9f97e47b0940aade986eab02aa83316c3cc8234547f",
+      "current_sha256": "bdf905e288bf1b1f58d4c9f97e47b0940aade986eab02aa83316c3cc8234547f",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/eccc_weather/station_inventory/Station Inventory EN.csv": {
+      "baseline_sha256": "33fcee2d966edf47fdaf5164fe91772f1987e4e7b4a19eede7ffdfcf898ea632",
+      "current_sha256": "33fcee2d966edf47fdaf5164fe91772f1987e4e7b4a19eede7ffdfcf898ea632",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/borough_boundaries/limites-administratives-agglomeration-nad83.geojson": {
+      "baseline_sha256": "7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192",
+      "current_sha256": "7c860dccbf8a8a1a7ff45d1b65a19f819ebbf444b7f7808506c09ad305aed192",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/geobase/geobase.json": {
+      "baseline_sha256": "fbb1a46f4fd64ae156a778a3bfe3ef176583967607de33762d26b07f53572c25",
+      "current_sha256": "fbb1a46f4fd64ae156a778a3bfe3ef176583967607de33762d26b07f53572c25",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussee-2024.gpkg": {
+      "baseline_sha256": "fc474fb8c668a027d80c1c9dc09cf839b3311a21f65409b34a641c9fae02d01a",
+      "current_sha256": "fc474fb8c668a027d80c1c9dc09cf839b3311a21f65409b34a641c9fae02d01a",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussees-2010.csv": {
+      "baseline_sha256": "5ee6becde9cb4d2b75246b19458968a6da29c7266f32360b1f097e732ed89a74",
+      "current_sha256": "5ee6becde9cb4d2b75246b19458968a6da29c7266f32360b1f097e732ed89a74",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussees-2015.csv": {
+      "baseline_sha256": "c062a2989057df64e6bc0fc23d27bfc48988cd72e6d7694c380e0b40a8d10879",
+      "current_sha256": "c062a2989057df64e6bc0fc23d27bfc48988cd72e6d7694c380e0b40a8d10879",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussees-2018-arteriel.csv": {
+      "baseline_sha256": "a2fc5ddf358493aa5d7e3d4b8401fe7880bd799816e36853d6bf7d9bf6ad8023",
+      "current_sha256": "a2fc5ddf358493aa5d7e3d4b8401fe7880bd799816e36853d6bf7d9bf6ad8023",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussees-2020-arteriel.json": {
+      "baseline_sha256": "6555ef9488b955b677c01993f067651985c5c804185a5675e39e03c9b1ecabf2",
+      "current_sha256": "6555ef9488b955b677c01993f067651985c5c804185a5675e39e03c9b1ecabf2",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pavement_condition/auscultation-chaussees-2022-local.gpkg": {
+      "baseline_sha256": "7cca61a6712ddb3fb71147bfd125632d3646f0498f113d670f5a117a150387d3",
+      "current_sha256": "7cca61a6712ddb3fb71147bfd125632d3646f0498f113d670f5a117a150387d3",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule-_2017.csv": {
+      "baseline_sha256": "af4f1fede65dee1d171b01e261929168621408526d2746a17875119c3f328069",
+      "current_sha256": "af4f1fede65dee1d171b01e261929168621408526d2746a17875119c3f328069",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2018.csv": {
+      "baseline_sha256": "ef988b45eec79427eecbcca71ae91dcdbc50cf517f691a6edadc3f8c1acbc505",
+      "current_sha256": "ef988b45eec79427eecbcca71ae91dcdbc50cf517f691a6edadc3f8c1acbc505",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2019.csv": {
+      "baseline_sha256": "68ecb956608b3230e939943aadd96a216b03ca16b4138902e7a52e5ce1e4e3db",
+      "current_sha256": "68ecb956608b3230e939943aadd96a216b03ca16b4138902e7a52e5ce1e4e3db",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2020.csv": {
+      "baseline_sha256": "8417021f629007af4d873e1d5faca5924a6d297c35dfc63adf3abe9698ef1703",
+      "current_sha256": "8417021f629007af4d873e1d5faca5924a6d297c35dfc63adf3abe9698ef1703",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2021.gpkg": {
+      "baseline_sha256": "a7c7b0a44db5ef84fd885d35730a94d0292815da8c036cb479c6dc793d2dd245",
+      "current_sha256": "a7c7b0a44db5ef84fd885d35730a94d0292815da8c036cb479c6dc793d2dd245",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2022.gpkg": {
+      "baseline_sha256": "2da007281adeb4ff32d22e8b7c9fd9729ec8e5b1aa38d45de6c31822c0050048",
+      "current_sha256": "2da007281adeb4ff32d22e8b7c9fd9729ec8e5b1aa38d45de6c31822c0050048",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2023.gpkg": {
+      "baseline_sha256": "548568a84ce07cec077c6da6ea2f5b1e98ff620b9317c9d22bda7e74ef75e04e",
+      "current_sha256": "548568a84ce07cec077c6da6ea2f5b1e98ff620b9317c9d22bda7e74ef75e04e",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2024.gpkg": {
+      "baseline_sha256": "7e3ea9b16999fea7286501e5f1490ef84c89655bd6c3d812b38473e5232ccf34",
+      "current_sha256": "7e3ea9b16999fea7286501e5f1490ef84c89655bd6c3d812b38473e5232ccf34",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissage_niddepoule_2025.gpkg": {
+      "baseline_sha256": "c64b6dec96dd44bee9ba5a1d4280ba77f733a75e48c4d7ce1f6fbd18148f4320",
+      "current_sha256": "c64b6dec96dd44bee9ba5a1d4280ba77f733a75e48c4d7ce1f6fbd18148f4320",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/pothole_repairs/remplissageniddepoule-2016.csv": {
+      "baseline_sha256": "b49386f895285ac50f8ec6136723d9c9a7e78b9a762ef4330977833dd09fb8ca",
+      "current_sha256": "b49386f895285ac50f8ec6136723d9c9a7e78b9a762ef4330977833dd09fb8ca",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/road_assets/voi_chaussee_s_c22_geojson.zip": {
+      "baseline_sha256": "baeb0afd09d13f1a812836aea36ab04efc2f6333a7600caf31218ee522f3b4e7",
+      "current_sha256": "baeb0afd09d13f1a812836aea36ab04efc2f6333a7600caf31218ee522f3b4e7",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "data/raw/montreal/road_assets/voi_liste_valeurs_csv.csv": {
+      "baseline_sha256": "e8ae05f22796ae361360da6ac3f28fe7d79cd7200cf4e5e93ecf85e9bf2704b0",
+      "current_sha256": "e8ae05f22796ae361360da6ac3f28fe7d79cd7200cf4e5e93ecf85e9bf2704b0",
+      "status": "matching",
+      "classification": "matching",
+      "explanation": "File matches the baseline exactly.",
+      "used_as_remediation_input": true
+    },
+    "config/.gitkeep": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "97de1335081bc1208fd09feded9a4210dc4fbfb0afb1b92ea3fbfcf468c39b90",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/data_sources.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "4e8915d191cfc2bb345734dc9dd754a74c2695108bfaa72e46e096f7d32be864",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/phase_5_modeling.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "cb48f0526a569e48860daa60db6c957eeac0022d33f95808d711dba68d3c01cb",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/phase_6_evaluation.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "1b284ead07c470c834fa174db276e57e238a1e671922acf210bed0428c56d7a0",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/spatial_linkage.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "ff0e52eb9ba42acdce307941f96101c3b1dc5a5f72826ee1f3ce8d75faadbc10",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/spatial_preprocessing.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "8589320c61e74f4696b49900f9053639bef52a28110c57147f4fbbac70805d76",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "config/temporal_preprocessing.json": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "7eda31954fc1eca211932a4e68ec7dce2feb703a3bb83944a6630d5672c234e3",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "data/metadata/data_manifest.csv": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "98be5ef3279db43858853e437cadcc89f6ca9f29146f8b827b5efa2be07044d7",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "data/metadata/eccc_weather_resource_manifest.csv": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "4738eb01dace7e80554ccf967c916dc45f1a5f82269816d80647e4479e8fe62c",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "data/metadata/pavement_condition_resource_manifest.csv": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "a3da7e197fd543db195b43b99ea40d1912a4e97d521252e5c7260bd313ab31cb",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    },
+    "data/metadata/pothole_resource_manifest.csv": {
+      "baseline_sha256": "MISSING",
+      "current_sha256": "12429fc73e9412515a94220d2bcade19c26232967045ae006ee38ca79b4df86e",
+      "status": "added",
+      "classification": "expected addition",
+      "explanation": "Approved config or metadata manifest file.",
+      "used_as_remediation_input": false
+    }
+  }
+}

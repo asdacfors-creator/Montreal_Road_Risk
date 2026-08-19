@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "timezone_assumption": "America/Toronto",
+  "inputs": {
+    "potholes_years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+    "potholes_pattern": "data/interim/phase_3a/pothole_repairs/pothole_repairs_{YEAR}_32188.parquet",
+    "potholes_links": "data/interim/phase_3b/pothole_segment_links.parquet",
+    "pavement_campaigns": ["2010", "2015", "2018", "2020", "2022", "2024"],
+    "pavement_pattern": "data/interim/phase_3a/pavement_condition/pavement_condition_{YEAR}_32188.parquet",
+    "pavement_links": "data/interim/phase_3b/pavement_condition_segment_links.parquet",
+    "road_assets": "data/interim/phase_3a/road_assets/road_assets_pavement_32188.parquet",
+    "road_assets_links": "data/interim/phase_3b/road_asset_segment_crosswalk.parquet",
+    "weather": {
+      "raw_dir": "data/raw/eccc_weather",
+      "stations": {
+        "mctavish": {
+          "station_id": "7024745",
+          "name": "MCTAVISH",
+          "is_primary": true
+        },
+        "montreal_trudeau": {
+          "station_id": "702S006",
+          "name": "MONTREAL_TRUDEAU",
+          "is_primary": false
+        }
+      },
+      "years": [
+        2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+        2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+      ],
+      "variable_allowlist": [
+        "mean_temp",
+        "min_temp",
+        "max_temp",
+        "total_precip"
+      ]
+    }
+  },
+  "outputs": {
+    "pothole_temporal": "data/interim/phase_3c/pothole_events_temporal.parquet",
+    "pavement_temporal": "data/interim/phase_3c/pavement_condition_temporal.parquet",
+    "road_assets_temporal": "data/interim/phase_3c/road_assets_temporal.parquet",
+    "weather_station_daily": "data/interim/phase_3c/weather_station_daily.parquet",
+    "weather_daily_canonical": "data/interim/phase_3c/weather_daily_canonical.parquet",
+    "dataset_temporal_coverage": "data/interim/phase_3c/dataset_temporal_coverage.parquet",
+    "qa_summary": "data/interim/phase_3c/temporal_qa_summary.json",
+    "run_manifest": "data/interim/phase_3c/phase_3c_run_manifest.json"
+  }
+}

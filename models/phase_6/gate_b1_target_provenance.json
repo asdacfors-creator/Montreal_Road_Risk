@@ -1,0 +1,14 @@
+{
+  "artifact_path": "data\\processed\\phase_6\\gate_b1_authorized_targets_90d.parquet",
+  "source_description": "Legacy Phase 4 panel partitions (decoded strictly columns: segment_month_id, canonical_segment_id, as_of_date, target_repair_90d)",
+  "authorized_anchors": [
+    "2024-01-31",
+    "2024-02-29",
+    "2024-03-31"
+  ],
+  "total_rows": 143949,
+  "positive_count": 12081,
+  "prevalence": 0.08392555696809287,
+  "target_array_sha256": "de775524ecc80221760f24120869664f722544eaa04fdf7ff7361f44dfeea5dc",
+  "f67860d_target_array_matched": true
+}

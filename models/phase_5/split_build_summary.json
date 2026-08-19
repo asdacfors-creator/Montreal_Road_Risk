@@ -1,0 +1,16 @@
+{
+  "n_train_90d": 3406793,
+  "n_embargo_tv_90d": 95966,
+  "n_val_90d": 479830,
+  "n_embargo_vt_90d": 95966,
+  "n_test_90d": 815711,
+  "n_total_90d": 4894266,
+  "n_train_180d": 3262844,
+  "n_embargo_tv_180d": 239915,
+  "n_val_180d": 335881,
+  "n_embargo_vt_180d": 239915,
+  "n_test_180d": 815711,
+  "seal_n_rows": 815711,
+  "seal_content_fp": "19a8fb615a78363a2cc8b74b4d9556ca07cedfb493b30a39433a87be16a57d0a",
+  "elapsed_s": 52.9
+}
